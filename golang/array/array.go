@@ -63,7 +63,7 @@ func (this *Array) Delete(index int)(int, error){
 	if this.isIndexOutOfRange(index){
 		return 0,errors.New("index out the range")
 	}
-	v := this.data[index]
+	v := this.data[index-1]
 	for i:=index-1;i<this.length-1;i++{
 		this.data[i] = this.data[i+1]
 	}
@@ -90,38 +90,42 @@ func main(){
 			return
 		}
 	}
-    fmt.Println(newArray)
-	fmt.Println(bignewarray)
+
 	fianalArray := NewArray(20)
 
-	if newArray.Len()==0||bignewarray.Len()==0{
-		fianalArray.data = append(newArray.data,bignewarray.data...)
-		fmt.Println(fianalArray)
+	if newArray.Len()==0{
+		fianalArray.data=bignewarray.data
+	}else if bignewarray.Len()==0{
+		fianalArray.data=newArray.data
 	}
-	for{
-		newindex := 0
-		bigindex := 0
-		if newArray.Len()>0 && bignewarray.Len()>0{
-			if newArray.data[newindex]>=bignewarray.data[bigindex]{
-				_ = fianalArray.Insert(fianalArray.length,newArray.data[newindex])
-				newindex++
-				_,_ = newArray.Delete(0)
-			}else{
-				_ = bignewarray.Insert(fianalArray.length,bignewarray.data[bigindex])
-				bigindex++
-				_,_ = bignewarray.Delete(0)
-			}
 
+	fmt.Println(newArray)
+	fmt.Println(bignewarray)
+	newindex := 0
+	bigindex := 0
+	for{
+		if newArray.Len()!=0 && bignewarray.Len()!=0{
+			if newArray.data[newindex]<=bignewarray.data[bigindex]{
+				_ = fianalArray.Insert(fianalArray.length+1,newArray.data[0])
+				_,_ = newArray.Delete(1)
+			}else{
+				_ = fianalArray.Insert(fianalArray.length+1,bignewarray.data[0])
+				_,_ = bignewarray.Delete(1)
+			}
 		}else{
 			if newArray.Len()==0{
-				fianalArray.data = append(fianalArray.data,newArray.data...)
-			}else{
-				fianalArray.data = append(fianalArray.data,bignewarray.data...)
+				for i:=0;i<bignewarray.length;i++{
+					_=fianalArray.Insert(fianalArray.length+1,bignewarray.data[i])
+				}
+			}else if bignewarray.Len()==0{
+				for i:=0;i<newArray.length;i++{
+					_=fianalArray.Insert(fianalArray.length+1,newArray.data[i])
+				}
 			}
 			break
 		}
 	}
-	fmt.Println(fianalArray)
+	fmt.Printf("finalArray is %v",fianalArray)
 }
 
 
@@ -134,7 +138,7 @@ func main(){
 //如果insert加一了  那就应该进行一次length++
 //自己手写 也是很重要的
 
-
+//insert的时候 应该是用户输入 没有0  但是用length的话 有0 所以应该是 length+1
 
 
 
