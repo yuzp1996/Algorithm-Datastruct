@@ -85,7 +85,7 @@ func main(){
     bignewarray := NewArray(6)
     fmt.Println(bignewarray)
 	for i:=1;i<=6;i++{
-		if err:= bignewarray.Insert(i,i+2); err != nil{
+		if err:= bignewarray.Insert(i,i-11); err != nil{
 			fmt.Println("err is ", err)
 			return
 		}
