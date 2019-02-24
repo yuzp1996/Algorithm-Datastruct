@@ -123,7 +123,7 @@ func CombineSortedSlice(firarray, secarray *ArrayList){
 						break
 					}
 				}
-				}
+			}
 			break
 		}
 	}
