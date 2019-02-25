@@ -28,6 +28,10 @@ func (this *LinkNode)GetNext()*LinkNode{
 	return this.next
 }
 
+
+
+
+
 func (this *LinkList)InsterAfter(p *LinkNode,value int){
 	newnode := NewLinkNode(value)
 	if p.next == nil{
