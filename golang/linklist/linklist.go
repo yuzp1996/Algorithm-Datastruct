@@ -16,8 +16,8 @@ func NewLinkNode(value int)*LinkNode{
 	return &LinkNode{nil,value}
 }
 
-func NewLinkList()*LinkList{
-	return &LinkList{NewLinkNode(0),0}
+func NewLinkList(headvalue int)*LinkList{
+	return &LinkList{NewLinkNode(headvalue),1}
 }
 
 func (this *LinkNode)Getvalue()int{
@@ -28,21 +28,6 @@ func (this *LinkNode)GetNext()*LinkNode{
 	return this.next
 }
 
-
-
-
-
-func (this *LinkList)InsterAfter(p *LinkNode,value int){
-	newnode := NewLinkNode(value)
-	if p.next == nil{
-		p.next = newnode
-	}else{
-		pernext := p.next
-		newnode.next = pernext
-		p.next = newnode
-	}
-	this.length++
-}
 
 
 func(this *LinkList)PrintList(){
@@ -58,31 +43,7 @@ func(this *LinkList)PrintList(){
 	fmt.Println()
 }
 
-func(this *LinkList)DeleteNode(deletenode *LinkNode){
-	per := this.head
-	//only one element
-	if this.head == deletenode{
-		this.head.next = nil
-		this.head.value = 0
-		this.length--
-	}
-	pernode := &LinkNode{}
-	for{
-		if per != nil{
-			if per.next == deletenode{
-				pernode = per
-				break
-			}else{
-				per = per.next
-			}
-		}
-	}
-	if pernode.next!= nil{
-		pernode.next = deletenode.next
-		this.length--
-	}
-	return
-}
+
 
 func (this *LinkList)searchwithvalue(value interface{})*LinkNode{
 	per := this.head
@@ -163,45 +124,36 @@ func(this *LinkList)findfianlNode()(*LinkNode){
 }
 
 func main(){
-	NewList := NewLinkList()
-	fmt.Printf("len is %d\n",NewList.length)
-	//NewList.InsterAfter(NewList.searchwithvalue(0),1)
-	//NewList.InsterAfter(NewList.searchwithvalue(1),2)
-	//NewList.InsterAfter(NewList.searchwithvalue(2),3)
-	//NewList.InsterAfter(NewList.searchwithvalue(1),4)
-	//NewList.DeleteNode(NewList.searchwithvalue(4))
-	//NewList.DeleteNode(NewList.searchwithvalue(1))
-	//NewList.InsterInTail(4)
-	//NewList.InsterInTail(5)
-	//NewList.InsterInhead(1)
+	NewList := NewLinkList(1)
 	NewList.InsterInTail(1)
 	NewList.InsterInTail(2)
 	NewList.InsterInTail(3)
 
-
-	NewList.PrintList()
-
-	SecondList := NewLinkList()
+	SecondList := NewLinkList(2)
+	SecondList.InsterInTail(3)
 	SecondList.InsterInTail(4)
 	SecondList.InsterInTail(5)
-	SecondList.InsterInTail(6)
-	SecondList.PrintList()
+
+
 	FinalList := MergeLinkList(NewList,SecondList)
 	FinalList.PrintList()
 
 
-
-
 }
 func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkList) {
-	finallink = NewLinkList()
+	finallink = NewLinkList(0)
+
+	firstlink.PrintList()
+	secondlink.PrintList()
+	finallink.PrintList()
+
 	for {
-		if firstlink.length != 0 && secondlink.length != 0 {
+		if firstlink.length != 0 && secondlink.length != 0{
 			if firstlink.head.Getvalue() <= secondlink.head.Getvalue() {
-				finallink.InsertAtIndex(finallink.length, firstlink.head.Getvalue())
+				finallink.InsertAtIndex(finallink.length-1, firstlink.head.Getvalue())
 				firstlink.Deletehead()
 			} else {
-				finallink.InsertAtIndex(finallink.length, secondlink.head.Getvalue())
+				finallink.InsertAtIndex(finallink.length-1, secondlink.head.Getvalue())
 				secondlink.Deletehead()
 			}
 		} else {
