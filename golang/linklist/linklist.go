@@ -48,9 +48,10 @@ func(this *LinkList)PrintList(){
 			fmt.Printf("%d -> ",per.value)
 			per = per.next
 		}else{
-			return
+			break
 		}
 	}
+	fmt.Println()
 }
 
 func(this *LinkList)DeleteNode(deletenode *LinkNode){
@@ -169,20 +170,20 @@ func main(){
 	//NewList.InsterInTail(4)
 	//NewList.InsterInTail(5)
 	//NewList.InsterInhead(1)
-	NewList.InsertAtIndex(0,1)
-	NewList.InsertAtIndex(1,2)
-	NewList.InsertAtIndex(2,3)
+	NewList.InsterInTail(1)
+	NewList.InsterInTail(2)
+	NewList.InsterInTail(3)
 
 
 	NewList.PrintList()
 
 	SecondList := NewLinkList()
-	SecondList.InsertAtIndex(0,4)
-	SecondList.InsertAtIndex(1,5)
-	SecondList.InsertAtIndex(2,6)
-	//FinalList := MergeLinkList(NewList,SecondList)
+	SecondList.InsterInTail(4)
+	SecondList.InsterInTail(5)
+	SecondList.InsterInTail(6)
 	SecondList.PrintList()
-	//FinalList.PrintList()
+	FinalList := MergeLinkList(NewList,SecondList)
+	FinalList.PrintList()
 
 
 
@@ -204,9 +205,9 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 		}
 	}
 	if firstlink.length!=0{
-		finallink.findfianlNode().next = firstlink.findfianlNode()
+		finallink.findfianlNode().next = firstlink.head
 	}else{
-		finallink.findfianlNode().next = secondlink.findfianlNode()
+		finallink.findfianlNode().next = secondlink.head
 	}
 	return finallink
 }
