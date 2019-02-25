@@ -189,30 +189,28 @@ func main(){
 
 
 }
-func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkList){
+func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkList) {
 	finallink = NewLinkList()
-	for{
-		if firstlink.length!=0&&secondlink.length!=0{
-			if firstlink.head.Getvalue() <= secondlink.head.Getvalue(){
-				finallink.InsertAtIndex(finallink.length,firstlink.head.Getvalue())
+	for {
+		if firstlink.length != 0 && secondlink.length != 0 {
+			if firstlink.head.Getvalue() <= secondlink.head.Getvalue() {
+				finallink.InsertAtIndex(finallink.length, firstlink.head.Getvalue())
 				firstlink.Deletehead()
-			}else{
-				finallink.InsertAtIndex(finallink.length,secondlink.head.Getvalue())
+			} else {
+				finallink.InsertAtIndex(finallink.length, secondlink.head.Getvalue())
 				secondlink.Deletehead()
 			}
-		}else{
+		} else {
 			break
 		}
 	}
-	if firstlink.length!=0{
+	if firstlink.length != 0 {
 		finallink.findfianlNode().next = firstlink.head
-	}else{
+	} else {
 		finallink.findfianlNode().next = secondlink.head
 	}
 	return finallink
 }
-
-
 
 //正常的应该就是头部插入 尾部插入  按照索引插入
 
