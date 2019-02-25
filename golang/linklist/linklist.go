@@ -212,6 +212,9 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 	return finallink
 }
 
+
+
+
 //正常的应该就是头部插入 尾部插入  按照索引插入
 
 
