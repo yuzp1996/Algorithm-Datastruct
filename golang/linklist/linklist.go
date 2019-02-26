@@ -45,17 +45,19 @@ func(this *LinkList)PrintList(){
 
 
 
-func (this *LinkList)searchwithvalue(value interface{})*LinkNode{
+func (this *LinkList)searchwithvalue(value interface{})(*LinkNode,int){
 	per := this.head
+	index := 1
 	for{
 		if per != nil {
 			if per.value == value {
-				return per
+				return per,index
 			} else {
 				per = per.next
+				index++
 			}
 		}else{
-			return nil
+			return nil,0
 		}
 	}
 }
@@ -83,6 +85,19 @@ func (this *LinkList)InsterInTail(value int){
 	}
 }
 
+func(this *LinkList)FindwithIndex(index int)*LinkNode{
+	if index<1||index>this.length{
+		fmt.Println("index unexpected")
+		return nil
+	}
+	head := this.head
+	for i:=1;i<index;i++{
+		head = head.next
+	}
+	return head
+}
+
+
 //在index的下面加上这个
 func(this *LinkList)InsertAtIndex(index int, value int){
 	if index > this.length || index<0 {
@@ -101,11 +116,14 @@ func(this *LinkList)InsertAtIndex(index int, value int){
 	this.length++
 }
 
-func(this *LinkList)Deletehead(){
-	newhead := this.head.next
-	this.head = newhead
-	this.length--
+func(this *LinkList)DeleteHead(){
+	if this.length>=1{
+		newhead := this.head.next
+		this.head = newhead
+		this.length--
+	}
 }
+
 
 //    1 -> 0 -> 5
 //head     1    2
@@ -124,19 +142,26 @@ func(this *LinkList)findfianlNode()(*LinkNode){
 }
 
 func main(){
-	NewList := NewLinkList(1)
-	NewList.InsterInTail(1)
-	NewList.InsterInTail(2)
-	NewList.InsterInTail(3)
+	//NewList := NewLinkList(1)
+	//NewList.InsterInTail(11)
+	//NewList.InsterInTail(23)
+	//NewList.InsterInTail(34)
 
 	SecondList := NewLinkList(2)
-	SecondList.InsterInTail(3)
-	SecondList.InsterInTail(4)
-	SecondList.InsterInTail(5)
+	SecondList.InsterInTail(21)
+	SecondList.InsterInTail(43)
+	SecondList.InsterInTail(54)
 
 
-	FinalList := MergeLinkList(NewList,SecondList)
-	FinalList.PrintList()
+	//FinalList := MergeLinkList(NewList,SecondList)
+	//FinalList.PrintList()
+
+	SecondList.PrintList()
+	SecondList.LRU(1)
+	SecondList.LRU(3)
+	SecondList.LRU(2)
+
+	SecondList.PrintList()
 
 
 }
@@ -151,10 +176,10 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 		if firstlink.length != 0 && secondlink.length != 0{
 			if firstlink.head.Getvalue() <= secondlink.head.Getvalue() {
 				finallink.InsertAtIndex(finallink.length-1, firstlink.head.Getvalue())
-				firstlink.Deletehead()
+				firstlink.DeleteHead()
 			} else {
 				finallink.InsertAtIndex(finallink.length-1, secondlink.head.Getvalue())
-				secondlink.Deletehead()
+				secondlink.DeleteHead()
 			}
 		} else {
 			break
@@ -168,6 +193,32 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 	return finallink
 }
 
+
+func (this *LinkList)LRU(value int){
+	//三种情况  有，删放到头部即可、 没有，没满直接放在头部、 没有，满了 去尾头增
+	cap := 5
+	//有
+	if node,index := this.searchwithvalue(value);node!=nil&&index!=0{
+		if index==1{
+			return
+		}else{
+			pre:=this.FindwithIndex(index-1)
+			nextnode := this.FindwithIndex(index+1)
+			pre.next=nextnode
+			this.InsterInhead(value)
+		}
+	}else{
+		//没有
+		if this.length<cap{
+			this.InsterInhead(value)
+		}else{
+			finalnode := this.FindwithIndex(cap-1)
+			finalnode.next=nil
+			this.InsterInhead(value)
+		}
+
+	}
+}
 
 
 
