@@ -142,10 +142,15 @@ func(this *LinkList)findfianlNode()(*LinkNode){
 }
 
 func main(){
-	//NewList := NewLinkList(1)
-	//NewList.InsterInTail(11)
-	//NewList.InsterInTail(23)
-	//NewList.InsterInTail(34)
+	Merge()
+	LRU()
+}
+
+func Merge(){
+	NewList := NewLinkList(1)
+	NewList.InsterInTail(11)
+	NewList.InsterInTail(23)
+	NewList.InsterInTail(34)
 
 	SecondList := NewLinkList(2)
 	SecondList.InsterInTail(21)
@@ -153,18 +158,24 @@ func main(){
 	SecondList.InsterInTail(54)
 
 
-	//FinalList := MergeLinkList(NewList,SecondList)
-	//FinalList.PrintList()
-
-	SecondList.PrintList()
-	SecondList.LRU(1)
-	SecondList.LRU(3)
-	SecondList.LRU(2)
-
-	SecondList.PrintList()
-
-
+	FinalList := MergeLinkList(NewList,SecondList)
+	FinalList.PrintList()
 }
+
+func LRU(){
+	fmt.Println("Begin LRU")
+	linklistforLRU := NewLinkList(11)
+	for i:=0; i<10;i++{
+		linklistforLRU.LRU(i)
+		linklistforLRU.PrintList()
+	}
+	linklistforLRU.LRU(1)
+	linklistforLRU.PrintList()
+	linklistforLRU.LRU(6)
+	linklistforLRU.PrintList()
+}
+
+
 func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkList) {
 	finallink = NewLinkList(0)
 
@@ -196,7 +207,7 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 
 func (this *LinkList)LRU(value int){
 	//三种情况  有，删放到头部即可、 没有，没满直接放在头部、 没有，满了 去尾头增
-	cap := 5
+	capoflru := 5
 	//有
 	if node,index := this.searchwithvalue(value);node!=nil&&index!=0{
 		if index==1{
@@ -209,10 +220,10 @@ func (this *LinkList)LRU(value int){
 		}
 	}else{
 		//没有
-		if this.length<cap{
+		if this.length<capoflru{
 			this.InsterInhead(value)
 		}else{
-			finalnode := this.FindwithIndex(cap-1)
+			finalnode := this.FindwithIndex(capoflru-1)
 			finalnode.next=nil
 			this.InsterInhead(value)
 		}
