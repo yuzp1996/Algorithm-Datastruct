@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type LinkNode struct {
 	next *LinkNode
@@ -144,6 +146,7 @@ func(this *LinkList)findfianlNode()(*LinkNode){
 func main(){
 	Merge()
 	LRU()
+
 }
 
 func Merge(){
@@ -165,6 +168,7 @@ func Merge(){
 func LRU(){
 	fmt.Println("Begin LRU")
 	linklistforLRU := NewLinkList(11)
+	linklistforLRU.PrintList()
 	for i:=0; i<10;i++{
 		linklistforLRU.LRU(i)
 		linklistforLRU.PrintList()
@@ -173,6 +177,9 @@ func LRU(){
 	linklistforLRU.PrintList()
 	linklistforLRU.LRU(6)
 	linklistforLRU.PrintList()
+
+	middlenode := linklistforLRU.FindMiddlenode()
+	fmt.Println(middlenode.Getvalue())
 }
 
 
@@ -231,6 +238,20 @@ func (this *LinkList)LRU(value int){
 	}
 }
 
+
+func(this *LinkList)FindMiddlenode()*LinkNode{
+	if this.length<=2{
+		return this.head
+	}
+	fast, slow := this.head, this.head
+	//fast要首先保证不为nil  可以试想  只有在fast在最后一个元素或者最后一个元素的next(nil)的时候  才应该结束
+	for fast!=nil && fast.next!=nil{
+		fast = fast.next.next
+		slow = slow.next
+	}
+	return slow
+
+}
 
 
 //正常的应该就是头部插入 尾部插入  按照索引插入
