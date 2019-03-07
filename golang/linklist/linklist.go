@@ -255,5 +255,8 @@ func(this *LinkList)FindMiddlenode()*LinkNode{
 
 
 //正常的应该就是头部插入 尾部插入  按照索引插入
-
-
+//https://blog.csdn.net/Charliewolf/article/details/82622014
+//https://blog.csdn.net/Charliewolf/article/details/82687642
+func (this *LinkList)reserve(){
+	this.InsterInhead(1)
+}
