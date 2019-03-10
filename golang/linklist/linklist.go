@@ -146,6 +146,11 @@ func(this *LinkList)findfianlNode()(*LinkNode){
 func main(){
 	Merge()
 	LRU()
+	NewList := NewLinkList(1)
+	NewList.InsterInTail(11)
+	NewList.InsterInTail(23)
+	NewList.InsterInTail(34)
+	NewList.reserve()
 
 }
 
@@ -258,5 +263,17 @@ func(this *LinkList)FindMiddlenode()*LinkNode{
 //https://blog.csdn.net/Charliewolf/article/details/82622014
 //https://blog.csdn.net/Charliewolf/article/details/82687642
 func (this *LinkList)reserve(){
-	this.InsterInhead(1)
-}
+	this.PrintList()
+	newtail := NewLinkNode(0)
+	p := this.head
+	q := p.next
+	p.next = newtail
+	for q != nil{
+		r := q.next
+		q.next = p
+		p = q
+		q = r
+	}
+	this.head = p
+	this.PrintList()
+	}

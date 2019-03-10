@@ -51,7 +51,9 @@ func (this *ArrayList)isOutofIndex(index int)bool{
 
 func (this *ArrayList)Insert(index,value int)error{
 	if this.length==len(this.data){
-		this.data = append(this.data,make([]int,1,1)...)
+		length := 3
+		this.data = append(this.data,make([]int,length,length)...)
+		this.length += length
 	}
 	if this.isOutofIndex(index){
 		return errors.New("index out of")

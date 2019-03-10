@@ -28,7 +28,7 @@ var _ = Describe("Shopping cart", func() {
 			testlinklist.reserve()
 		})
 		It("should reserver the linklist", func() {
-			Expect(testlinklist.findfianlNode().Getvalue()).Should(Equal(1))
+			Expect(testlinklist.findfianlNode().Getvalue()).Should(Equal(0))
 			Expect(testlinklist.FindwithIndex(1).Getvalue()).Should(Equal(5))
 		})
 	})
