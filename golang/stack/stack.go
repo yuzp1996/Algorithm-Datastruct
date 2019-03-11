@@ -15,6 +15,19 @@ func NewStackArray()*StackArray{
 }
 
 
+func(this *StackArray)Top()interface{}{
+	if this.IsEmpty(){
+		fmt.Printf("Empty Stack")
+		return nil
+	}
+	return this.data[this.top]
+}
+
+func(this *StackArray)Flush(){
+	this.top=-1
+}
+
+
 func (this *StackArray)IsEmpty()(bool){
 	if this.top<0{
 		return true

@@ -150,7 +150,18 @@ func main(){
 	NewList.InsterInTail(11)
 	NewList.InsterInTail(23)
 	NewList.InsterInTail(34)
-	NewList.reserve()
+	//NewList.reserve()
+	NewList.PrintList()
+	newhead := recursionresrver(NewList.head)
+	for{
+		if newhead.next!=nil{
+			fmt.Println(newhead.Getvalue())
+			newhead = newhead.next
+		}else{
+			break
+		}
+	}
+
 
 }
 
@@ -262,6 +273,7 @@ func(this *LinkList)FindMiddlenode()*LinkNode{
 //正常的应该就是头部插入 尾部插入  按照索引插入
 //https://blog.csdn.net/Charliewolf/article/details/82622014
 //https://blog.csdn.net/Charliewolf/article/details/82687642
+//http://www.cnblogs.com/kubixuesheng/p/4394509.html
 func (this *LinkList)reserve(){
 	this.PrintList()
 	newtail := NewLinkNode(0)
@@ -277,3 +289,16 @@ func (this *LinkList)reserve(){
 	this.head = p
 	this.PrintList()
 	}
+
+
+func recursionresrver(head *LinkNode)*LinkNode{
+	if head == nil||head.next==nil{
+		return head
+	}else{
+		newhead := recursionresrver(head.next)
+		head.next.next = head
+		head.next=nil
+		return newhead
+	}
+}
+
