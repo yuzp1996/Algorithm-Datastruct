@@ -38,7 +38,7 @@ func (this *StackArray)IsEmpty()(bool){
 
 func(this *StackArray)PrintStack(){
 	if this.IsEmpty(){
-		fmt.Println("empty stack")
+		fmt.Println("empty stackarray")
 	}else{
 		for i := this.top;i>=0;i--{
 			fmt.Printf("%v,",this.data[i])

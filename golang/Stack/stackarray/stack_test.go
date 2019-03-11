@@ -5,7 +5,7 @@ import (
 )
 
 var _ = Describe("Stack", func() {
-	Context("test create a stack", func() {
+	Context("test create a stackarray", func() {
 
 	})
 
