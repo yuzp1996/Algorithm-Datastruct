@@ -68,6 +68,13 @@ func(this *LinkStack)Printstack(){
 
 
 
+func(this *LinkStack)Flush(){
+	if this.IsEmpty(){
+		return
+	}
+	this.top = nil
+}
+
 
 func main(){
 	stack := NewLinkStack()
