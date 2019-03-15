@@ -1,4 +1,4 @@
-package main_test
+package linklistStack_test
 
 import (
 	"testing"
