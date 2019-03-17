@@ -4,6 +4,7 @@ import "fmt"
 
 type StackArray struct {
 	data []interface{}
+	// top is like a index
 	top int
 }
 
@@ -90,6 +91,4 @@ func main(){
 
 	fmt.Printf("pop is %v\n",newstack.Pop())
 	newstack.PrintStack()
-
-
 }

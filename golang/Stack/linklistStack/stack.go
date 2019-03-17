@@ -9,6 +9,7 @@ type node struct {
 	Value interface{}
 }
 
+// only need a top
 type LinkStack struct {
 	Top *node
 }
