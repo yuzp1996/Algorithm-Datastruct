@@ -51,10 +51,14 @@ var _ = Describe("Arrayqueue", func() {
 				testarrayqueue.Enqueue(i)
 			}
 			testarrayqueue.Dequeue()
+			testarrayqueue.Dequeue()
+
 			testarrayqueue.Enqueue(6)
+			testarrayqueue.Enqueue(7)
+
 			testvalue := make([]interface{},5,5)
 			for i:=0;i<5;i++{
-				testvalue[i] = i+2
+				testvalue[i] = i+3
 			}
 			Expect(testarrayqueue.Candequeue()).To(Equal(true))
 			Expect(testarrayqueue.Data).To(Equal(testvalue))

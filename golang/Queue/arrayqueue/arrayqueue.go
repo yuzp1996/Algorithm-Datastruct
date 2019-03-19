@@ -46,9 +46,12 @@ func (this *ArrayQueue)Enqueue(value interface{}){
 			}
 			this.Tail -= this.Head
 			this.Head = 0
+			//后面这两步都是自己丢掉的
 			this.Data[this.Tail] = value
+			this.Tail++
 		}else{
 			fmt.Println("It is a Really Full Data Queue")
+			return
 		}
 	}
 }
