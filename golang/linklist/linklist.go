@@ -151,16 +151,18 @@ func main(){
 	NewList.InsterInTail(23)
 	NewList.InsterInTail(34)
 	//NewList.reserve()
+	NewList.Reserver()
 	NewList.PrintList()
-	newhead := recursionresrver(NewList.head)
-	for{
-		if newhead.next!=nil{
-			fmt.Println(newhead.Getvalue())
-			newhead = newhead.next
-		}else{
-			break
-		}
-	}
+	//NewList.PrintList()
+	//newhead := rescurionreserver(NewList.head)
+	//for{
+	//	if newhead!=nil{
+	//		fmt.Println(newhead.Getvalue())
+	//		newhead = newhead.next
+	//	}else{
+	//		break
+	//	}
+	//}
 
 
 }
@@ -292,13 +294,93 @@ func (this *LinkList)reserve(){
 
 
 func recursionresrver(head *LinkNode)*LinkNode{
-	if head == nil||head.next==nil{
+	if head.next==nil{
 		return head
-	}else{
-		newhead := recursionresrver(head.next)
-		head.next.next = head
-		head.next=nil
-		return newhead
 	}
+	newhead := recursionresrver(head.next)
+	head.next.next = head
+	head.next=nil
+	return newhead
 }
+
+
+func rescurionreserver(head *LinkNode)*LinkNode{
+	if head.next == nil{
+		return head
+	}
+	newhead := recursionresrver(head.next)
+
+	head.next.next = head
+	head.next = nil
+
+	return newhead
+}
+
+//
+//	head.next.next = head
+//	head.next = nil
+//  以上是操作
+
+//newhead 只是为了  1.返回头 2.返回迭代过程中进行操作
+
+//head.next==nil 是停止操作的条件
+//
+//递归递归  先递过去 再归过来
+
+
+
+func reserverrecursion(head *LinkNode)*LinkNode{
+	if head.next == nil{
+		return head
+	}
+	newhead := recursionresrver(head.next) //递过去
+	head.next.next = head //归回来
+	head.next = nil
+	return  newhead
+}
+
+
+
+
+
+
+
+//等号右面是不变的值
+func(this *LinkList)Reserver(){
+	this.PrintList()
+	newtail := NewLinkNode(0)
+	p := this.head
+	q := p.next
+	p.next = newtail
+	for q != nil{
+		r := q.next
+		q.next = p
+		p = q
+		q = r
+	}
+	this.head = p
+	this.PrintList()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
