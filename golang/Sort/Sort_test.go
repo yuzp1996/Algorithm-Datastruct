@@ -14,6 +14,10 @@ var _ = Describe("Sort", func() {
 		It("bubble sort return a sorted array", func() {
 			gomega.Expect(Sort.Bubble([]int{10,8,7,6,5,4,3,20,1,2,9})).To(gomega.Equal([]int{1,2,3,4,5,6,7,8,9,10,20}))
 		})
+		It("Merge sort return a sorted array", func() {
+			gomega.Expect(Sort.Merge_Sort([]int{10,8,7,6,6,5,4,100,3,20,1,2,9})).To(gomega.Equal([]int{1,2,3,4,5,6,6,7,8,9,10,20,100}))
+		})
+
 	})
 
 })
