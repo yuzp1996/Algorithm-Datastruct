@@ -1,7 +1,7 @@
 package Sort
 
 //比较的应该是某个索引下面的值  不是某个值  应该抓到索引
-func Bubble(array []int)[]int{
+func Select(array []int)[]int{
 	for index,_ := range array{
 		for sindex,_ := range array[index+1:]{
 			if array[index] >= array[sindex+index+1]{
