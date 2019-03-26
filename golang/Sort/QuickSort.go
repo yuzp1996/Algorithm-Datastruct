@@ -1,6 +1,6 @@
 package Sort
 
-func QuickSort(array []int)[]int{
+func Quick_Sort(array []int)[]int{
 	if len(array)<=1{
 		return array
 	}
@@ -9,8 +9,8 @@ func QuickSort(array []int)[]int{
 	smaller := GetSmaller(array,middle)
 	Middle := FindSame(array,middle)
 
-	FinnalArray := append(QuickSort(smaller),Middle...)
-	FinnalArray = append(FinnalArray,QuickSort(bigger)...)
+	FinnalArray := append(Quick_Sort(smaller),Middle...)
+	FinnalArray = append(FinnalArray,Quick_Sort(bigger)...)
 	return FinnalArray
 }
 
