@@ -59,12 +59,31 @@ func (list *skiplist) Insert(key int) {
 		list.level = level
 	}
 
+	//最后插入这个节点
 	node := NewNode(key, level)
 	for i := 0; i < level; i++ {
 		node.forward[i] = update[i].forward[i]
 		update[i].forward[i] = node
 	}
 }
+
+func (s *skiplist)Delete(key int){
+	current := s.head
+	for i := s.level;i<=0;i--{
+		for current.forward[i]!= nil{
+			if current.forward[i].key == key{
+				tmp := current.forward[i]
+				current.forward[i] = tmp.forward[i]
+				tmp.forward[i] = nil
+			}else if(current.forward[i].key > key){
+				break
+			}else{
+				current = current.forward[i]
+			}
+		}
+	}
+}
+
 
 func (s *skiplist) Print() {
 	fmt.Println()
