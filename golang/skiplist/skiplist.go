@@ -41,7 +41,7 @@ func (list *skiplist) Insert(key int) {
 	update := make([]*node, MaxLevel)
 	//先一层一层的确定这个update的 应该是被哪些节点来指向的
 	for i := list.level - 1; i >= 0; i-- {
-		if current.forward[i] == nil || current.forward[i].key > key{
+		if current.forward[i] == nil || current.forward[i].key > key {
 			update[i] = current
 		} else {
 			for current.forward[i] != nil && current.forward[i].key < key {
@@ -67,23 +67,38 @@ func (list *skiplist) Insert(key int) {
 	}
 }
 
-func (s *skiplist)Delete(key int){
+func (s *skiplist) Delete(key int) {
 	current := s.head
-	for i := s.level;i<=0;i--{
-		for current.forward[i]!= nil{
-			if current.forward[i].key == key{
+	for i := s.level - 1; i >= 0; i-- {
+		for current.forward[i] != nil {
+			if current.forward[i].key == key {
 				tmp := current.forward[i]
 				current.forward[i] = tmp.forward[i]
 				tmp.forward[i] = nil
-			}else if(current.forward[i].key > key){
+			} else if current.forward[i].key > key {
 				break
-			}else{
+			} else {
 				current = current.forward[i]
 			}
 		}
 	}
 }
 
+func (s *skiplist) Search(key int) bool {
+	current := s.head
+	for i := s.level; i >= 0; i-- {
+		for current.forward[i] != nil {
+			if current.forward[i].key == key {
+				return true
+			} else if current.forward[i].key > key {
+				break
+			} else {
+				current = current.forward[i]
+			}
+		}
+	}
+	return false
+}
 
 func (s *skiplist) Print() {
 	fmt.Println()
@@ -99,8 +114,11 @@ func (s *skiplist) Print() {
 
 func main() {
 	list := NewSkipList()
-	for i := 0; i < 200; i++ {
-		list.Insert(rand.Intn(100))
+	for i := 0; i < 20; i++ {
+		list.Insert(i)
 	}
 	list.Print()
+	list.Delete(2)
+	list.Print()
+	fmt.Println(list.Search(2))
 }
