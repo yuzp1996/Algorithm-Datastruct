@@ -1,0 +1,6 @@
+projectKey=algorithm
+serverUrl=http://118.24.199.49:29000
+serverVersion=6.7.5.38563
+dashboardUrl=http://118.24.199.49:29000/dashboard/index/algorithm
+ceTaskId=AWn8fH5QVVUL88U_DV7A
+ceTaskUrl=http://118.24.199.49:29000/api/ce/task?id=AWn8fH5QVVUL88U_DV7A
