@@ -2,7 +2,6 @@ package Linkedtree
 
 import (
 	"errors"
-	"fmt"
 )
 
 type Leaf struct {
@@ -38,11 +37,20 @@ func (Root *Leaf) RightAdd(value int) error {
 func(Root *Leaf)Preorder(result []int)[]int{
 	if Root == nil{
 		return result
-	}else{
-		fmt.Printf("%d ",Root.Value)
-		result = append(result, Root.Value)
 	}
+	result = append(result, Root.Value)
 	result = Root.Left.Preorder(result)
 	result = Root.Right.Preorder(result)
 	return result
 }
+
+func(Root *Leaf)Middleorder(result []int)[]int{
+	if Root == nil{
+		return result
+	}
+	result = Root.Left.Middleorder(result)
+	result = append(result, Root.Value)
+	result = Root.Right.Middleorder(result)
+	return result
+}
+

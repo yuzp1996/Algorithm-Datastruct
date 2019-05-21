@@ -29,4 +29,10 @@ var _ = Describe("Tree", func() {
 			Expect(Root.Preorder([]int{})).To(Equal(result))
 		})
 	})
+	Context("Traversing with middle", func() {
+		middleresult := []int{3,1,4,0,5,2,6}
+		It("middle traversal", func() {
+			Expect(Root.Middleorder([]int{})).To(Equal(middleresult))
+		})
+	})
 })
