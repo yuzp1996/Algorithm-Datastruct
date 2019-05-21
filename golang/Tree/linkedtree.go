@@ -34,9 +34,10 @@ func (Root *Leaf) RightAdd(value int) error {
 	}
 }
 
-func(Root *Leaf)Preorder(result []int)[]int{
-	if Root == nil{
+func (Root *Leaf) Preorder(result []int) []int {
+	if Root == nil {
 		return result
+
 	}
 	result = append(result, Root.Value)
 	result = Root.Left.Preorder(result)
@@ -44,13 +45,44 @@ func(Root *Leaf)Preorder(result []int)[]int{
 	return result
 }
 
-func(Root *Leaf)Middleorder(result []int)[]int{
-	if Root == nil{
+func (Root *Leaf) Middleorder(result []int) []int {
+	if Root == nil {
 		return result
 	}
 	result = Root.Left.Middleorder(result)
 	result = append(result, Root.Value)
 	result = Root.Right.Middleorder(result)
+	return result
+}
+
+func (Root *Leaf) BehindOrder(result []int) []int {
+	if Root == nil {
+		return result
+	}
+	result = Root.Left.BehindOrder(result)
+	result = Root.Right.BehindOrder(result)
+	result = append(result, Root.Value)
+	return result
+}
+
+func (Root *Leaf)LevelOrder(result []int)[]int{
+	if Root == nil{
+		return result
+	}
+	Queue := []Leaf{}
+	Queue = append(Queue, *Root)
+	for len(Queue) > 0{
+		root := Queue[0]
+		Queue = Queue[1:]
+		result = append(result, root.Value)
+		if root.Left != nil{
+			Queue = append(Queue, *root.Left)
+		}
+		if root.Right != nil{
+			Queue = append(Queue, *root.Right)
+		}
+	}
+
 	return result
 }
 
