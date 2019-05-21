@@ -7,7 +7,7 @@ import (
 )
 
 var _ = Describe("Tree", func() {
-	//var result []int
+	var result []int
 	Root := NewTree(0)
 	Root.LeafAdd(1)
 	Root.RightAdd(2)
@@ -23,10 +23,10 @@ var _ = Describe("Tree", func() {
 			Expect(Root.Right.Value).To(Equal(2))
 		})
 	})
-	//Context("Traversing with fornt", func() {
-	//	result = []int{0,1,3,4,2,5,6}
-	//	It("preorder traversal", func() {
-	//		Expect(Root.Preorder()).To(Equal(result))
-	//	})
-	//})
+	Context("Traversing with fornt", func() {
+		result = []int{0,1,3,4,2,5,6}
+		It("preorder traversal", func() {
+			Expect(Root.Preorder([]int{})).To(Equal(result))
+		})
+	})
 })

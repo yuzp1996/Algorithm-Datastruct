@@ -35,12 +35,14 @@ func (Root *Leaf) RightAdd(value int) error {
 	}
 }
 
-func(Root *Leaf)Preorder(){
+func(Root *Leaf)Preorder(result []int)[]int{
 	if Root == nil{
-		fmt.Print("nil")
+		return result
 	}else{
-		fmt.Print(Root.Value)
+		fmt.Printf("%d ",Root.Value)
+		result = append(result, Root.Value)
 	}
-	Root.Left.Preorder()
-	Root.Right.Preorder()
+	result = Root.Left.Preorder(result)
+	result = Root.Right.Preorder(result)
+	return result
 }
