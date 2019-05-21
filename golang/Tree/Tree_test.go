@@ -1,14 +1,18 @@
 package Linkedtree_test
 
 import (
+	. "Algorithm-Datastruct/golang/Tree"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-
-	. "Algorithm-Datastruct/golang/Tree"
 )
 
 var _ = Describe("Tree", func() {
 	Root := NewTree(0)
 	Root.LeafAdd(1)
-	Expect(Root.Left.Value).To(Equal())
+	Context("test the tree", func() {
+
+		It("Insert should be successful", func() {
+			Expect(Root.Left.Value).To(Equal(1))
+		})
+	})
 })

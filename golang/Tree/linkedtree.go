@@ -13,7 +13,7 @@ func NewTree(value int) *Leaf {
 }
 
 func (Root *Leaf) LeafAdd(value int) error {
-	if Root.Left != nil {
+	if Root.Left == nil {
 		newleaf := Leaf{value, nil, nil}
 		Root.Left = &newleaf
 		return nil
