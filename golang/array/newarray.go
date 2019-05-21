@@ -6,17 +6,16 @@ import (
 )
 
 type ArrayList struct {
-	data []int
+	data   []int
 	length int
 }
 
-
-func NewArray(cap int)*ArrayList{
-	if cap <=0 {
+func NewArray(cap int) *ArrayList {
+	if cap <= 0 {
 		return nil
 	}
 	return &ArrayList{
-		make([]int,cap,cap),
+		make([]int, cap, cap),
 		0,
 	}
 }
@@ -38,32 +37,32 @@ func main() {
 		}
 	}
 
-	fmt.Println(newarray,newarray1)
-	CombineSortedSlice(newarray,newarray1)
+	fmt.Println(newarray, newarray1)
+	CombineSortedSlice(newarray, newarray1)
 }
 
-func (this *ArrayList)isOutofIndex(index int)bool{
-	if index<=0||index>cap(this.data){
+func (this *ArrayList) isOutofIndex(index int) bool {
+	if index <= 0 || index > cap(this.data) {
 		return true
 	}
 	return false
 }
 
-func (this *ArrayList)Insert(index,value int)error{
-	if this.length==len(this.data){
+func (this *ArrayList) Insert(index, value int) error {
+	if this.length == len(this.data) {
 		length := 3
-		this.data = append(this.data,make([]int,length,length)...)
+		this.data = append(this.data, make([]int, length, length)...)
 		this.length += length
 	}
-	if this.isOutofIndex(index){
+	if this.isOutofIndex(index) {
 		return errors.New("index out of")
 	}
-	if this.data[index-1] == 0{
+	if this.data[index-1] == 0 {
 		this.data[index-1] = value
 		this.length++
 		return nil
 	}
-	for i:= this.length-1;i>=index-1;i--{
+	for i := this.length - 1; i >= index-1; i-- {
 		this.data[i+1] = this.data[i]
 	}
 	this.data[index-1] = value
@@ -71,14 +70,14 @@ func (this *ArrayList)Insert(index,value int)error{
 	return nil
 }
 
-func (this *ArrayList)Delete(index int)error{
-	if this.isOutofIndex(index){
+func (this *ArrayList) Delete(index int) error {
+	if this.isOutofIndex(index) {
 		return errors.New("delete out of index")
 	}
-	if this.data[index-1]==0{
+	if this.data[index-1] == 0 {
 		return errors.New("now val in the index")
 	}
-	for i:=index-1;i<this.length-1;i++{
+	for i := index - 1; i < this.length-1; i++ {
 		this.data[i] = this.data[i+1]
 	}
 	this.data[this.length-1] = 0
@@ -86,42 +85,41 @@ func (this *ArrayList)Delete(index int)error{
 	return nil
 }
 
-
-func CombineSortedSlice(firarray, secarray *ArrayList){
+func CombineSortedSlice(firarray, secarray *ArrayList) {
 	finalarray := NewArray(5)
-	for{
-		if firarray.length>0 && secarray.length>0{
-			if firarray.data[0]>=secarray.data[0]{
-				if err := finalarray.Insert(finalarray.length+1,secarray.data[0]); err!= nil{
+	for {
+		if firarray.length > 0 && secarray.length > 0 {
+			if firarray.data[0] >= secarray.data[0] {
+				if err := finalarray.Insert(finalarray.length+1, secarray.data[0]); err != nil {
 					fmt.Printf("Insert err err is %v", err)
 				}
-				if err := secarray.Delete(1);err!=nil{
+				if err := secarray.Delete(1); err != nil {
 					fmt.Printf("Delete err err is %v", err)
 				}
-			}else{
-				if err:= finalarray.Insert(finalarray.length+1,firarray.data[0]);err!=nil{
+			} else {
+				if err := finalarray.Insert(finalarray.length+1, firarray.data[0]); err != nil {
 					fmt.Printf("Insert firarray err")
 				}
-				if err:=firarray.Delete(1);err!=nil{
+				if err := firarray.Delete(1); err != nil {
 					fmt.Printf("Delete firarry err")
 				}
 			}
-		}else{
-			if firarray.length==0{
-				for{
-					if secarray.length > 0{
-						finalarray.Insert(finalarray.length+1,secarray.data[0])
+		} else {
+			if firarray.length == 0 {
+				for {
+					if secarray.length > 0 {
+						finalarray.Insert(finalarray.length+1, secarray.data[0])
 						secarray.Delete(1)
-					}else{
+					} else {
 						break
 					}
 				}
-			}else if secarray.length==0{
-				for{
-					if firarray.length > 0{
-						finalarray.Insert(finalarray.length+1,firarray.data[0])
+			} else if secarray.length == 0 {
+				for {
+					if firarray.length > 0 {
+						finalarray.Insert(finalarray.length+1, firarray.data[0])
 						firarray.Delete(1)
-					}else{
+					} else {
 						break
 					}
 				}
@@ -132,21 +130,20 @@ func CombineSortedSlice(firarray, secarray *ArrayList){
 	fmt.Println(finalarray)
 	good := false
 
-	for i,v := range finalarray.data{
-		if firarray.data[i+1] == 0{
+	for i, v := range finalarray.data {
+		if firarray.data[i+1] == 0 {
 			break
-		}else if v <= finalarray.data[i+1]{
+		} else if v <= finalarray.data[i+1] {
 			continue
-		}else{
+		} else {
 			good = true
 			break
 		}
 	}
-	if !good{
+	if !good {
 		fmt.Printf("good algorithm")
-	}else{
+	} else {
 		fmt.Printf("not good algotrithm")
 	}
-
 
 }

@@ -128,10 +128,6 @@ package main
 //	fmt.Printf("finalArray is %v",fianalArray)
 //}
 
-
-
-
-
 //你假设用户输入的 和 计算机里面的索引是不一样的
 //所以0的输入应该是不对的 用户不应该有0的输入 最小是1
 //最好是用数据手写一下 试试看
@@ -139,7 +135,3 @@ package main
 //自己手写 也是很重要的
 
 //insert的时候 应该是用户输入 没有0  但是用length的话 有0 所以应该是 length+1
-
-
-
-
