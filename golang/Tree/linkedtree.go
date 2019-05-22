@@ -34,6 +34,11 @@ func (Root *Leaf) RightAdd(value int) error {
 	}
 }
 
+func (Root *Leaf)Add(value int){
+
+}
+
+
 func (Root *Leaf) Preorder(result []int) []int {
 	if Root == nil {
 		return result

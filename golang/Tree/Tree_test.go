@@ -47,4 +47,15 @@ var _ = Describe("Tree", func() {
 			Expect(Root.LevelOrder([]int{})).To(Equal(levelresult))
 		})
 	})
+	Context("binary search tree",func(){
+		BianrysearchRoot := NewTree(0)
+		BianrysearchRoot.Insert(1)
+		BianrysearchRoot.Insert(2)
+		BianrysearchRoot.Insert(3)
+		It("return the right leaf", func(){
+			Expect(BianrysearchRoot.Right.Value).To(Equal(1))
+			Expect(BianrysearchRoot.Right.Right.Value).To(Equal(2))
+		})
+
+	})
 })
