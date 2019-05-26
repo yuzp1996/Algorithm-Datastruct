@@ -2,6 +2,7 @@ package Linkedtree_test
 
 import (
 	. "Algorithm-Datastruct/golang/Tree"
+	"fmt"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -55,6 +56,22 @@ var _ = Describe("Tree", func() {
 		It("return the right leaf", func(){
 			Expect(BianrysearchRoot.Right.Value).To(Equal(4))
 			Expect(BianrysearchRoot.Left.Left.Value).To(Equal(1))
+		})
+		It("search the right leaf", func(){
+			Expect(BianrysearchRoot.Search(2)).To(Equal(true))
+		})
+		It("delete the right leaf", func() {
+			result1 := BianrysearchRoot.LevelOrder([]int{})
+			fmt.Print(result1)
+
+			Expect(BianrysearchRoot.Delete(3)).To(Equal(3))
+			Expect(BianrysearchRoot.Delete(5)).To(Equal(-1))
+			Expect(BianrysearchRoot.Delete(2)).To(Equal(2))
+			Expect(BianrysearchRoot.Delete(1)).To(Equal(1))
+
+
+			result := BianrysearchRoot.LevelOrder([]int{})
+			fmt.Print(result)
 		})
 	})
 
