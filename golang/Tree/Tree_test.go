@@ -43,21 +43,21 @@ var _ = Describe("Tree", func() {
 		})
 	})
 	Context("Traversing with middle", func() {
-		levelresult := []int{0,1,2,3,4,5,6}
+		levelresult := []int{0, 1, 2, 3, 4, 5, 6}
 		It("middle traversal", func() {
 			Expect(Root.LevelOrder([]int{})).To(Equal(levelresult))
 		})
 	})
-	Context("binary search tree",func(){
+	Context("binary search tree", func() {
 		BianrysearchRoot := NewTree(3)
 		BianrysearchRoot.Insert(2)
 		BianrysearchRoot.Insert(1)
 		BianrysearchRoot.Insert(4)
-		It("return the right leaf", func(){
+		It("return the right leaf", func() {
 			Expect(BianrysearchRoot.Right.Value).To(Equal(4))
 			Expect(BianrysearchRoot.Left.Left.Value).To(Equal(1))
 		})
-		It("search the right leaf", func(){
+		It("search the right leaf", func() {
 			Expect(BianrysearchRoot.Search(2)).To(Equal(true))
 		})
 		It("delete the right leaf", func() {
@@ -68,10 +68,18 @@ var _ = Describe("Tree", func() {
 			Expect(BianrysearchRoot.Delete(5)).To(Equal(-1))
 			Expect(BianrysearchRoot.Delete(2)).To(Equal(2))
 			Expect(BianrysearchRoot.Delete(1)).To(Equal(1))
+			fmt.Print(BianrysearchRoot.LevelOrder([]int{}))
+			fmt.Print("\n now the tree is %v", BianrysearchRoot)
 
-
+			Expect(BianrysearchRoot.Delete(4)).To(Equal(4))
+			fmt.Print("\n 1now the tree is %v", BianrysearchRoot)
 			result := BianrysearchRoot.LevelOrder([]int{})
 			fmt.Print(result)
+		})
+		It("Test make tree nil",func(){
+			testtree := NewTree(110)
+			testtree.TestMakeitnil()
+			fmt.Print(testtree)
 		})
 	})
 

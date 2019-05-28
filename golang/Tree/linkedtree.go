@@ -2,6 +2,7 @@ package Linkedtree
 
 import (
 	"errors"
+	"fmt"
 )
 
 type Leaf struct {
@@ -13,6 +14,16 @@ type Leaf struct {
 func NewTree(value int) *Leaf {
 	return &Leaf{value, nil, nil}
 }
+
+
+func (Root *Leaf)TestMakeitnil(){
+	//Root=nil
+	fmt.Print("after nil")
+	Root.Value=111
+	fmt.Print(Root)
+	return
+}
+
 
 func (Root *Leaf) LeafAdd(value int) error {
 	if Root.Left == nil {
