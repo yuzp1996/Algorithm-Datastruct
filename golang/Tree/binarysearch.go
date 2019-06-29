@@ -120,36 +120,6 @@ func (Tree *Leaf)Delete(value int)int{
 
 
 
-func (Tree *Leaf)Deletemethod(value int)int{
-	// find the leaf
-	for{
-		if Tree == nil{
-			fmt.Printf("there is no leaf valued %d", value)
-			return -1
-		}
-		if value > Tree.Value{
-			Tree = Tree.Right
-		}
-		if value < Tree.Value{
-			Tree = Tree.Left
-		}
-		if value == Tree.Value{
-			break
-		}
-	}
-
-	// handle the situation when a leaf has two child
-
-
-
-
-	// handle the child
-
-
-	// make the child to the right place
-}
-
-
 
 
 

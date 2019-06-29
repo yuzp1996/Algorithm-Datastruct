@@ -36,18 +36,26 @@ var _ = Describe("Tree", func() {
 			Expect(Root.Middleorder([]int{})).To(Equal(middleresult))
 		})
 	})
-	Context("Traversing with middle", func() {
+	Context("Traversing with behind", func() {
 		behindresult := []int{3, 4, 1, 5, 6, 2, 0}
 		It("middle traversal", func() {
 			Expect(Root.BehindOrder([]int{})).To(Equal(behindresult))
 		})
 	})
-	Context("Traversing with middle", func() {
+	Context("Traversing with level", func() {
 		levelresult := []int{0, 1, 2, 3, 4, 5, 6}
-		It("middle traversal", func() {
+		It("level traversal", func() {
 			Expect(Root.LevelOrder([]int{})).To(Equal(levelresult))
 		})
 	})
+	Context("Traversing with level1", func() {
+		levelresult := []int{0, 1, 2, 3, 4, 5, 6}
+		It("leve1 traversal", func() {
+			Expect(Root.Level()).To(Equal(levelresult))
+		})
+	})
+
+
 	Context("binary search tree", func() {
 		BianrysearchRoot := NewTree(3)
 		BianrysearchRoot.Insert(2)

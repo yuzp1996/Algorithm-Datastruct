@@ -98,7 +98,30 @@ func (Root *Leaf)LevelOrder(result []int)[]int{
 			Queue = append(Queue, *root.Right)
 		}
 	}
-
 	return result
 }
+
+func (Root *Leaf)Level()[]int{
+	result := []int{}
+	if Root == nil{
+		return result
+	}
+	Queue := []*Leaf{}
+	// 添加数据比较靠谱的方式
+	Queue = append(Queue,Root)
+	for(len(Queue)>0){
+		Root = Queue[0]
+		Queue = Queue[1:]
+		result = append(result, Root.Value)
+		if Root.Left != nil{
+			Queue = append(Queue, Root.Left)
+		}
+		if Root.Right !=nil{
+			Queue = append(Queue, Root.Right)
+		}
+	}
+	return result
+}
+
+
 
