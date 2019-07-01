@@ -89,6 +89,17 @@ var _ = Describe("Tree", func() {
 			testtree.TestMakeitnil()
 			fmt.Print(testtree)
 		})
+
+		It("New Delete ", func() {
+			Tree := NewTree(29)
+			Tree.Insert(19)
+			Tree.Insert(20)
+			Tree.Insert(18)
+			Tree.Insert(1)
+			fmt.Printf("Tree is %v ",Tree.Level())
+			Expect(Tree.DeleteLeaf(0)).To(Equal(-1))
+			Expect(Tree.DeleteLeaf(1)).To(Equal(1))
+		})
 	})
 
 })

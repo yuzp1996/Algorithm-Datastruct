@@ -64,13 +64,14 @@ func (Tree *Leaf)Delete(value int)int{
 			Tree = Tree.Left
 		}
 	}
+
+	// 处理根节点的情况
 	if parentleaf.Value == -1{
 		parentleaf = nil
 	}
 
 
-
-	// 处理子节点有两个节点的  最终变成parentleaf 和 leaf  使得这中情况的处理方法和其他的一个或者没有子节点的处理方法一致
+	// 处理子节点有两个节点的  最终变成parentleaf 和 leaf  使得这种情况的处理方法和其他的一个或者没有子节点的处理方法一致
 
 	if leaf.Right != nil && leaf.Left != nil{
 		DeletePTree := leaf
@@ -118,6 +119,27 @@ func (Tree *Leaf)Delete(value int)int{
 
 //有两个节点的 其实就比有一个节点的多出了一步  那就是把值给赋过去  最终就是变成最小值的叶子的删除
 
+
+
+
+func (Tree *Leaf)DeleteLeaf(value int)int{
+	Root := Tree
+	// find the leaf
+	for{
+		if Root == nil{
+			fmt.Printf("no such leaf")
+			return -1
+		}else if value > Root.Value{
+			Root = Root.Right
+		}else if value < Root.Value{
+			Root = Root.Left
+		}else if value == Root.Value{
+			break
+		}
+	}
+
+	return Root.Value
+}
 
 
 
