@@ -137,8 +137,25 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 			break
 		}
 	}
+	// just one leaf or no leaf
 
-	return Root.Value
+	if Root.Left == nil && Root.Right==nil{
+		return Root.Value
+	}else if Root.Right != nil && Root.Left != nil{
+		return Root.Value
+	}else{
+		if Root.Right != nil{
+
+		}else if Root.Left != nil{
+
+		}
+		return Root.Value
+	}
+
+
+
+
+
 }
 
 
