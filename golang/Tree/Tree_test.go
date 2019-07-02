@@ -90,15 +90,26 @@ var _ = Describe("Tree", func() {
 			fmt.Print(testtree)
 		})
 
-		It("New Delete ", func() {
+		It("New Delete", func() {
 			Tree := NewTree(29)
 			Tree.Insert(19)
 			Tree.Insert(20)
 			Tree.Insert(18)
 			Tree.Insert(1)
-			fmt.Printf("Tree is %v ",Tree.Level())
+			Tree.Insert(45)
+			Tree.Insert(40)
+			Tree.Insert(50)
+			fmt.Printf("Tree is %v \n",Tree.Level())
 			Expect(Tree.DeleteLeaf(0)).To(Equal(-1))
+			Expect(Tree.Level()).To(Equal([]int{29,19,45,18,20,40,50,1}))
 			Expect(Tree.DeleteLeaf(1)).To(Equal(1))
+			Expect(Tree.Level()).To(Equal([]int{29,19,45,18,20,40,50}))
+			Expect(Tree.DeleteLeaf(45)).To(Equal(45))
+			Expect(Tree.Level()).To(Equal([]int{29,19,50,18,20,40}))
+			Expect(Tree.DeleteLeaf(50)).To(Equal(50))
+			Expect(Tree.Level()).To(Equal([]int{29,19,40,18,20}))
+			Expect(Tree.DeleteLeaf(19)).To(Equal(19))
+			Expect(Tree.Level()).To(Equal([]int{29,20,40,18}))
 		})
 	})
 

@@ -124,38 +124,68 @@ func (Tree *Leaf)Delete(value int)int{
 
 func (Tree *Leaf)DeleteLeaf(value int)int{
 	Root := Tree
-	// find the leaf
+	ParentRoot := NewTree(-1)
+	// find the leaf and it's parent leaf
 	for{
 		if Root == nil{
 			fmt.Printf("no such leaf")
 			return -1
 		}else if value > Root.Value{
+			ParentRoot = Root
 			Root = Root.Right
 		}else if value < Root.Value{
+			ParentRoot = Root
 			Root = Root.Left
 		}else if value == Root.Value{
 			break
 		}
 	}
-	// just one leaf or no leaf
+	if ParentRoot.Value == -1{
+		fmt.Printf("\nthe value %v is the Root of this tree", Root.Value)
+	}
 
+	if Root.Right != nil && Root.Left != nil{
+		pleaf := Root
+		leaf := Root.Right
+		for{
+			if leaf.Left != nil{
+				pleaf = leaf
+				leaf =leaf.Left
+			}else{
+				break
+			}
+		}
+		Root.Value, leaf.Value = leaf.Value, Root.Value
+		Root = leaf
+		ParentRoot = pleaf
+	}
+
+	// just one leaf or no leaf
+	// no leaf
 	if Root.Left == nil && Root.Right==nil{
-		return Root.Value
-	}else if Root.Right != nil && Root.Left != nil{
+		if ParentRoot.Left == Root{
+			ParentRoot.Left = nil
+		}else{
+			ParentRoot.Right = nil
+		}
 		return Root.Value
 	}else{
+		// just one leaf
 		if Root.Right != nil{
-
+			if ParentRoot.Right == Root{
+				ParentRoot.Right = Root.Right
+			}else{
+				ParentRoot.Left = Root.Right
+			}
 		}else if Root.Left != nil{
-
+			if ParentRoot.Right == Root{
+				ParentRoot.Right = Root.Left
+			}else{
+				ParentRoot.Left = Root.Left
+			}
 		}
 		return Root.Value
 	}
-
-
-
-
-
 }
 
 
