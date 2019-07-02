@@ -68,28 +68,6 @@ var _ = Describe("Tree", func() {
 		It("search the right leaf", func() {
 			Expect(BianrysearchRoot.Search(2)).To(Equal(true))
 		})
-		It("delete the right leaf", func() {
-			result1 := BianrysearchRoot.LevelOrder([]int{})
-			fmt.Print(result1)
-
-			Expect(BianrysearchRoot.Delete(3)).To(Equal(3))
-			Expect(BianrysearchRoot.Delete(5)).To(Equal(-1))
-			Expect(BianrysearchRoot.Delete(2)).To(Equal(2))
-			Expect(BianrysearchRoot.Delete(1)).To(Equal(1))
-			fmt.Print(BianrysearchRoot.LevelOrder([]int{}))
-			fmt.Print("\n now the tree is %v", BianrysearchRoot)
-
-			Expect(BianrysearchRoot.Delete(4)).To(Equal(4))
-			fmt.Print("\n 1now the tree is %v", BianrysearchRoot)
-			result := BianrysearchRoot.LevelOrder([]int{})
-			fmt.Print(result)
-		})
-		It("Test make tree nil",func(){
-			testtree := NewTree(110)
-			testtree.TestMakeitnil()
-			fmt.Print(testtree)
-		})
-
 		It("New Delete", func() {
 			Tree := NewTree(29)
 			Tree.Insert(19)
@@ -116,8 +94,6 @@ var _ = Describe("Tree", func() {
 			Expect(Tree.Level()).To(Equal([]int{40,18}))
 			Expect(Tree.DeleteLeaf(40)).To(Equal(40))
 			Expect(Tree.Level()).To(Equal([]int{18}))
-
-
 		})
 	})
 

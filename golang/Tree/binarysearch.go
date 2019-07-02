@@ -43,85 +43,6 @@ func (Tree *Leaf)Search(value int)bool{
 	}
 }
 
-func (Tree *Leaf)Delete(value int)int{
-
-	leaf := Tree
-	parentleaf := NewTree(-1)
-	// 找到节点
-	for {
-		if Tree == nil {
-			fmt.Print("There is no such node value as %d", value)
-			return -1
-		}
-		if Tree.Value == value {
-			parentleaf = parentleaf
-			leaf = Tree
-			break
-		}
-		if value > Tree.Value {
-			parentleaf = Tree
-			Tree = Tree.Right
-		} else {
-			parentleaf = Tree
-			Tree = Tree.Left
-		}
-	}
-
-	// 处理根节点的情况
-	if parentleaf.Value == -1{
-		parentleaf = nil
-	}
-
-
-	// 处理子节点有两个节点的  最终变成parentleaf 和 leaf  使得这种情况的处理方法和其他的一个或者没有子节点的处理方法一致
-
-	if leaf.Right != nil && leaf.Left != nil{
-		DeletePTree := leaf
-		DeleteTree := leaf.Right
-		for {
-			if(DeleteTree.Left != nil){
-				DeletePTree = DeleteTree
-				DeleteTree = DeleteTree.Left
-			}
-			break
-		}
-		leaf.Value = DeleteTree.Value
-		parentleaf = DeletePTree
-		leaf = DeleteTree
-	}
-
-	//上面已经处理成子节点了 也就是只有一个 或者没有节点的情况了
-
-	// 把需要被删除节点的 子节点 都挂到child上  这里其实还剩只有一个节点需要处理的情况
-	child := NewTree(-1)
-	if leaf.Left != nil{
-		child = leaf.Left
-	}else if leaf.Right != nil{
-		child= leaf.Right
-	}
-	if child.Value == -1{
-		child = nil
-	}
-
-	// 把child放到正确的位置上
-	if parentleaf == nil{  // 处理删除根节点
-		Tree = child
-		if Tree == nil{
-			fmt.Print("\n Root can not be deleted ")
-		}
-		return value
-	}else if parentleaf.Left == leaf{
-		parentleaf.Left = child
-		return value
-	}else{
-		parentleaf.Right = child
-		return value
-	}
-}
-
-//有两个节点的 其实就比有一个节点的多出了一步  那就是把值给赋过去  最终就是变成最小值的叶子的删除
-
-
 
 
 func (Tree *Leaf)DeleteLeaf(value int)int{
@@ -142,10 +63,8 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 			break
 		}
 	}
-	if ParentRoot.Value == -1{
-		fmt.Printf("\nthe value %v is the Root of this tree", Root.Value)
-	}
 
+    //经过这个的处理 之后只有没有或者单个leaf的情况了
 	if Root.Right != nil && Root.Left != nil{
 		pleaf := Root
 		leaf := Root.Right
@@ -162,9 +81,23 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 		ParentRoot = pleaf
 	}
 
+	// 经过上面的处理 现在如果paroot还是-1的话 那肯定是只有
+	// 1、删除根节点
+	// 2、根节点只有一个或者没有子树
+	if ParentRoot.Value == -1{
+		value := Root.Value
+		if Root.Left != nil{
+			*Tree = *(Root.Left)
+		}else if Root.Right != nil{
+			*Tree = *(Root.Right)
+		}else {
+			Tree = nil
+		}
+		return value
+	}
 	// just one leaf or no leaf
 	// no leaf
-	// 或者抽象出来一个child的东西 现在肯定是 最多一个leaf了
+	// 现在肯定是 最多一个leaf了
 	child := NewTree(-1)
 	if Root.Left != nil{
 		child = Root.Left
@@ -180,34 +113,6 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 		ParentRoot.Left = child
 	}
 	return Root.Value
-
-	//if Root.Left == nil && Root.Right==nil{
-	//	if ParentRoot.Left == Root{
-	//		ParentRoot.Left = nil
-	//	}else{
-	//		ParentRoot.Right = nil
-	//	}
-	//	return Root.Value
-	//}else{
-	//	// just one leaf
-	//	if Root.Right != nil{
-	//		if ParentRoot.Right == Root{
-	//			ParentRoot.Right = Root.Right
-	//		}else{
-	//			ParentRoot.Left = Root.Right
-	//		}
-	//	}else if Root.Left != nil{
-	//		if ParentRoot.Right == Root{
-	//			ParentRoot.Right = Root.Left
-	//		}else{
-	//			ParentRoot.Left = Root.Left
-	//		}
-	//	}
-	//	return Root.Value
-	//}
-
-
-
 }
 
 
