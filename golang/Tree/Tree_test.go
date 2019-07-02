@@ -110,6 +110,14 @@ var _ = Describe("Tree", func() {
 			Expect(Tree.Level()).To(Equal([]int{29,19,40,18,20}))
 			Expect(Tree.DeleteLeaf(19)).To(Equal(19))
 			Expect(Tree.Level()).To(Equal([]int{29,20,40,18}))
+			Expect(Tree.DeleteLeaf(29)).To(Equal(29))
+			Expect(Tree.Level()).To(Equal([]int{40,20,18}))
+			Expect(Tree.DeleteLeaf(20)).To(Equal(20))
+			Expect(Tree.Level()).To(Equal([]int{40,18}))
+			Expect(Tree.DeleteLeaf(40)).To(Equal(40))
+			Expect(Tree.Level()).To(Equal([]int{18}))
+
+
 		})
 	})
 

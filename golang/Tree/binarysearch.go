@@ -1,6 +1,8 @@
 package Linkedtree
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func (Tree *Leaf)Insert(value int){
 	for{
@@ -162,30 +164,50 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 
 	// just one leaf or no leaf
 	// no leaf
-	if Root.Left == nil && Root.Right==nil{
-		if ParentRoot.Left == Root{
-			ParentRoot.Left = nil
-		}else{
-			ParentRoot.Right = nil
-		}
-		return Root.Value
+	// 或者抽象出来一个child的东西 现在肯定是 最多一个leaf了
+	child := NewTree(-1)
+	if Root.Left != nil{
+		child = Root.Left
+	}else if Root.Right != nil{
+		child = Root.Right
 	}else{
-		// just one leaf
-		if Root.Right != nil{
-			if ParentRoot.Right == Root{
-				ParentRoot.Right = Root.Right
-			}else{
-				ParentRoot.Left = Root.Right
-			}
-		}else if Root.Left != nil{
-			if ParentRoot.Right == Root{
-				ParentRoot.Right = Root.Left
-			}else{
-				ParentRoot.Left = Root.Left
-			}
-		}
-		return Root.Value
+		child = nil
 	}
+
+	if ParentRoot.Right == Root{
+		ParentRoot.Right = child
+	}else if ParentRoot.Left == Root{
+		ParentRoot.Left = child
+	}
+	return Root.Value
+
+	//if Root.Left == nil && Root.Right==nil{
+	//	if ParentRoot.Left == Root{
+	//		ParentRoot.Left = nil
+	//	}else{
+	//		ParentRoot.Right = nil
+	//	}
+	//	return Root.Value
+	//}else{
+	//	// just one leaf
+	//	if Root.Right != nil{
+	//		if ParentRoot.Right == Root{
+	//			ParentRoot.Right = Root.Right
+	//		}else{
+	//			ParentRoot.Left = Root.Right
+	//		}
+	//	}else if Root.Left != nil{
+	//		if ParentRoot.Right == Root{
+	//			ParentRoot.Right = Root.Left
+	//		}else{
+	//			ParentRoot.Left = Root.Left
+	//		}
+	//	}
+	//	return Root.Value
+	//}
+
+
+
 }
 
 
