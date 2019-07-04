@@ -94,6 +94,23 @@ var _ = Describe("Tree", func() {
 			Expect(Tree.Level()).To(Equal([]int{40,18}))
 			Expect(Tree.DeleteLeaf(40)).To(Equal(40))
 			Expect(Tree.Level()).To(Equal([]int{18}))
+			Expect(Tree.DeleteLeaf(18)).To(Equal(18))
+			Expect(Tree.Level()).To(Equal([]int{-1}))
+
+		})
+		It("FindParentandChild will return the parent and the leaf", func() {
+			Tree := NewTree(100)
+			Tree.Insert(50)
+			Tree.Insert(150)
+			Tree.Insert(25)
+			Tree.Insert(75)
+			Tree.Insert(125)
+			Tree.Insert(200)
+			fmt.Printf("New the tree is %v", Tree.Level())
+			Expect(Tree.FindParentandChild(50)).To(Equal([3]int{100,25,75}))
+			Expect(Tree.FindParentandChild(100)).To(Equal([3]int{100,50,150}))
+			Tree.DeleteLeaf(200)
+			Expect(Tree.FindParentandChild(150)).To(Equal([3]int{100,125,-1}))
 		})
 	})
 

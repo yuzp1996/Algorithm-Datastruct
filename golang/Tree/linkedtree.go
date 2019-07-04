@@ -24,6 +24,21 @@ func (Root *Leaf)TestMakeitnil(){
 	return
 }
 
+func (Root *Leaf)GetLeaf()int{
+	if Root == nil || Root.Left == nil{
+		return -1
+	}
+	return Root.Left.Value
+}
+
+func (Root *Leaf)GetRight()int{
+	if Root == nil || Root.Right == nil{
+		return -1
+	}
+	return Root.Right.Value
+}
+
+
 
 func (Root *Leaf) LeafAdd(value int) error {
 	if Root.Left == nil {

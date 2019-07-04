@@ -43,7 +43,28 @@ func (Tree *Leaf)Search(value int)bool{
 	}
 }
 
-
+func (Tree *Leaf)FindParentandChild(value int)([3]int){
+	Ptree := NewTree(-1)
+	for{
+		if Tree == nil{
+			return [3]int{-1,-1,-1}
+		}
+		if Tree.Value == value{
+			break
+		}
+		if value > Tree.Value{
+			Ptree = Tree
+			Tree = Tree.Right
+		}else {
+			Ptree = Tree
+			Tree = Tree.Left
+		}
+	}
+	if Ptree.Value == -1{
+		*Ptree = *Tree
+	}
+	return [3]int{Ptree.Value,Tree.GetLeaf(),Tree.GetRight()}
+}
 
 func (Tree *Leaf)DeleteLeaf(value int)int{
 	Root := Tree
@@ -91,7 +112,7 @@ func (Tree *Leaf)DeleteLeaf(value int)int{
 		}else if Root.Right != nil{
 			*Tree = *(Root.Right)
 		}else {
-			Tree = nil
+			*Tree = *(NewTree(-1))
 		}
 		return value
 	}
