@@ -22,6 +22,8 @@ var _ = Describe("Skiplist", func() {
 
 
 			Expect(skiplist.Search(12)).To(Equal(true))
+
+
 		})
 	})
 })
