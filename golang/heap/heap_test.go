@@ -75,4 +75,21 @@ var _ = Describe("Heap", func() {
 		})
 	})
 
+	Context("top(K) insert", func() {
+		JustBeforeEach(func() {
+			Heap = heap.NewHeap(5)
+		})
+		It("top(K) insert should hold the biggest K value ", func() {
+			Heap.TopKInsert(10)
+			Heap.TopKInsert(12)
+			Heap.TopKInsert(4)
+			Heap.TopKInsert(5)
+			Heap.TopKInsert(7)
+			Heap.TopKInsert(3)
+			Expect(Heap.GetTopKData()).To(Equal([]int{4, 5, 10, 12, 7}))
+			Heap.TopKInsert(6)
+			Expect(Heap.GetTopKData()).To(Equal([]int{5, 6, 10, 12, 7}))
+		})
+	})
+
 })
