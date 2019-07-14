@@ -51,7 +51,6 @@ var _ = Describe("Heap", func() {
 			Heap.RemoveBigTop()
 			Heap.RemoveBigTop()
 
-
 			Expect(Heap.Data[1]).To(Equal(15))
 			Expect(Heap.Data[2]).To(Equal(14))
 			//Expect(Heap.Data[3]).To(Equal(0))
@@ -62,16 +61,16 @@ var _ = Describe("Heap", func() {
 	Context("Sort should work ", func() {
 		It("sort should be good", func() {
 
-			Heap.Data[1]=7
-			Heap.Data[2]=3
-			Heap.Data[3]=9
-			Heap.Data[4]=14
-			Heap.Data[5]=16
+			Heap.Data[1] = 7
+			Heap.Data[2] = 3
+			Heap.Data[3] = 9
+			Heap.Data[4] = 14
+			Heap.Data[5] = 16
 			Heap.Count = 5
 
 			Heap.Sort()
-			for i:=1;i<5;i++{
-				Expect(Heap.Data[i]<Heap.Data[i+1]).To(Equal(true))
+			for i := 1; i < 5; i++ {
+				Expect(Heap.Data[i] < Heap.Data[i+1]).To(Equal(true))
 			}
 		})
 	})

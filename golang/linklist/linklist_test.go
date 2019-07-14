@@ -1,17 +1,17 @@
 package main
 
 import (
-	"testing"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"testing"
 )
 
-func Testlinklist(t *testing.T){
+func Testlinklist(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Test Linklist")
 }
 
-func Createlinklist()*LinkList{
+func Createlinklist() *LinkList {
 	testlinklist := NewLinkList(1)
 	testlinklist.InsterInTail(2)
 	testlinklist.InsterInTail(3)
@@ -24,8 +24,8 @@ var _ = Describe("Shopping cart", func() {
 	testlinklist := Createlinklist()
 
 	Context("Find the middle element of a linklist", func() {
-		It("Find the middle element",func(){
-		 	Expect(testlinklist.FindMiddlenode().Getvalue()).Should(Equal(3))
+		It("Find the middle element", func() {
+			Expect(testlinklist.FindMiddlenode().Getvalue()).Should(Equal(3))
 		})
 	})
 	Context("reserver the link list", func() {

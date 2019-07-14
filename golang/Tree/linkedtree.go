@@ -15,30 +15,27 @@ func NewTree(value int) *Leaf {
 	return &Leaf{value, nil, nil}
 }
 
-
-func (Root *Leaf)TestMakeitnil(){
+func (Root *Leaf) TestMakeitnil() {
 	//Root=nil
 	fmt.Print("after nil")
-	Root.Value=111
+	Root.Value = 111
 	fmt.Print(Root)
 	return
 }
 
-func (Root *Leaf)GetLeaf()int{
-	if Root == nil || Root.Left == nil{
+func (Root *Leaf) GetLeaf() int {
+	if Root == nil || Root.Left == nil {
 		return -1
 	}
 	return Root.Left.Value
 }
 
-func (Root *Leaf)GetRight()int{
-	if Root == nil || Root.Right == nil{
+func (Root *Leaf) GetRight() int {
+	if Root == nil || Root.Right == nil {
 		return -1
 	}
 	return Root.Right.Value
 }
-
-
 
 func (Root *Leaf) LeafAdd(value int) error {
 	if Root.Left == nil {
@@ -60,10 +57,9 @@ func (Root *Leaf) RightAdd(value int) error {
 	}
 }
 
-func (Root *Leaf)Add(value int){
+func (Root *Leaf) Add(value int) {
 
 }
-
 
 func (Root *Leaf) Preorder(result []int) []int {
 	if Root == nil {
@@ -96,47 +92,44 @@ func (Root *Leaf) BehindOrder(result []int) []int {
 	return result
 }
 
-func (Root *Leaf)LevelOrder(result []int)[]int{
-	if Root == nil{
+func (Root *Leaf) LevelOrder(result []int) []int {
+	if Root == nil {
 		return result
 	}
 	Queue := []Leaf{}
 	Queue = append(Queue, *Root)
-	for len(Queue) > 0{
+	for len(Queue) > 0 {
 		root := Queue[0]
 		Queue = Queue[1:]
 		result = append(result, root.Value)
-		if root.Left != nil{
+		if root.Left != nil {
 			Queue = append(Queue, *root.Left)
 		}
-		if root.Right != nil{
+		if root.Right != nil {
 			Queue = append(Queue, *root.Right)
 		}
 	}
 	return result
 }
 
-func (Root *Leaf)Level()[]int{
+func (Root *Leaf) Level() []int {
 	result := []int{}
-	if Root == nil{
+	if Root == nil {
 		return result
 	}
 	Queue := []*Leaf{}
 	// 添加数据比较靠谱的方式
-	Queue = append(Queue,Root)
-	for(len(Queue)>0){
+	Queue = append(Queue, Root)
+	for len(Queue) > 0 {
 		Root = Queue[0]
 		Queue = Queue[1:]
 		result = append(result, Root.Value)
-		if Root.Left != nil{
+		if Root.Left != nil {
 			Queue = append(Queue, Root.Left)
 		}
-		if Root.Right !=nil{
+		if Root.Right != nil {
 			Queue = append(Queue, Root.Right)
 		}
 	}
 	return result
 }
-
-
-

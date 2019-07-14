@@ -11,7 +11,7 @@ var _ = Describe("Skiplist", func() {
 	Context("Skiplist can find the number ", func() {
 		It("If I delete some number It will not find this number", func() {
 			skiplist := NewSkipList()
-			for i:=1;i<20;i++{
+			for i := 1; i < 20; i++ {
 				skiplist.Insert(i)
 			}
 			skiplist.Delete(12)
@@ -23,34 +23,3 @@ var _ = Describe("Skiplist", func() {
 	})
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

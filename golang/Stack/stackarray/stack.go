@@ -8,54 +8,50 @@ type StackArray struct {
 	top int
 }
 
-func NewStackArray()*StackArray{
+func NewStackArray() *StackArray {
 	return &StackArray{
-		data:make([]interface{},32,32),//这个是切片偶
-		top:-1,
+		data: make([]interface{}, 32, 32), //这个是切片偶
+		top:  -1,
 	}
 }
 
-
-func(this *StackArray)Top()interface{}{
-	if this.IsEmpty(){
+func (this *StackArray) Top() interface{} {
+	if this.IsEmpty() {
 		fmt.Printf("Empty Stack")
 		return nil
 	}
 	return this.data[this.top]
 }
 
-func(this *StackArray)Flush(){
-	this.top=-1
+func (this *StackArray) Flush() {
+	this.top = -1
 }
 
-
-func (this *StackArray)IsEmpty()(bool){
-	if this.top<0{
+func (this *StackArray) IsEmpty() bool {
+	if this.top < 0 {
 		return true
-	}else{
+	} else {
 		return false
 	}
 }
 
-func(this *StackArray)PrintStack(){
-	if this.IsEmpty(){
+func (this *StackArray) PrintStack() {
+	if this.IsEmpty() {
 		fmt.Println("empty stackarray")
-	}else{
-		for i := this.top;i>=0;i--{
-			fmt.Printf("%v,",this.data[i])
+	} else {
+		for i := this.top; i >= 0; i-- {
+			fmt.Printf("%v,", this.data[i])
 		}
 	}
 }
 
-
-
-func (this *StackArray)Push(v interface{}){
+func (this *StackArray) Push(v interface{}) {
 	this.top += 1
 	this.data[this.top] = v
 }
 
-func (this *StackArray)Pop() (v interface{}){
-	if this.IsEmpty(){
+func (this *StackArray) Pop() (v interface{}) {
+	if this.IsEmpty() {
 		fmt.Println("Empty Stack ....")
 		return nil
 	}
@@ -65,10 +61,10 @@ func (this *StackArray)Pop() (v interface{}){
 
 }
 
-func main(){
+func main() {
 	newstack := NewStackArray()
 	newstack.Push(1)
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 	newstack.Push(2)
 	newstack.Push(3)
@@ -77,18 +73,18 @@ func main(){
 	newstack.Push(6)
 	newstack.PrintStack()
 
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 
-	fmt.Printf("pop is %v\n",newstack.Pop())
+	fmt.Printf("pop is %v\n", newstack.Pop())
 	newstack.PrintStack()
 }

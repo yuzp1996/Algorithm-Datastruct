@@ -5,66 +5,62 @@ import (
 )
 
 type LinkNode struct {
-	next *LinkNode
+	next  *LinkNode
 	value int
 }
 
 type LinkList struct {
-	head *LinkNode
+	head   *LinkNode
 	length int
 }
 
-func NewLinkNode(value int)*LinkNode{
-	return &LinkNode{nil,value}
+func NewLinkNode(value int) *LinkNode {
+	return &LinkNode{nil, value}
 }
 
-func NewLinkList(headvalue int)*LinkList{
-	return &LinkList{NewLinkNode(headvalue),1}
+func NewLinkList(headvalue int) *LinkList {
+	return &LinkList{NewLinkNode(headvalue), 1}
 }
 
-func (this *LinkNode)Getvalue()int{
+func (this *LinkNode) Getvalue() int {
 	return this.value
 }
 
-func (this *LinkNode)GetNext()*LinkNode{
+func (this *LinkNode) GetNext() *LinkNode {
 	return this.next
 }
 
-
-
-func(this *LinkList)PrintList(){
+func (this *LinkList) PrintList() {
 	per := this.head
-	for{
-		if per != nil{
-			fmt.Printf("%d -> ",per.value)
+	for {
+		if per != nil {
+			fmt.Printf("%d -> ", per.value)
 			per = per.next
-		}else{
+		} else {
 			break
 		}
 	}
 	fmt.Println()
 }
 
-
-
-func (this *LinkList)searchwithvalue(value interface{})(*LinkNode,int){
+func (this *LinkList) searchwithvalue(value interface{}) (*LinkNode, int) {
 	per := this.head
 	index := 1
-	for{
+	for {
 		if per != nil {
 			if per.value == value {
-				return per,index
+				return per, index
 			} else {
 				per = per.next
 				index++
 			}
-		}else{
-			return nil,0
+		} else {
+			return nil, 0
 		}
 	}
 }
 
-func (this *LinkList)InsterInhead(value int){
+func (this *LinkList) InsterInhead(value int) {
 	newnode := NewLinkNode(value)
 	pernext := this.head
 	newnode.next = pernext
@@ -72,14 +68,13 @@ func (this *LinkList)InsterInhead(value int){
 	this.length++
 }
 
-
-func (this *LinkList)InsterInTail(value int){
+func (this *LinkList) InsterInTail(value int) {
 	newnode := NewLinkNode(value)
 	per := this.head
-	for{
-		if per.next != nil{
+	for {
+		if per.next != nil {
 			per = per.next
-		}else{
+		} else {
 			per.next = newnode
 			this.length++
 			return
@@ -87,28 +82,27 @@ func (this *LinkList)InsterInTail(value int){
 	}
 }
 
-func(this *LinkList)FindwithIndex(index int)*LinkNode{
-	if index<1||index>this.length{
+func (this *LinkList) FindwithIndex(index int) *LinkNode {
+	if index < 1 || index > this.length {
 		fmt.Println("index unexpected")
 		return nil
 	}
 	head := this.head
-	for i:=1;i<index;i++{
+	for i := 1; i < index; i++ {
 		head = head.next
 	}
 	return head
 }
 
-
 //在index的下面加上这个
-func(this *LinkList)InsertAtIndex(index int, value int){
-	if index > this.length || index<0 {
-		fmt.Printf("wrong index when insert at index %d  length is %d\n",index, this.length)
+func (this *LinkList) InsertAtIndex(index int, value int) {
+	if index > this.length || index < 0 {
+		fmt.Printf("wrong index when insert at index %d  length is %d\n", index, this.length)
 		return
 	}
 	newnode := NewLinkNode(value)
 	per := this.head
-	for i:=0;i<index;i++{
+	for i := 0; i < index; i++ {
 		per = per.next
 	}
 	beforeindex := per
@@ -118,32 +112,30 @@ func(this *LinkList)InsertAtIndex(index int, value int){
 	this.length++
 }
 
-func(this *LinkList)DeleteHead(){
-	if this.length>=1{
+func (this *LinkList) DeleteHead() {
+	if this.length >= 1 {
 		newhead := this.head.next
 		this.head = newhead
 		this.length--
 	}
 }
 
-
 //    1 -> 0 -> 5
 //head     1    2
 //index         2
 
-
-func(this *LinkList)findfianlNode()(*LinkNode){
+func (this *LinkList) findfianlNode() *LinkNode {
 	per := this.head
-	for{
-		if per.next != nil{
+	for {
+		if per.next != nil {
 			per = per.next
-		}else{
+		} else {
 			return per
 		}
 	}
 }
 
-func main(){
+func main() {
 	Merge()
 	LRU()
 	NewList := NewLinkList(1)
@@ -164,10 +156,9 @@ func main(){
 	//	}
 	//}
 
-
 }
 
-func Merge(){
+func Merge() {
 	NewList := NewLinkList(1)
 	NewList.InsterInTail(11)
 	NewList.InsterInTail(23)
@@ -178,16 +169,15 @@ func Merge(){
 	SecondList.InsterInTail(43)
 	SecondList.InsterInTail(54)
 
-
-	FinalList := MergeLinkList(NewList,SecondList)
+	FinalList := MergeLinkList(NewList, SecondList)
 	FinalList.PrintList()
 }
 
-func LRU(){
+func LRU() {
 	fmt.Println("Begin LRU")
 	linklistforLRU := NewLinkList(11)
 	linklistforLRU.PrintList()
-	for i:=0; i<10;i++{
+	for i := 0; i < 10; i++ {
 		linklistforLRU.LRU(i)
 		linklistforLRU.PrintList()
 	}
@@ -200,8 +190,7 @@ func LRU(){
 	fmt.Println(middlenode.Getvalue())
 }
 
-
-func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkList) {
+func MergeLinkList(firstlink *LinkList, secondlink *LinkList) (finallink *LinkList) {
 	finallink = NewLinkList(0)
 
 	firstlink.PrintList()
@@ -209,7 +198,7 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 	finallink.PrintList()
 
 	for {
-		if firstlink.length != 0 && secondlink.length != 0{
+		if firstlink.length != 0 && secondlink.length != 0 {
 			if firstlink.head.Getvalue() <= secondlink.head.Getvalue() {
 				finallink.InsertAtIndex(finallink.length-1, firstlink.head.Getvalue())
 				firstlink.DeleteHead()
@@ -229,41 +218,39 @@ func MergeLinkList(firstlink *LinkList, secondlink *LinkList)(finallink *LinkLis
 	return finallink
 }
 
-
-func (this *LinkList)LRU(value int){
+func (this *LinkList) LRU(value int) {
 	//三种情况  有，删放到头部即可、 没有，没满直接放在头部、 没有，满了 去尾头增
 	capoflru := 5
 	//有
-	if node,index := this.searchwithvalue(value);node!=nil&&index!=0{
-		if index==1{
+	if node, index := this.searchwithvalue(value); node != nil && index != 0 {
+		if index == 1 {
 			return
-		}else{
-			pre:=this.FindwithIndex(index-1)
-			nextnode := this.FindwithIndex(index+1)
-			pre.next=nextnode
+		} else {
+			pre := this.FindwithIndex(index - 1)
+			nextnode := this.FindwithIndex(index + 1)
+			pre.next = nextnode
 			this.InsterInhead(value)
 		}
-	}else{
+	} else {
 		//没有
-		if this.length<capoflru{
+		if this.length < capoflru {
 			this.InsterInhead(value)
-		}else{
-			finalnode := this.FindwithIndex(capoflru-1)
-			finalnode.next=nil
+		} else {
+			finalnode := this.FindwithIndex(capoflru - 1)
+			finalnode.next = nil
 			this.InsterInhead(value)
 		}
 
 	}
 }
 
-
-func(this *LinkList)FindMiddlenode()*LinkNode{
-	if this.length<=2{
+func (this *LinkList) FindMiddlenode() *LinkNode {
+	if this.length <= 2 {
 		return this.head
 	}
 	fast, slow := this.head, this.head
 	//fast要首先保证不为nil  可以试想  只有在fast在最后一个元素或者最后一个元素的next(nil)的时候  才应该结束
-	for fast!=nil && fast.next!=nil{
+	for fast != nil && fast.next != nil {
 		fast = fast.next.next
 		slow = slow.next
 	}
@@ -271,18 +258,17 @@ func(this *LinkList)FindMiddlenode()*LinkNode{
 
 }
 
-
 //正常的应该就是头部插入 尾部插入  按照索引插入
 //https://blog.csdn.net/Charliewolf/article/details/82622014
 //https://blog.csdn.net/Charliewolf/article/details/82687642
 //http://www.cnblogs.com/kubixuesheng/p/4394509.html
-func (this *LinkList)reserve(){
+func (this *LinkList) reserve() {
 	this.PrintList()
 	newtail := NewLinkNode(0)
 	p := this.head
 	q := p.next
 	p.next = newtail
-	for q != nil{
+	for q != nil {
 		r := q.next
 		q.next = p
 		p = q
@@ -290,22 +276,20 @@ func (this *LinkList)reserve(){
 	}
 	this.head = p
 	this.PrintList()
-	}
+}
 
-
-func recursionresrver(head *LinkNode)*LinkNode{
-	if head.next==nil{
+func recursionresrver(head *LinkNode) *LinkNode {
+	if head.next == nil {
 		return head
 	}
 	newhead := recursionresrver(head.next)
 	head.next.next = head
-	head.next=nil
+	head.next = nil
 	return newhead
 }
 
-
-func rescurionreserver(head *LinkNode)*LinkNode{
-	if head.next == nil{
+func rescurionreserver(head *LinkNode) *LinkNode {
+	if head.next == nil {
 		return head
 	}
 	newhead := recursionresrver(head.next)
@@ -327,32 +311,24 @@ func rescurionreserver(head *LinkNode)*LinkNode{
 //
 //递归递归  先递过去 再归过来
 
-
-
-func reserverrecursion(head *LinkNode)*LinkNode{
-	if head.next == nil{
+func reserverrecursion(head *LinkNode) *LinkNode {
+	if head.next == nil {
 		return head
 	}
 	newhead := recursionresrver(head.next) //递过去
-	head.next.next = head //归回来
+	head.next.next = head                  //归回来
 	head.next = nil
-	return  newhead
+	return newhead
 }
 
-
-
-
-
-
-
 //等号右面是不变的值
-func(this *LinkList)Reserver(){
+func (this *LinkList) Reserver() {
 	this.PrintList()
 	newtail := NewLinkNode(0)
 	p := this.head
 	q := p.next
 	p.next = newtail
-	for q != nil{
+	for q != nil {
 		r := q.next
 		q.next = p
 		p = q
@@ -361,26 +337,3 @@ func(this *LinkList)Reserver(){
 	this.head = p
 	this.PrintList()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

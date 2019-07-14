@@ -1,10 +1,9 @@
 package Sort
 
-
-func Insert_Sort(array []int)[]int{
-	for index,_ := range array{
-		for insert_index := index;insert_index>0;insert_index--{
-			if array[insert_index] < array[insert_index-1]{
+func Insert_Sort(array []int) []int {
+	for index, _ := range array {
+		for insert_index := index; insert_index > 0; insert_index-- {
+			if array[insert_index] < array[insert_index-1] {
 				array[insert_index], array[insert_index-1] = array[insert_index-1], array[insert_index]
 			}
 		}
@@ -46,14 +45,12 @@ func Insert_Sort(array []int)[]int{
 // 3 4 4 6 6 6 32 3
 // 3 3 4 4 6 6 6 32
 
-
-
 //比较的应该是某个索引下面的值  不是某个值  应该抓到索引
-func MayBubble(array []int)[]int{
-	for index,_ := range array{
-		for sindex,_ := range array[index+1:]{
-			if array[index] >= array[sindex+index+1]{
-				array[sindex+index+1],array[index] = array[index],array[sindex+index+1]
+func MayBubble(array []int) []int {
+	for index, _ := range array {
+		for sindex, _ := range array[index+1:] {
+			if array[index] >= array[sindex+index+1] {
+				array[sindex+index+1], array[index] = array[index], array[sindex+index+1]
 			}
 		}
 	}
