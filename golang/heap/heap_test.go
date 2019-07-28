@@ -2,12 +2,15 @@ package heap_test
 
 import (
 	"Algorithm-Datastruct/golang/heap"
+	"fmt"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("Heap", func() {
 	var Heap *heap.Heap
+	var Array1 []int
+	var Array2 []int
 	BeforeEach(func() {
 		Heap = heap.NewHeap(5)
 	})
@@ -50,15 +53,36 @@ var _ = Describe("Heap", func() {
 			Heap.BigTopInsert(14)
 			Heap.RemoveBigTop()
 			Heap.RemoveBigTop()
+			Heap.RemoveBigTop()
 
-			Expect(Heap.Data[1]).To(Equal(15))
-			Expect(Heap.Data[2]).To(Equal(14))
+
+			Expect(Heap.Data[1]).To(Equal(14))
+			//Expect(Heap.Data[2]).To(Equal(14))
 			//Expect(Heap.Data[3]).To(Equal(0))
 			//Expect(Heap.Data[4]).To(Equal(20))
 		})
 	})
 
-	Context("Sort should work ", func() {
+	Context("RemoveSmallTop should remove the top value", func() {
+		It("remove the top value ", func() {
+			Heap.SmallTopInsert(20)
+			Heap.SmallTopInsert(15)
+			Heap.SmallTopInsert(18)
+			Heap.SmallTopInsert(14)
+			fmt.Print(Heap.Data)
+			Heap.RemoveSmallTop()
+			Heap.RemoveSmallTop()
+			Heap.RemoveSmallTop()
+			fmt.Print(Heap.Data)
+
+			Expect(Heap.Data[1]).To(Equal(20))
+			//Expect(Heap.Data[3]).To(Equal(0))
+			//Expect(Heap.Data[4]).To(Equal(20))
+		})
+	})
+
+
+	Context("Sort should work", func() {
 		It("sort should be good", func() {
 
 			Heap.Data[1] = 7
@@ -89,6 +113,20 @@ var _ = Describe("Heap", func() {
 			Expect(Heap.GetTopKData()).To(Equal([]int{4, 5, 10, 12, 7}))
 			Heap.TopKInsert(6)
 			Expect(Heap.GetTopKData()).To(Equal([]int{5, 6, 10, 12, 7}))
+
+		})
+	})
+	Context("Merge sorted array", func() {
+		JustBeforeEach(func() {
+			Heap = heap.NewHeap(6)
+			Array1 = []int{3,5,7,9,11,13,15}
+			Array2 = []int{2,4,6,8,10,12,14}
+		})
+		It("sort should merge the arraies", func() {
+			Arrays:=[][]int{Array2,Array1}
+			mergestring := Heap.MergeArray(Arrays)
+			Expect(mergestring).To(Equal("23456789101112131415"))
+
 		})
 	})
 

@@ -60,7 +60,7 @@ func (heap *Heap) SmallTopInsert(value int) {
 
 // removetop:
 // 1. replace(exchange) the latst leaf with the top leaf
-// 2. heapify(chose the bigest value in the two leaf of the uesd top leaf to be the new top leaf)
+// 2. heapify(chose the bigger value in the two leaf of the uesd top leaf to be the new top leaf)
 // 3. do the next heapify
 // and it can tranform to a sort like below function named heapsort()
 
@@ -83,12 +83,44 @@ func (heap *Heap) RemoveBigTop() {
 		}
 		heap.Data[index], heap.Data[maxposi] = heap.Data[maxposi], heap.Data[index]
 		index = maxposi
-		if index*2 > heap.Count {
+		if index*2 >= heap.Count {
 			break
 		}
 	}
 	return
 }
+
+
+func (heap *Heap) RemoveSmallTop() {
+
+	if heap.Count <= 1 {
+		return
+	}
+	heap.Data[1] = heap.Data[heap.Count]
+	heap.Data[heap.Count] = 0
+	heap.Count -= 1
+
+	index := 1
+	minposi := 1
+	for {
+		if index*2 <= heap.Count && heap.Data[index*2] < heap.Data[index] {
+			minposi = index * 2
+		}
+		if index*2+1 <= heap.Count && heap.Data[index*2+1] < heap.Data[minposi] {
+			minposi = index*2 + 1
+		}
+		heap.Data[index], heap.Data[minposi] = heap.Data[minposi], heap.Data[index]
+		index = minposi
+
+		if index*2 >= heap.Count {
+			break
+		}
+	}
+	return
+}
+
+
+
 
 func (heap *Heap) Sort() {
 	// Build the heap to make sure the top is the biggest element
@@ -98,6 +130,7 @@ func (heap *Heap) Sort() {
 		// make the top the biggest value
 		heap.heapify(heapindex)
 	}
+	// now  heap is the big heap
 	for i := 1; i < heap.Count; {
 		heap.heapsort()
 	}
@@ -163,10 +196,15 @@ func (heap *Heap) heapsort() {
 		}
 		heap.Data[index], heap.Data[maxposi] = heap.Data[maxposi], heap.Data[index]
 		index = maxposi
-		if index*2 > heap.Count {
+
+		if index*2 >= heap.Count {
+			//最后一个会发生置换  换到第一个位置 这里这个最后会被最大的替代掉 不用比较也可以
+			//这个的最主要的原因是防止进行无所谓的比较与兑换吧
 			break
 		}
 	}
+
+
 	return
 }
 
