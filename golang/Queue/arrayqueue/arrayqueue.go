@@ -19,6 +19,9 @@ func NewArrayQueue(Cap int) *ArrayQueue {
 }
 
 func (this *ArrayQueue) Canenqueue() bool {
+	if len(this.Data)==0{
+		return true
+	}
 	if this.Tail >= this.Cap {
 		fmt.Println("Can Not Enqueue Now")
 		return false
@@ -69,6 +72,7 @@ func (this *ArrayQueue) PrintQueue() []interface{} {
 		fmt.Printf("Equeue is ")
 		for index <= this.Tail {
 			fmt.Printf(" %v", this.Data[index])
+			index++
 		}
 		return this.Data
 	} else {
