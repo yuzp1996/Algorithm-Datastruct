@@ -38,10 +38,13 @@ var _ = Describe("ListGraph", func() {
 			Expect(exsit).To(Equal(true))
 			Expect(path).To(Equal([]int{}))
 
-			exsit, path = Graph.BFS(0, 4)
-			Expect(exsit).To(Equal(true))
-			Expect(path).To(Equal([]int{0, 3, 4}))
+			//exsit, path = Graph.BFS(0, 4)
+			//Expect(exsit).To(Equal(true))
+			//Expect(path).To(Equal([]int{0, 3, 4}))
 
+			exsit, path = Graph.BFS(1, 0)
+			Expect(exsit).To(Equal(true))
+			Expect(path).To(Equal([]int{1, 3, 0}))
 		})
 	})
 
