@@ -72,42 +72,50 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 
 	Queue.Enqueue(source)
 	Prev[source] = -1
-
+	var result []int
 	for{
 		if Queue.Candequeue() {
 			queuehead := Queue.Data[Queue.Head].(int)
-
 			if queuehead != target {
 				Visited[queuehead] = true
 				childnodevalues := graph.GetNextList(queuehead)
 				Queue.Dequeue()
 				for _, value := range childnodevalues {
 					if !Visited[value]{
-						Prev[value] = queuehead
+						if Prev[value]==-1{
+							Prev[value] = queuehead
+						}
 						Queue.Enqueue(value)
 					}
 				}
 			}else{
-				Getpath(Prev,source,target)
-				return true, Prev
+				result = Getpath(Prev,source,target)
+				return true, result
 			}
 		}
 	}
 }
 
-//[-1, 3, 5, 0, 3, 0]
 
-func Getpath(Prev []int,source,target int){
+
+func Getpath(Prev []int,source,target int)(result []int){
 	if(Prev[target]!=-1 && target != source){
-		Getpath(Prev,source,Prev[target])
+		result = Getpath(Prev,source,Prev[target])
 	}
-	fmt.Printf("%d  ", target)
-
+	result = append(result,target)
+	return
 }
 
 
-
-
+func ValueInQueue(data []interface{}, value int)bool{
+	for index, _ := range data{
+		interval,_ := data[index].(int)
+		if interval == value{
+			return true
+		}
+	}
+	return false
+}
 
 
 
