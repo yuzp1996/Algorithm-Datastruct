@@ -1,6 +1,8 @@
 package ListGraph
 
-import "fmt"
+import (
+	"fmt"
+)
 import "Algorithm-Datastruct/golang/Queue/arrayqueue"
 
 type node struct {
@@ -71,6 +73,7 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 	}
 
 	Queue.Enqueue(source)
+	//只要进了队列  就说你是被访问的了
 	Prev[source] = -1
 	Visited[source] = true
 	var result []int
@@ -105,19 +108,6 @@ func Getpath(Prev []int,source,target int)(result []int){
 	return
 }
 
-
-func ValueInQueue(data []interface{}, value int)bool{
-	for index, _ := range data{
-		interval,_ := data[index].(int)
-		if interval == value{
-			return true
-		}
-	}
-	return false
-}
-
-
-
 func (graph *ListGraph)GetNextList(source int)[]int{
 	Result := []int{}
 	for _,node := range graph.Data{
@@ -133,4 +123,46 @@ func (graph *ListGraph)GetNextList(source int)[]int{
 		}
 	}
 	return Result
+}
+
+
+
+
+var Found bool = false
+
+func (graph *ListGraph)DFS(source, target int)(path []int){
+	if source == target{
+		return path
+	}
+	Prev := []int{}
+	Visited := []bool{}
+	for i := 0; i < len(graph.Data); i++ {
+		Visited = append(Visited, false)
+		Prev = append(Prev, -1)
+	}
+	// data is ready
+
+	graph.recursive(Prev,source,target,Visited)
+
+	return Getpath(Prev,source,target)
+}
+
+func (graph *ListGraph)recursive(Prev []int, source, target int, visited []bool){
+	if Found == true{
+		return
+	}
+	visited[source] = true
+
+	if source == target{
+		Found = true
+		return
+	}
+	childvertexs := graph.GetNextList(source)
+	for _,value := range childvertexs{
+		if !visited[value]{
+			Prev[value] = source
+			graph.recursive(Prev,value,target,visited)
+		}
+	}
+	return
 }

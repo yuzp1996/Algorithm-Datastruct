@@ -20,7 +20,8 @@ var _ = Describe("ListGraph", func() {
 		Graph.InsertNode(5)
 		Graph.InsertNode(6)
 
-
+		Graph.AddEdge(0, 3)
+		Graph.AddEdge(3, 0)
 		Graph.AddEdge(0, 5)
 		Graph.AddEdge(5, 0)
 		Graph.AddEdge(1, 3)
@@ -33,8 +34,6 @@ var _ = Describe("ListGraph", func() {
 		Graph.AddEdge(2, 5)
 		Graph.AddEdge(2, 1)
 		Graph.AddEdge(1, 2)
-		Graph.AddEdge(0, 3)
-		Graph.AddEdge(3, 0)
 		Graph.AddEdge(5, 6)
 		Graph.AddEdge(6, 5)
 	})
@@ -55,7 +54,7 @@ var _ = Describe("ListGraph", func() {
 
 		})
 	})
-	Context("second fing ListGraph should be a good thing", func() {
+	Context("second find ListGraph should be a good thing", func() {
 		It("New List graph", func() {
 			exsit, path := Graph.BFS(1, 0)
 			Expect(exsit).To(Equal(true))
@@ -65,12 +64,19 @@ var _ = Describe("ListGraph", func() {
 	})
 
 
-	Context("second fing ListGraph should be a good thing", func() {
+	Context("second find ListGraph should be a good thing", func() {
 		It("New List graph", func() {
 			exsit, path := Graph.BFS(1, 6)
 			Expect(exsit).To(Equal(true))
 			Expect(path).To(Equal([]int{1, 2, 5, 6}))
-
 		})
 	})
+
+	Context("DFS", func() {
+		It("New List graph", func() {
+			path := Graph.DFS(3, 1)
+			Expect(path).To(Equal([]int{3,4,1}))
+		})
+	})
+
 })
