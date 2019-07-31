@@ -72,19 +72,19 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 
 	Queue.Enqueue(source)
 	Prev[source] = -1
+	Visited[source] = true
 	var result []int
 	for{
 		if Queue.Candequeue() {
 			queuehead := Queue.Data[Queue.Head].(int)
 			if queuehead != target {
-				Visited[queuehead] = true
 				childnodevalues := graph.GetNextList(queuehead)
 				Queue.Dequeue()
+				//只要存到队列中来 就应该说明这个东西是已经访问的了
 				for _, value := range childnodevalues {
 					if !Visited[value]{
-						if Prev[value]==-1{
-							Prev[value] = queuehead
-						}
+						Prev[value] = queuehead
+						Visited[value] = true
 						Queue.Enqueue(value)
 					}
 				}
@@ -95,7 +95,6 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 		}
 	}
 }
-
 
 
 func Getpath(Prev []int,source,target int)(result []int){

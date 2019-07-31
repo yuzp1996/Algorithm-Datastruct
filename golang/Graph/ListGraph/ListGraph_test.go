@@ -11,13 +11,15 @@ var _ = Describe("ListGraph", func() {
 	var Graph *ListGraph
 
 	BeforeEach(func(){
-		Graph = NewListGraph(6)
+		Graph = NewListGraph(7)
 		Graph.InsertNode(0)
 		Graph.InsertNode(1)
 		Graph.InsertNode(2)
 		Graph.InsertNode(3)
 		Graph.InsertNode(4)
 		Graph.InsertNode(5)
+		Graph.InsertNode(6)
+
 
 		Graph.AddEdge(0, 5)
 		Graph.AddEdge(5, 0)
@@ -33,12 +35,14 @@ var _ = Describe("ListGraph", func() {
 		Graph.AddEdge(1, 2)
 		Graph.AddEdge(0, 3)
 		Graph.AddEdge(3, 0)
+		Graph.AddEdge(5, 6)
+		Graph.AddEdge(6, 5)
 	})
 
 	Context("first find ListGraph should be a good thing", func() {
 		It("New List graph", func() {
 			Graph.PrintGraph()
-			Expect((*Graph).Cap).To(Equal(6))
+			Expect((*Graph).Cap).To(Equal(7))
 			Expect((*Graph).Data[1].Next.Next.Value).To(Equal(4))
 
 			exsit, path := Graph.BFS(0, 0)
@@ -60,4 +64,13 @@ var _ = Describe("ListGraph", func() {
 		})
 	})
 
+
+	Context("second fing ListGraph should be a good thing", func() {
+		It("New List graph", func() {
+			exsit, path := Graph.BFS(1, 6)
+			Expect(exsit).To(Equal(true))
+			Expect(path).To(Equal([]int{1, 2, 5, 6}))
+
+		})
+	})
 })
