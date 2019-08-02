@@ -1,6 +1,7 @@
 package ListGraph_test
 
 import (
+	"github.com/onsi/ginkgo/reporters"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -9,5 +10,6 @@ import (
 
 func TestListGraph(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "ListGraph Suite")
+	report := reporters.NewJUnitReporter("listgraph.xml")
+	RunSpecsWithCustomReporters(t,"listgraph", []Reporter{report})
 }

@@ -148,7 +148,7 @@ func (graph *ListGraph)DFS(source, target int)(path []int){
 }
 
 func (graph *ListGraph)recursive(Prev []int, source, target int, visited []bool){
-	if Found == true{
+	if Found{
 		return
 	}
 	visited[source] = true

@@ -30,7 +30,7 @@ func(heap *Heap)MergeArray(data [][]int)string{
 			heap.SmallTopInsert(data[1][ArrayIndex(data[1])])
 			data[1][ArrayIndex(data[1])] = 0
 		}
-		if stop,index := ArearrayEmpty(data);stop == true{
+		if stop,index := ArearrayEmpty(data);stop{
 			arraynotemptyindex = index
 			break
 		}
