@@ -10,7 +10,7 @@ var _ = Describe("ListGraph", func() {
 
 	var Graph *ListGraph
 
-	BeforeEach(func(){
+	BeforeEach(func() {
 		Graph = NewListGraph(7)
 		Graph.InsertNode(0)
 		Graph.InsertNode(1)
@@ -63,7 +63,6 @@ var _ = Describe("ListGraph", func() {
 		})
 	})
 
-
 	Context("second find ListGraph should be a good thing", func() {
 		It("New List graph", func() {
 			exsit, path := Graph.BFS(1, 6)
@@ -75,7 +74,7 @@ var _ = Describe("ListGraph", func() {
 	Context("DFS", func() {
 		It("New List graph", func() {
 			path := Graph.DFS(3, 1)
-			Expect(path).To(Equal([]int{3,4,1}))
+			Expect(path).To(Equal([]int{3, 4, 1}))
 		})
 	})
 

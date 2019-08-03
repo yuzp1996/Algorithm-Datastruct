@@ -55,7 +55,6 @@ var _ = Describe("Heap", func() {
 			Heap.RemoveBigTop()
 			Heap.RemoveBigTop()
 
-
 			Expect(Heap.Data[1]).To(Equal(14))
 			//Expect(Heap.Data[2]).To(Equal(14))
 			//Expect(Heap.Data[3]).To(Equal(0))
@@ -80,7 +79,6 @@ var _ = Describe("Heap", func() {
 			//Expect(Heap.Data[4]).To(Equal(20))
 		})
 	})
-
 
 	Context("Sort should work", func() {
 		It("sort should be good", func() {
@@ -119,11 +117,11 @@ var _ = Describe("Heap", func() {
 	Context("Merge sorted array", func() {
 		JustBeforeEach(func() {
 			Heap = heap.NewHeap(6)
-			Array1 = []int{3,5,7,9,11,13,15}
-			Array2 = []int{2,4,6,8,10,12,14}
+			Array1 = []int{3, 5, 7, 9, 11, 13, 15}
+			Array2 = []int{2, 4, 6, 8, 10, 12, 14}
 		})
 		It("sort should merge the arraies", func() {
-			Arrays:=[][]int{Array2,Array1}
+			Arrays := [][]int{Array2, Array1}
 			mergestring := Heap.MergeArray(Arrays)
 			Expect(mergestring).To(Equal("23456789101112131415"))
 

@@ -90,7 +90,6 @@ func (heap *Heap) RemoveBigTop() {
 	return
 }
 
-
 func (heap *Heap) RemoveSmallTop() {
 
 	if heap.Count <= 1 {
@@ -118,9 +117,6 @@ func (heap *Heap) RemoveSmallTop() {
 	}
 	return
 }
-
-
-
 
 func (heap *Heap) Sort() {
 	// Build the heap to make sure the top is the biggest element
@@ -203,7 +199,6 @@ func (heap *Heap) heapsort() {
 			break
 		}
 	}
-
 
 	return
 }

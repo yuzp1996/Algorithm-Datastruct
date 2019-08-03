@@ -77,7 +77,7 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 	Prev[source] = -1
 	Visited[source] = true
 	var result []int
-	for{
+	for {
 		if Queue.Candequeue() {
 			queuehead := Queue.Data[Queue.Head].(int)
 			if queuehead != target {
@@ -85,38 +85,37 @@ func (graph *ListGraph) BFS(source, target int) (bool, []int) {
 				Queue.Dequeue()
 				//只要存到队列中来 就应该说明这个东西是已经访问的了
 				for _, value := range childnodevalues {
-					if !Visited[value]{
+					if !Visited[value] {
 						Prev[value] = queuehead
 						Visited[value] = true
 						Queue.Enqueue(value)
 					}
 				}
-			}else{
-				result = Getpath(Prev,source,target)
+			} else {
+				result = Getpath(Prev, source, target)
 				return true, result
 			}
 		}
 	}
 }
 
-
-func Getpath(Prev []int,source,target int)(result []int){
-	if(Prev[target]!=-1 && target != source){
-		result = Getpath(Prev,source,Prev[target])
+func Getpath(Prev []int, source, target int) (result []int) {
+	if Prev[target] != -1 && target != source {
+		result = Getpath(Prev, source, Prev[target])
 	}
-	result = append(result,target)
+	result = append(result, target)
 	return
 }
 
-func (graph *ListGraph)GetNextList(source int)[]int{
+func (graph *ListGraph) GetNextList(source int) []int {
 	Result := []int{}
-	for _,node := range graph.Data{
-		if node.Value == source{
-			for{
+	for _, node := range graph.Data {
+		if node.Value == source {
+			for {
 				node = node.Next
-				if node != nil{
-					Result = append(Result,node.Value)
-				}else{
+				if node != nil {
+					Result = append(Result, node.Value)
+				} else {
 					break
 				}
 			}
@@ -125,13 +124,10 @@ func (graph *ListGraph)GetNextList(source int)[]int{
 	return Result
 }
 
-
-
-
 var Found bool = false
 
-func (graph *ListGraph)DFS(source, target int)(path []int){
-	if source == target{
+func (graph *ListGraph) DFS(source, target int) (path []int) {
+	if source == target {
 		return path
 	}
 	Prev := []int{}
@@ -142,26 +138,26 @@ func (graph *ListGraph)DFS(source, target int)(path []int){
 	}
 	// data is ready
 
-	graph.recursive(Prev,source,target,Visited)
+	graph.recursive(Prev, source, target, Visited)
 
-	return Getpath(Prev,source,target)
+	return Getpath(Prev, source, target)
 }
 
-func (graph *ListGraph)recursive(Prev []int, source, target int, visited []bool){
-	if Found{
+func (graph *ListGraph) recursive(Prev []int, source, target int, visited []bool) {
+	if Found {
 		return
 	}
 	visited[source] = true
 
-	if source == target{
+	if source == target {
 		Found = true
 		return
 	}
 	childvertexs := graph.GetNextList(source)
-	for _,value := range childvertexs{
-		if !visited[value]{
+	for _, value := range childvertexs {
+		if !visited[value] {
 			Prev[value] = source
-			graph.recursive(Prev,value,target,visited)
+			graph.recursive(Prev, value, target, visited)
 		}
 	}
 	return

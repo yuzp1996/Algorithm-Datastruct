@@ -19,7 +19,7 @@ func NewArrayQueue(Cap int) *ArrayQueue {
 }
 
 func (this *ArrayQueue) Canenqueue() bool {
-	if len(this.Data)==0{
+	if len(this.Data) == 0 {
 		return true
 	}
 	if this.Tail >= this.Cap {
