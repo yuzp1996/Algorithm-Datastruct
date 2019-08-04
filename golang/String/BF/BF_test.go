@@ -20,16 +20,16 @@ var _ = Describe("BF", func() {
 			UnMatchPattern = "xuyahui"
 		})
 		It("find the main", func() {
-			exist := BF.BFfindstring(Main, "dahaoren")
+			exist := BF.BFfindstring(Main, MatchPattern)
 			Expect(exist).To(Equal(true))
 
 		})
 		It("find no main", func() {
-			exist := BF.BFfindstring("yuzhipengs   hiyigedahaorenbalabaala", "xuyahui")
+			exist := BF.BFfindstring(Main, UnMatchPattern)
 			Expect(exist).To(Equal(false))
 		})
 		It("Rk find the string", func() {
-			exist := BF.RKfindstring("yuzhixuyaihuiiiiii", "xuyahui")
+			exist := BF.RKfindstring(Main, UnMatchPattern)
 			Expect(exist).To(Equal(false))
 		})
 	})

@@ -27,7 +27,7 @@ var _ = Describe("Recursion", func() {
 		It("Arrangement 0 should return 0", func() {
 			Expect(Recursion.Arrangement(1)).To(Equal(1))
 			Expect(Recursion.Arrangement(2)).To(Equal(2))
-			Expect(Recursion.Arrangement(3)).To(Equal(6))
+			Expect(Recursion.Arrangement(3)).To(Equal(8))
 
 		})
 	})
