@@ -1,7 +1,5 @@
 package BF
 
-import "fmt"
-
 func BFfindstring(Main, Pattern string) bool {
 	patternlength := len(Pattern)
 	mainlength := len(Main)
@@ -9,9 +7,6 @@ func BFfindstring(Main, Pattern string) bool {
 		if Main[i:i+patternlength] == Pattern {
 			return true
 		}
-	}
-	for _, value := range "abcdefghijklmnopqrstuvwxyz" {
-		fmt.Printf("%d\n", value-97)
 	}
 	return false
 }
@@ -30,12 +25,16 @@ func RKfindstring(Main, Pattern string) bool {
 	matchfirstindex := 0
 
 	for {
-		if matchlastindex <= len(Main) {
+		// if it can equal you should think what is the length
+		if matchlastindex < len(Main) {
 			if mainvalue != patternvalue {
-				matchfirstindex++
-				matchlastindex++
+				// wrong here
 				mainvalue -= int32(Main[matchfirstindex])
 				mainvalue += int32(Main[matchlastindex])
+				// index add should be done latter
+				matchfirstindex++
+				matchlastindex++
+
 			} else {
 				// if it has the equal val
 				if Main[matchfirstindex:matchlastindex] == Pattern {
@@ -45,15 +44,17 @@ func RKfindstring(Main, Pattern string) bool {
 					matchlastindex++
 				}
 			}
+		} else {
+			return false
 		}
-		return false
 	}
+
 }
 
 func hash(StringData string) int32 {
 	var result int32
 	for _, value := range StringData {
-		result += (value - 97)
+		result += value
 	}
 	return result
 

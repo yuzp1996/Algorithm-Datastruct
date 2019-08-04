@@ -15,14 +15,13 @@ var _ = Describe("BF", func() {
 			UnMatchPattern string
 		)
 		BeforeEach(func() {
-			Main = "yuzhipengshiyigedahaorenbalabaala"
+			Main = "gogogogogogogoddddgggggyuzhipengshiyigedahaorenbalabaala"
 			MatchPattern = "yuzhipeng"
 			UnMatchPattern = "xuyahui"
 		})
 		It("find the main", func() {
 			exist := BF.BFfindstring(Main, MatchPattern)
 			Expect(exist).To(Equal(true))
-
 		})
 		It("find no main", func() {
 			exist := BF.BFfindstring(Main, UnMatchPattern)
@@ -31,6 +30,14 @@ var _ = Describe("BF", func() {
 		It("Rk find the string", func() {
 			exist := BF.RKfindstring(Main, UnMatchPattern)
 			Expect(exist).To(Equal(false))
+		})
+		It("Rk can notfind the string", func() {
+			exist := BF.RKfindstring(UnMatchPattern, Main)
+			Expect(exist).To(Equal(false))
+		})
+		It("Rk can find the string", func() {
+			exist := BF.RKfindstring(Main, MatchPattern)
+			Expect(exist).To(Equal(true))
 		})
 	})
 })
