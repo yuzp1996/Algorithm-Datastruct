@@ -30,7 +30,7 @@ func RKfindstring(Main, Pattern string) bool {
 	matchfirstindex := 0
 
 	for {
-		if(matchlastindex <= len(Main)) {
+		if matchlastindex <= len(Main) {
 			if mainvalue != patternvalue {
 				matchfirstindex++
 				matchlastindex++

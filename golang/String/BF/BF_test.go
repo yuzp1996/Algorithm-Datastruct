@@ -10,8 +10,8 @@ var _ = Describe("BF", func() {
 
 	Context("find if there is the pattern", func() {
 		var (
-			Main  string
-			MatchPattern string
+			Main           string
+			MatchPattern   string
 			UnMatchPattern string
 		)
 		BeforeEach(func() {
