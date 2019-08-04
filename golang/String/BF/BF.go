@@ -46,10 +46,8 @@ func RKfindstring(Main, Pattern string) bool {
 				}
 			}
 		}
-		break
+		return false
 	}
-
-	return false
 }
 
 func hash(StringData string) int32 {
