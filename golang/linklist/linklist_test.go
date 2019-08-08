@@ -3,13 +3,7 @@ package main
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"testing"
 )
-
-func Testlinklist(t *testing.T) {
-	RegisterFailHandler(Fail)
-	RunSpecs(t, "Test Linklist")
-}
 
 func Createlinklist() *LinkList {
 	testlinklist := NewLinkList(1)

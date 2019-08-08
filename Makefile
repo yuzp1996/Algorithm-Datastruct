@@ -4,6 +4,7 @@ format:
 
 
 test: format
+	go vet ./...
 	go test -cover -v ./golang/... -json -coverprofile=coverage-all.out > test.json
 
 
