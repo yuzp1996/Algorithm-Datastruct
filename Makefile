@@ -9,7 +9,7 @@ sonar: test
 	export PATH=$$PATH:/Users/yuzhipeng/Desktop/sonar-scanner-4.0.0.1744-macosx/bin
 	sonar-scanner -Dsonar.projectKey=algorithm -Dsonar.sources=.
 
-upload: sonar
+upload: test
 	git add .
 	git commit -m "update load code"
 	git push origin master

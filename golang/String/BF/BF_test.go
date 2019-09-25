@@ -2,6 +2,7 @@ package BF_test
 
 import (
 	"Algorithm-Datastruct/golang/String/BF"
+	"Algorithm-Datastruct/golang/String/BM"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -39,5 +40,11 @@ var _ = Describe("BF", func() {
 			exist := BF.RKfindstring(Main, MatchPattern)
 			Expect(exist).To(Equal(true))
 		})
+
+		It("BM should find the right string", func() {
+			exist := BM.BMfindstring(Main, MatchPattern)
+			Expect(exist).To(Equal(true))
+		})
+
 	})
 })
