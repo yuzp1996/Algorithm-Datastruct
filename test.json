@@ -1,235 +1,272 @@
-{"Time":"2019-09-25T09:20:42.252623+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph"}
-{"Time":"2019-09-25T09:20:42.255141+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"=== RUN   TestListGraph\n"}
-{"Time":"2019-09-25T09:20:42.255195+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"0 -\u003e 5 -\u003e 3 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255215+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"1 -\u003e 2 -\u003e 4 -\u003e 3 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255249+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"2 -\u003e 1 -\u003e 5 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255268+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"3 -\u003e 4 -\u003e 1 -\u003e 0 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255285+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"4 -\u003e 3 -\u003e 1 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255302+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"5 -\u003e 6 -\u003e 2 -\u003e 0 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255318+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"6 -\u003e 5 -\u003e nil\n"}
-{"Time":"2019-09-25T09:20:42.255512+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"--- PASS: TestListGraph (0.00s)\n"}
-{"Time":"2019-09-25T09:20:42.255536+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Elapsed":0}
-{"Time":"2019-09-25T09:20:42.255844+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:42.255896+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"coverage: 97.4% of statements\n"}
-{"Time":"2019-09-25T09:20:42.257518+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"ok  \tAlgorithm-Datastruct/golang/Graph/ListGraph\t0.047s\tcoverage: 97.4% of statements\n"}
-{"Time":"2019-09-25T09:20:42.257836+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Elapsed":0.048}
-{"Time":"2019-09-25T09:20:42.422116+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue"}
-{"Time":"2019-09-25T09:20:42.4222+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"=== RUN   TestArrayqueue\n"}
-{"Time":"2019-09-25T09:20:42.422533+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Running Suite: Arrayqueue Suite\n"}
-{"Time":"2019-09-25T09:20:42.42257+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"===============================\n"}
-{"Time":"2019-09-25T09:20:42.422592+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Random Seed: \u001b[1m1569374442\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.422643+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Will run \u001b[1m4\u001b[0m of \u001b[1m4\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:42.422684+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\n"}
-{"Time":"2019-09-25T09:20:42.424116+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Can Not Dequeue Now\n"}
-{"Time":"2019-09-25T09:20:42.424221+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0mCan Not Enqueue Now\n"}
-{"Time":"2019-09-25T09:20:42.424284+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.424304+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[1m\u001b[32mRan 4 of 4 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.424325+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m4 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.42436+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"--- PASS: TestArrayqueue (0.00s)\n"}
-{"Time":"2019-09-25T09:20:42.424393+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Elapsed":0}
-{"Time":"2019-09-25T09:20:42.424414+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:42.425044+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"coverage: 65.7% of statements\n"}
-{"Time":"2019-09-25T09:20:42.426951+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"ok  \tAlgorithm-Datastruct/golang/Queue/arrayqueue\t0.037s\tcoverage: 65.7% of statements\n"}
-{"Time":"2019-09-25T09:20:42.42703+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Elapsed":0.038}
-{"Time":"2019-09-25T09:20:42.427063+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch"}
-{"Time":"2019-09-25T09:20:42.427088+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"=== RUN   TestBinarySearch\n"}
-{"Time":"2019-09-25T09:20:42.427694+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Running Suite: BinarySearch Suite\n"}
-{"Time":"2019-09-25T09:20:42.42774+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"=================================\n"}
-{"Time":"2019-09-25T09:20:42.42776+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Random Seed: \u001b[1m1569374442\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.427811+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Will run \u001b[1m6\u001b[0m of \u001b[1m6\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:42.427834+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\n"}
-{"Time":"2019-09-25T09:20:42.429168+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.429227+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[1m\u001b[32mRan 6 of 6 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.429248+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m6 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.429295+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"--- PASS: TestBinarySearch (0.00s)\n"}
-{"Time":"2019-09-25T09:20:42.429451+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Elapsed":0}
-{"Time":"2019-09-25T09:20:42.429485+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:42.431858+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"coverage: 96.2% of statements\n"}
-{"Time":"2019-09-25T09:20:42.434024+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"ok  \tAlgorithm-Datastruct/golang/BinarySearch\t0.039s\tcoverage: 96.2% of statements\n"}
-{"Time":"2019-09-25T09:20:42.434102+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/BinarySearch","Elapsed":0.041}
-{"Time":"2019-09-25T09:20:42.737474+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph"}
-{"Time":"2019-09-25T09:20:42.737588+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"=== RUN   TestGraph\n"}
-{"Time":"2019-09-25T09:20:42.737931+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Running Suite: Graph Suite\n"}
-{"Time":"2019-09-25T09:20:42.737987+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"==========================\n"}
-{"Time":"2019-09-25T09:20:42.738006+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Random Seed: \u001b[1m1569374442\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.73811+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Will run \u001b[1m1\u001b[0m of \u001b[1m1\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:42.738152+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\n"}
-{"Time":"2019-09-25T09:20:42.739322+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 0 0] [0 0 0 0] [0 0 0 0]]\n"}
-{"Time":"2019-09-25T09:20:42.73941+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"1 2\n"}
-{"Time":"2019-09-25T09:20:42.73944+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"0\n"}
-{"Time":"2019-09-25T09:20:42.739457+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 0 0]]\n"}
-{"Time":"2019-09-25T09:20:42.739483+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 0 0]]\n"}
-{"Time":"2019-09-25T09:20:42.7395+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"3 2\n"}
-{"Time":"2019-09-25T09:20:42.739515+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"0\n"}
-{"Time":"2019-09-25T09:20:42.73953+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 4 0]]\n"}
-{"Time":"2019-09-25T09:20:42.739563+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.739582+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[1m\u001b[32mRan 1 of 1 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.739613+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m1 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:42.739671+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"--- PASS: TestGraph (0.00s)\n"}
-{"Time":"2019-09-25T09:20:42.73969+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Elapsed":0}
-{"Time":"2019-09-25T09:20:42.739709+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:42.740178+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"coverage: 92.9% of statements\n"}
-{"Time":"2019-09-25T09:20:42.742454+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"ok  \tAlgorithm-Datastruct/golang/Graph/matrixGraph\t0.034s\tcoverage: 92.9% of statements\n"}
-{"Time":"2019-09-25T09:20:42.742507+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Elapsed":0.035}
-{"Time":"2019-09-25T09:20:44.762668+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort"}
-{"Time":"2019-09-25T09:20:44.762764+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"=== RUN   TestSort\n"}
-{"Time":"2019-09-25T09:20:44.763169+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Running Suite: Sort Suite\n"}
-{"Time":"2019-09-25T09:20:44.763237+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"=========================\n"}
-{"Time":"2019-09-25T09:20:44.763276+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Random Seed: \u001b[1m1569374444\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.763344+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Will run \u001b[1m6\u001b[0m of \u001b[1m6\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:44.763414+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\n"}
-{"Time":"2019-09-25T09:20:44.764869+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.764949+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[1m\u001b[32mRan 6 of 6 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.764988+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m6 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.765052+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"--- PASS: TestSort (0.00s)\n"}
-{"Time":"2019-09-25T09:20:44.76511+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Elapsed":0}
-{"Time":"2019-09-25T09:20:44.765149+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:44.767024+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"coverage: 88.5% of statements\n"}
-{"Time":"2019-09-25T09:20:44.768491+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"ok  \tAlgorithm-Datastruct/golang/Sort\t0.037s\tcoverage: 88.5% of statements\n"}
-{"Time":"2019-09-25T09:20:44.768581+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Sort","Elapsed":0.038}
-{"Time":"2019-09-25T09:20:44.957076+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue"}
-{"Time":"2019-09-25T09:20:44.957211+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"=== RUN   TestCyclequeue\n"}
-{"Time":"2019-09-25T09:20:44.959+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Running Suite: Cyclequeue Suite\n"}
-{"Time":"2019-09-25T09:20:44.9591+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"===============================\n"}
-{"Time":"2019-09-25T09:20:44.959129+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Random Seed: \u001b[1m1569374444\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.959154+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:44.959175+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\n"}
-{"Time":"2019-09-25T09:20:44.960399+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.960482+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.960502+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:44.960541+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"--- PASS: TestCyclequeue (0.00s)\n"}
-{"Time":"2019-09-25T09:20:44.960574+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Elapsed":0}
-{"Time":"2019-09-25T09:20:44.960603+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:44.96119+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"coverage: 72.7% of statements\n"}
-{"Time":"2019-09-25T09:20:44.963126+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"ok  \tAlgorithm-Datastruct/golang/Queue/cyclequeue\t0.036s\tcoverage: 72.7% of statements\n"}
-{"Time":"2019-09-25T09:20:44.963177+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Elapsed":0.036}
-{"Time":"2019-09-25T09:20:45.130628+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion"}
-{"Time":"2019-09-25T09:20:45.130752+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"=== RUN   TestRecursion\n"}
-{"Time":"2019-09-25T09:20:45.131014+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Running Suite: Recursion Suite\n"}
-{"Time":"2019-09-25T09:20:45.131191+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"==============================\n"}
-{"Time":"2019-09-25T09:20:45.132365+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Random Seed: \u001b[1m1569374445\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.132418+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:45.132651+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\n"}
-{"Time":"2019-09-25T09:20:45.132757+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.132946+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.007 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.133114+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.133194+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"--- PASS: TestRecursion (0.01s)\n"}
-{"Time":"2019-09-25T09:20:45.133254+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Elapsed":0.01}
-{"Time":"2019-09-25T09:20:45.133491+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:45.133526+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"coverage: 91.2% of statements\n"}
-{"Time":"2019-09-25T09:20:45.134697+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"ok  \tAlgorithm-Datastruct/golang/Recursion\t0.046s\tcoverage: 91.2% of statements\n"}
-{"Time":"2019-09-25T09:20:45.134767+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Recursion","Elapsed":0.047}
-{"Time":"2019-09-25T09:20:45.138662+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack","Output":"?   \tAlgorithm-Datastruct/golang/Stack\t[no test files]\n"}
-{"Time":"2019-09-25T09:20:45.138708+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/Stack","Elapsed":0}
-{"Time":"2019-09-25T09:20:45.197396+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack"}
-{"Time":"2019-09-25T09:20:45.197477+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"=== RUN   TestLinklistStack\n"}
-{"Time":"2019-09-25T09:20:45.197789+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Running Suite: LinklistStack Suite\n"}
-{"Time":"2019-09-25T09:20:45.197877+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"==================================\n"}
-{"Time":"2019-09-25T09:20:45.198034+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Random Seed: \u001b[1m1569374445\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.198112+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Will run \u001b[1m0\u001b[0m of \u001b[1m0\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:45.198184+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\n"}
-{"Time":"2019-09-25T09:20:45.19943+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\n"}
-{"Time":"2019-09-25T09:20:45.199585+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\u001b[1m\u001b[32mRan 0 of 0 Specs in 0.001 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.199646+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m0 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:45.199743+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"--- PASS: TestLinklistStack (0.00s)\n"}
-{"Time":"2019-09-25T09:20:45.199764+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Elapsed":0}
-{"Time":"2019-09-25T09:20:45.199782+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:45.200344+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"coverage: 0.0% of statements\n"}
-{"Time":"2019-09-25T09:20:45.202773+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"ok  \tAlgorithm-Datastruct/golang/Stack/linklistStack\t0.036s\tcoverage: 0.0% of statements\n"}
-{"Time":"2019-09-25T09:20:45.202829+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Elapsed":0.037}
-{"Time":"2019-09-25T09:20:45.20571+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/stackarray","Output":"?   \tAlgorithm-Datastruct/golang/Stack/stackarray\t[no test files]\n"}
-{"Time":"2019-09-25T09:20:45.205775+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/Stack/stackarray","Elapsed":0}
-{"Time":"2019-09-25T09:20:45.842485+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"testing: warning: no tests to run\n"}
-{"Time":"2019-09-25T09:20:45.842615+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:45.843931+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"coverage: 0.0% of statements\n"}
-{"Time":"2019-09-25T09:20:45.844972+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"ok  \tAlgorithm-Datastruct/golang/array\t0.013s\tcoverage: 0.0% of statements [no tests to run]\n"}
-{"Time":"2019-09-25T09:20:45.845033+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/array","Elapsed":0.013}
-{"Time":"2019-09-25T09:20:47.889142+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree"}
-{"Time":"2019-09-25T09:20:47.889242+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"=== RUN   TestTree\n"}
-{"Time":"2019-09-25T09:20:47.898672+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Running Suite: Tree Suite\n"}
-{"Time":"2019-09-25T09:20:47.898808+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"=========================\n"}
-{"Time":"2019-09-25T09:20:47.899044+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Random Seed: \u001b[1m1569374447\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:47.899263+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Will run \u001b[1m11\u001b[0m of \u001b[1m11\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:47.899505+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\n"}
-{"Time":"2019-09-25T09:20:47.902256+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0mTree is [29 19 45 18 20 40 50 1] \n"}
-{"Time":"2019-09-25T09:20:47.902379+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"no such leaf\u001b[32m•\u001b[0mNew the tree is [100 50 150 25 75 125 200]\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:47.902444+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[1m\u001b[32mRan 11 of 11 Specs in 0.004 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:47.902497+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m11 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:47.902743+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"--- PASS: TestTree (0.01s)\n"}
-{"Time":"2019-09-25T09:20:47.902765+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Elapsed":0.01}
-{"Time":"2019-09-25T09:20:47.902787+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:47.903997+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"coverage: 87.7% of statements\n"}
-{"Time":"2019-09-25T09:20:47.925128+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"ok  \tAlgorithm-Datastruct/golang/Tree\t0.224s\tcoverage: 87.7% of statements\n"}
-{"Time":"2019-09-25T09:20:47.925235+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Tree","Elapsed":0.225}
-{"Time":"2019-09-25T09:20:48.184077+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF"}
-{"Time":"2019-09-25T09:20:48.18416+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"=== RUN   TestBF\n"}
-{"Time":"2019-09-25T09:20:48.184742+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Running Suite: BF Suite\n"}
-{"Time":"2019-09-25T09:20:48.184803+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"=======================\n"}
-{"Time":"2019-09-25T09:20:48.184846+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Random Seed: \u001b[1m1569374448\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.184876+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Will run \u001b[1m6\u001b[0m of \u001b[1m6\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:48.184898+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
-{"Time":"2019-09-25T09:20:48.186273+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0mstart is 0Main[start:start+patternlength] is gogogogog  Pattern is yuzhipeng\n"}
-{"Time":"2019-09-25T09:20:48.18637+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"7 - 0start is 7Main[start:start+patternlength] is ogogogodd  Pattern is yuzhipeng\n"}
-{"Time":"2019-09-25T09:20:48.186405+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"8 - 0start is 15Main[start:start+patternlength] is dddgggggy  Pattern is yuzhipeng\n"}
-{"Time":"2019-09-25T09:20:48.186429+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"8 - 0start is 23Main[start:start+patternlength] is yuzhipeng  Pattern is yuzhipeng\n"}
-{"Time":"2019-09-25T09:20:48.186453+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.186473+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[1m\u001b[32mRan 6 of 6 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.186499+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m6 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.186562+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"--- PASS: TestBF (0.00s)\n"}
-{"Time":"2019-09-25T09:20:48.186631+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Elapsed":0}
-{"Time":"2019-09-25T09:20:48.186665+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:48.187082+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"coverage: 100.0% of statements\n"}
-{"Time":"2019-09-25T09:20:48.189258+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"ok  \tAlgorithm-Datastruct/golang/String/BF\t0.045s\tcoverage: 100.0% of statements\n"}
-{"Time":"2019-09-25T09:20:48.189333+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/String/BF","Elapsed":0.045}
-{"Time":"2019-09-25T09:20:48.192483+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BM","Output":"?   \tAlgorithm-Datastruct/golang/String/BM\t[no test files]\n"}
-{"Time":"2019-09-25T09:20:48.19254+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/String/BM","Elapsed":0}
-{"Time":"2019-09-25T09:20:48.462621+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap"}
-{"Time":"2019-09-25T09:20:48.462708+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"=== RUN   TestHeap\n"}
-{"Time":"2019-09-25T09:20:48.463093+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Running Suite: Heap Suite\n"}
-{"Time":"2019-09-25T09:20:48.463177+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"=========================\n"}
-{"Time":"2019-09-25T09:20:48.463232+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Random Seed: \u001b[1m1569374448\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.463263+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Will run \u001b[1m7\u001b[0m of \u001b[1m7\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:48.463312+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\n"}
-{"Time":"2019-09-25T09:20:48.463811+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m[0 14 15 18 20 0][0 20 0 0 0 0]\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.463854+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[1m\u001b[32mRan 7 of 7 Specs in 0.001 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.463883+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m7 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.463914+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"--- PASS: TestHeap (0.00s)\n"}
-{"Time":"2019-09-25T09:20:48.463948+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Elapsed":0}
-{"Time":"2019-09-25T09:20:48.463971+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:48.466086+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"coverage: 95.7% of statements\n"}
-{"Time":"2019-09-25T09:20:48.468228+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"ok  \tAlgorithm-Datastruct/golang/heap\t0.040s\tcoverage: 95.7% of statements\n"}
-{"Time":"2019-09-25T09:20:48.46827+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/heap","Elapsed":0.041}
-{"Time":"2019-09-25T09:20:48.964108+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist"}
-{"Time":"2019-09-25T09:20:48.964254+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"=== RUN   TestLinklist\n"}
-{"Time":"2019-09-25T09:20:48.964728+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Running Suite: Linklist Suite\n"}
-{"Time":"2019-09-25T09:20:48.964816+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"=============================\n"}
-{"Time":"2019-09-25T09:20:48.964845+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Random Seed: \u001b[1m1569374448\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.964883+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:48.964915+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\n"}
-{"Time":"2019-09-25T09:20:48.966043+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[32m•\u001b[0m1 -\u003e 2 -\u003e 3 -\u003e 4 -\u003e 5 -\u003e \n"}
-{"Time":"2019-09-25T09:20:48.966403+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"5 -\u003e 4 -\u003e 3 -\u003e 2 -\u003e 1 -\u003e 0 -\u003e \n"}
-{"Time":"2019-09-25T09:20:48.967989+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.968352+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.002 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.968423+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:48.96868+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"--- PASS: TestLinklist (0.00s)\n"}
-{"Time":"2019-09-25T09:20:48.968724+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Elapsed":0}
-{"Time":"2019-09-25T09:20:48.968774+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:48.969069+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"coverage: 26.6% of statements\n"}
-{"Time":"2019-09-25T09:20:48.970247+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"ok  \tAlgorithm-Datastruct/golang/linklist\t0.036s\tcoverage: 26.6% of statements\n"}
-{"Time":"2019-09-25T09:20:48.97029+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/linklist","Elapsed":0.036}
-{"Time":"2019-09-25T09:20:49.92524+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist"}
-{"Time":"2019-09-25T09:20:49.925325+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"=== RUN   TestSkiplist\n"}
-{"Time":"2019-09-25T09:20:49.925806+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Running Suite: Skiplist Suite\n"}
-{"Time":"2019-09-25T09:20:49.925867+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"=============================\n"}
-{"Time":"2019-09-25T09:20:49.925889+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Random Seed: \u001b[1m1569374449\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:49.92597+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Will run \u001b[1m1\u001b[0m of \u001b[1m1\u001b[0m specs\n"}
-{"Time":"2019-09-25T09:20:49.926104+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\n"}
-{"Time":"2019-09-25T09:20:49.926422+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[32m•\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:49.926466+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[1m\u001b[32mRan 1 of 1 Specs in 0.001 seconds\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:49.926486+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m1 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
-{"Time":"2019-09-25T09:20:49.926569+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"--- PASS: TestSkiplist (0.00s)\n"}
-{"Time":"2019-09-25T09:20:49.926607+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Elapsed":0}
-{"Time":"2019-09-25T09:20:49.926637+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"PASS\n"}
-{"Time":"2019-09-25T09:20:49.927575+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"coverage: 71.4% of statements\n"}
-{"Time":"2019-09-25T09:20:49.929516+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"ok  \tAlgorithm-Datastruct/golang/skiplist\t0.036s\tcoverage: 71.4% of statements\n"}
-{"Time":"2019-09-25T09:20:49.929563+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/skiplist","Elapsed":0.036}
+{"Time":"2019-09-30T11:56:57.105356+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch"}
+{"Time":"2019-09-30T11:56:57.105726+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"=== RUN   TestBinarySearch\n"}
+{"Time":"2019-09-30T11:56:57.106102+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Running Suite: BinarySearch Suite\n"}
+{"Time":"2019-09-30T11:56:57.106169+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"=================================\n"}
+{"Time":"2019-09-30T11:56:57.106193+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Random Seed: \u001b[1m1569815817\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.106334+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"Will run \u001b[1m6\u001b[0m of \u001b[1m6\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:56:57.10643+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\n"}
+{"Time":"2019-09-30T11:56:57.106477+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.106501+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[1m\u001b[32mRan 6 of 6 Specs in 0.001 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.106532+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m6 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.10659+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Output":"--- PASS: TestBinarySearch (0.00s)\n"}
+{"Time":"2019-09-30T11:56:57.106618+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/BinarySearch","Test":"TestBinarySearch","Elapsed":0}
+{"Time":"2019-09-30T11:56:57.10665+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"PASS\n"}
+{"Time":"2019-09-30T11:56:57.108183+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"coverage: 96.2% of statements\n"}
+{"Time":"2019-09-30T11:56:57.110263+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/BinarySearch","Output":"ok  \tAlgorithm-Datastruct/golang/BinarySearch\t0.046s\tcoverage: 96.2% of statements\n"}
+{"Time":"2019-09-30T11:56:57.110332+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/BinarySearch","Elapsed":0.046}
+{"Time":"2019-09-30T11:56:57.302807+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph"}
+{"Time":"2019-09-30T11:56:57.302889+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"=== RUN   TestListGraph\n"}
+{"Time":"2019-09-30T11:56:57.3047+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"0 -\u003e 5 -\u003e 3 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304785+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"1 -\u003e 2 -\u003e 4 -\u003e 3 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304822+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"2 -\u003e 1 -\u003e 5 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304838+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"3 -\u003e 4 -\u003e 1 -\u003e 0 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304881+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"4 -\u003e 3 -\u003e 1 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304898+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"5 -\u003e 6 -\u003e 2 -\u003e 0 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.304913+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"6 -\u003e 5 -\u003e nil\n"}
+{"Time":"2019-09-30T11:56:57.305476+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Output":"--- PASS: TestListGraph (0.00s)\n"}
+{"Time":"2019-09-30T11:56:57.305518+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Test":"TestListGraph","Elapsed":0}
+{"Time":"2019-09-30T11:56:57.30554+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"PASS\n"}
+{"Time":"2019-09-30T11:56:57.306605+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"coverage: 97.4% of statements\n"}
+{"Time":"2019-09-30T11:56:57.308416+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Output":"ok  \tAlgorithm-Datastruct/golang/Graph/ListGraph\t0.037s\tcoverage: 97.4% of statements\n"}
+{"Time":"2019-09-30T11:56:57.308466+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/ListGraph","Elapsed":0.037}
+{"Time":"2019-09-30T11:56:57.322921+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue"}
+{"Time":"2019-09-30T11:56:57.323002+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"=== RUN   TestArrayqueue\n"}
+{"Time":"2019-09-30T11:56:57.323561+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Running Suite: Arrayqueue Suite\n"}
+{"Time":"2019-09-30T11:56:57.323602+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"===============================\n"}
+{"Time":"2019-09-30T11:56:57.323622+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Random Seed: \u001b[1m1569815817\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.323685+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Will run \u001b[1m4\u001b[0m of \u001b[1m4\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:56:57.323719+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\n"}
+{"Time":"2019-09-30T11:56:57.32499+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"Can Not Dequeue Now\n"}
+{"Time":"2019-09-30T11:56:57.325223+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0mCan Not Enqueue Now\n"}
+{"Time":"2019-09-30T11:56:57.325357+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.325416+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[1m\u001b[32mRan 4 of 4 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.325475+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m4 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.325567+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Output":"--- PASS: TestArrayqueue (0.00s)\n"}
+{"Time":"2019-09-30T11:56:57.325716+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Test":"TestArrayqueue","Elapsed":0}
+{"Time":"2019-09-30T11:56:57.325763+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"PASS\n"}
+{"Time":"2019-09-30T11:56:57.326488+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"coverage: 65.7% of statements\n"}
+{"Time":"2019-09-30T11:56:57.329004+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Output":"ok  \tAlgorithm-Datastruct/golang/Queue/arrayqueue\t0.035s\tcoverage: 65.7% of statements\n"}
+{"Time":"2019-09-30T11:56:57.332038+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/arrayqueue","Elapsed":0.039}
+{"Time":"2019-09-30T11:56:57.344952+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph"}
+{"Time":"2019-09-30T11:56:57.345082+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"=== RUN   TestGraph\n"}
+{"Time":"2019-09-30T11:56:57.345167+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Running Suite: Graph Suite\n"}
+{"Time":"2019-09-30T11:56:57.345229+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"==========================\n"}
+{"Time":"2019-09-30T11:56:57.345259+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Random Seed: \u001b[1m1569815817\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.345358+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"Will run \u001b[1m1\u001b[0m of \u001b[1m1\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:56:57.345406+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\n"}
+{"Time":"2019-09-30T11:56:57.346566+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 0 0] [0 0 0 0] [0 0 0 0]]\n"}
+{"Time":"2019-09-30T11:56:57.346649+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"1 2\n"}
+{"Time":"2019-09-30T11:56:57.346788+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"0\n"}
+{"Time":"2019-09-30T11:56:57.346818+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 0 0]]\n"}
+{"Time":"2019-09-30T11:56:57.346853+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 0 0]]\n"}
+{"Time":"2019-09-30T11:56:57.346883+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"3 2\n"}
+{"Time":"2019-09-30T11:56:57.346903+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"0\n"}
+{"Time":"2019-09-30T11:56:57.346935+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"[[0 0 0 0] [0 0 5 0] [0 0 0 0] [0 0 4 0]]\n"}
+{"Time":"2019-09-30T11:56:57.346957+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.346994+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[1m\u001b[32mRan 1 of 1 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.347022+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m1 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:57.34713+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Output":"--- PASS: TestGraph (0.00s)\n"}
+{"Time":"2019-09-30T11:56:57.347158+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Test":"TestGraph","Elapsed":0}
+{"Time":"2019-09-30T11:56:57.347177+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"PASS\n"}
+{"Time":"2019-09-30T11:56:57.347396+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"coverage: 92.9% of statements\n"}
+{"Time":"2019-09-30T11:56:57.34992+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Output":"ok  \tAlgorithm-Datastruct/golang/Graph/matrixGraph\t0.036s\tcoverage: 92.9% of statements\n"}
+{"Time":"2019-09-30T11:56:57.349997+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Graph/matrixGraph","Elapsed":0.036}
+{"Time":"2019-09-30T11:56:59.473513+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue"}
+{"Time":"2019-09-30T11:56:59.473646+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"=== RUN   TestCyclequeue\n"}
+{"Time":"2019-09-30T11:56:59.474113+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Running Suite: Cyclequeue Suite\n"}
+{"Time":"2019-09-30T11:56:59.474161+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"===============================\n"}
+{"Time":"2019-09-30T11:56:59.474193+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Random Seed: \u001b[1m1569815819\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:59.474239+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:56:59.474258+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\n"}
+{"Time":"2019-09-30T11:56:59.476821+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:59.476916+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.003 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:59.476943+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:56:59.476977+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Output":"--- PASS: TestCyclequeue (0.00s)\n"}
+{"Time":"2019-09-30T11:56:59.477+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Test":"TestCyclequeue","Elapsed":0}
+{"Time":"2019-09-30T11:56:59.477032+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"PASS\n"}
+{"Time":"2019-09-30T11:56:59.47739+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"coverage: 72.7% of statements\n"}
+{"Time":"2019-09-30T11:56:59.479317+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Output":"ok  \tAlgorithm-Datastruct/golang/Queue/cyclequeue\t0.036s\tcoverage: 72.7% of statements\n"}
+{"Time":"2019-09-30T11:56:59.479392+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Queue/cyclequeue","Elapsed":0.036}
+{"Time":"2019-09-30T11:57:00.024868+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack"}
+{"Time":"2019-09-30T11:57:00.025028+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"=== RUN   TestLinklistStack\n"}
+{"Time":"2019-09-30T11:57:00.025353+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Running Suite: LinklistStack Suite\n"}
+{"Time":"2019-09-30T11:57:00.025491+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"==================================\n"}
+{"Time":"2019-09-30T11:57:00.02553+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Random Seed: \u001b[1m1569815820\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.025551+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"Will run \u001b[1m0\u001b[0m of \u001b[1m0\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:00.025579+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\n"}
+{"Time":"2019-09-30T11:57:00.026571+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\n"}
+{"Time":"2019-09-30T11:57:00.026758+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\u001b[1m\u001b[32mRan 0 of 0 Specs in 0.001 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.026824+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m0 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.026876+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Output":"--- PASS: TestLinklistStack (0.00s)\n"}
+{"Time":"2019-09-30T11:57:00.026912+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Test":"TestLinklistStack","Elapsed":0}
+{"Time":"2019-09-30T11:57:00.026932+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:00.027599+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2019-09-30T11:57:00.029756+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Output":"ok  \tAlgorithm-Datastruct/golang/Stack/linklistStack\t0.051s\tcoverage: 0.0% of statements\n"}
+{"Time":"2019-09-30T11:57:00.029822+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Stack/linklistStack","Elapsed":0.052}
+{"Time":"2019-09-30T11:57:00.3266+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort"}
+{"Time":"2019-09-30T11:57:00.326674+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"=== RUN   TestSort\n"}
+{"Time":"2019-09-30T11:57:00.327136+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Running Suite: Sort Suite\n"}
+{"Time":"2019-09-30T11:57:00.327185+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"=========================\n"}
+{"Time":"2019-09-30T11:57:00.327205+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Random Seed: \u001b[1m1569815820\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.327231+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"Will run \u001b[1m6\u001b[0m of \u001b[1m6\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:00.327339+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\n"}
+{"Time":"2019-09-30T11:57:00.328785+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.328885+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[1m\u001b[32mRan 6 of 6 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.328937+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m6 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.328974+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Output":"--- PASS: TestSort (0.00s)\n"}
+{"Time":"2019-09-30T11:57:00.328994+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Sort","Test":"TestSort","Elapsed":0}
+{"Time":"2019-09-30T11:57:00.329025+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:00.330819+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"coverage: 88.5% of statements\n"}
+{"Time":"2019-09-30T11:57:00.332746+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Sort","Output":"ok  \tAlgorithm-Datastruct/golang/Sort\t0.036s\tcoverage: 88.5% of statements\n"}
+{"Time":"2019-09-30T11:57:00.332788+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Sort","Elapsed":0.037}
+{"Time":"2019-09-30T11:57:00.814606+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion"}
+{"Time":"2019-09-30T11:57:00.814685+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"=== RUN   TestRecursion\n"}
+{"Time":"2019-09-30T11:57:00.815123+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Running Suite: Recursion Suite\n"}
+{"Time":"2019-09-30T11:57:00.815174+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"==============================\n"}
+{"Time":"2019-09-30T11:57:00.815206+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Random Seed: \u001b[1m1569815820\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.815246+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:00.815273+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\n"}
+{"Time":"2019-09-30T11:57:00.821484+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.82162+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.006 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.821669+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:00.821715+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Output":"--- PASS: TestRecursion (0.01s)\n"}
+{"Time":"2019-09-30T11:57:00.821768+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Recursion","Test":"TestRecursion","Elapsed":0.01}
+{"Time":"2019-09-30T11:57:00.821796+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:00.822567+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"coverage: 91.2% of statements\n"}
+{"Time":"2019-09-30T11:57:00.824401+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Recursion","Output":"ok  \tAlgorithm-Datastruct/golang/Recursion\t0.044s\tcoverage: 91.2% of statements\n"}
+{"Time":"2019-09-30T11:57:00.824441+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Recursion","Elapsed":0.045}
+{"Time":"2019-09-30T11:57:00.827116+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack","Output":"?   \tAlgorithm-Datastruct/golang/Stack\t[no test files]\n"}
+{"Time":"2019-09-30T11:57:00.827188+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/Stack","Elapsed":0}
+{"Time":"2019-09-30T11:57:00.827222+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Stack/stackarray","Output":"?   \tAlgorithm-Datastruct/golang/Stack/stackarray\t[no test files]\n"}
+{"Time":"2019-09-30T11:57:00.827236+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/Stack/stackarray","Elapsed":0}
+{"Time":"2019-09-30T11:57:01.608823+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"testing: warning: no tests to run\n"}
+{"Time":"2019-09-30T11:57:01.608943+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:01.610473+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2019-09-30T11:57:01.611265+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/array","Output":"ok  \tAlgorithm-Datastruct/golang/array\t0.018s\tcoverage: 0.0% of statements [no tests to run]\n"}
+{"Time":"2019-09-30T11:57:01.611337+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/array","Elapsed":0.019}
+{"Time":"2019-09-30T11:57:04.187644+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree"}
+{"Time":"2019-09-30T11:57:04.187812+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"=== RUN   TestTree\n"}
+{"Time":"2019-09-30T11:57:04.191715+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Running Suite: Tree Suite\n"}
+{"Time":"2019-09-30T11:57:04.191801+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"=========================\n"}
+{"Time":"2019-09-30T11:57:04.19183+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Random Seed: \u001b[1m1569815824\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.191864+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"Will run \u001b[1m11\u001b[0m of \u001b[1m11\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:04.191906+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.195074+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0mTree is [29 19 45 18 20 40 50 1] \n"}
+{"Time":"2019-09-30T11:57:04.195162+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"no such leaf\u001b[32m•\u001b[0mNew the tree is [100 50 150 25 75 125 200]\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.195199+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[1m\u001b[32mRan 11 of 11 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.195237+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m11 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.195272+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Output":"--- PASS: TestTree (0.01s)\n"}
+{"Time":"2019-09-30T11:57:04.195289+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Tree","Test":"TestTree","Elapsed":0.01}
+{"Time":"2019-09-30T11:57:04.195324+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:04.19534+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"coverage: 87.7% of statements\n"}
+{"Time":"2019-09-30T11:57:04.198072+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/Tree","Output":"ok  \tAlgorithm-Datastruct/golang/Tree\t0.049s\tcoverage: 87.7% of statements\n"}
+{"Time":"2019-09-30T11:57:04.198167+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/Tree","Elapsed":0.051}
+{"Time":"2019-09-30T11:57:04.310169+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF"}
+{"Time":"2019-09-30T11:57:04.310265+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"=== RUN   TestBF\n"}
+{"Time":"2019-09-30T11:57:04.310866+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Running Suite: BF Suite\n"}
+{"Time":"2019-09-30T11:57:04.310945+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"=======================\n"}
+{"Time":"2019-09-30T11:57:04.310964+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Random Seed: \u001b[1m1569815824\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.310986+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"Will run \u001b[1m5\u001b[0m of \u001b[1m5\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:04.311033+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.311523+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[91m\u001b[1m• Failure [0.001 seconds]\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311564+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"BF\n"}
+{"Time":"2019-09-30T11:57:04.311586+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:9\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311615+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"  find if there is the pattern\n"}
+{"Time":"2019-09-30T11:57:04.311644+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"  \u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:11\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311662+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[91m\u001b[1mfind the main [It]\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311683+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:22\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311699+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.311714+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[91mExpected\n"}
+{"Time":"2019-09-30T11:57:04.311758+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"        \u003cbool\u003e: false\n"}
+{"Time":"2019-09-30T11:57:04.311776+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    to equal\n"}
+{"Time":"2019-09-30T11:57:04.311791+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"        \u003cbool\u003e: true\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.311806+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.311835+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    /Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:24\n"}
+{"Time":"2019-09-30T11:57:04.311856+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[90m------------------------------\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312158+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312222+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[90m------------------------------\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312294+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[91m\u001b[1m• Failure [0.000 seconds]\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312323+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"BF\n"}
+{"Time":"2019-09-30T11:57:04.312341+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:9\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312371+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"  find if there is the pattern\n"}
+{"Time":"2019-09-30T11:57:04.312389+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"  \u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:11\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312406+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[91m\u001b[1mRk can find the string [It]\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312428+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[90m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:38\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312459+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312476+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    \u001b[91mExpected\n"}
+{"Time":"2019-09-30T11:57:04.312492+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"        \u003cbool\u003e: false\n"}
+{"Time":"2019-09-30T11:57:04.312509+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    to equal\n"}
+{"Time":"2019-09-30T11:57:04.312538+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"        \u003cbool\u003e: true\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312556+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312573+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"    /Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:40\n"}
+{"Time":"2019-09-30T11:57:04.312616+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[90m------------------------------\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312663+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312682+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312703+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[91m\u001b[1mSummarizing 2 Failures:\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312727+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312747+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[91m\u001b[1m[Fail] \u001b[0m\u001b[90mBF \u001b[0m\u001b[0mfind if there is the pattern \u001b[0m\u001b[91m\u001b[1m[It] find the main \u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312765+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[37m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:24\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312784+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312802+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[91m\u001b[1m[Fail] \u001b[0m\u001b[90mBF \u001b[0m\u001b[0mfind if there is the pattern \u001b[0m\u001b[91m\u001b[1m[It] Rk can find the string \u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312824+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[37m/Users/yuzhipeng/go/src/Algorithm-Datastruct/golang/String/BF/BF_test.go:40\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.31284+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.312857+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[1m\u001b[91mRan 5 of 5 Specs in 0.001 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312873+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"\u001b[1m\u001b[91mFAIL!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m2 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.312932+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Output":"--- FAIL: TestBF (0.00s)\n"}
+{"Time":"2019-09-30T11:57:04.312951+08:00","Action":"fail","Package":"Algorithm-Datastruct/golang/String/BF","Test":"TestBF","Elapsed":0}
+{"Time":"2019-09-30T11:57:04.31297+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"FAIL\n"}
+{"Time":"2019-09-30T11:57:04.312995+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"coverage: 93.3% of statements\n"}
+{"Time":"2019-09-30T11:57:04.314816+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BF","Output":"FAIL\tAlgorithm-Datastruct/golang/String/BF\t0.034s\n"}
+{"Time":"2019-09-30T11:57:04.31489+08:00","Action":"fail","Package":"Algorithm-Datastruct/golang/String/BF","Elapsed":0.034}
+{"Time":"2019-09-30T11:57:04.31763+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/String/BM","Output":"?   \tAlgorithm-Datastruct/golang/String/BM\t[no test files]\n"}
+{"Time":"2019-09-30T11:57:04.317685+08:00","Action":"skip","Package":"Algorithm-Datastruct/golang/String/BM","Elapsed":0}
+{"Time":"2019-09-30T11:57:04.710024+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap"}
+{"Time":"2019-09-30T11:57:04.710131+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"=== RUN   TestHeap\n"}
+{"Time":"2019-09-30T11:57:04.710672+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Running Suite: Heap Suite\n"}
+{"Time":"2019-09-30T11:57:04.710804+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"=========================\n"}
+{"Time":"2019-09-30T11:57:04.710886+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Random Seed: \u001b[1m1569815824\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.710926+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"Will run \u001b[1m7\u001b[0m of \u001b[1m7\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:04.710966+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\n"}
+{"Time":"2019-09-30T11:57:04.712475+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m[0 14 15 18 20 0][0 20 0 0 0 0]\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.712539+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[1m\u001b[32mRan 7 of 7 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.712564+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m7 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:04.71262+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Output":"--- PASS: TestHeap (0.00s)\n"}
+{"Time":"2019-09-30T11:57:04.712667+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/heap","Test":"TestHeap","Elapsed":0}
+{"Time":"2019-09-30T11:57:04.712695+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:04.716017+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"coverage: 95.7% of statements\n"}
+{"Time":"2019-09-30T11:57:04.718225+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/heap","Output":"ok  \tAlgorithm-Datastruct/golang/heap\t0.043s\tcoverage: 95.7% of statements\n"}
+{"Time":"2019-09-30T11:57:04.718274+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/heap","Elapsed":0.044}
+{"Time":"2019-09-30T11:57:05.06988+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist"}
+{"Time":"2019-09-30T11:57:05.069964+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"=== RUN   TestLinklist\n"}
+{"Time":"2019-09-30T11:57:05.070578+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Running Suite: Linklist Suite\n"}
+{"Time":"2019-09-30T11:57:05.070641+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"=============================\n"}
+{"Time":"2019-09-30T11:57:05.070684+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Random Seed: \u001b[1m1569815825\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.070738+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"Will run \u001b[1m3\u001b[0m of \u001b[1m3\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:05.070764+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\n"}
+{"Time":"2019-09-30T11:57:05.070811+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[32m•\u001b[0m1 -\u003e 2 -\u003e 3 -\u003e 4 -\u003e 5 -\u003e \n"}
+{"Time":"2019-09-30T11:57:05.070835+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"5 -\u003e 4 -\u003e 3 -\u003e 2 -\u003e 1 -\u003e 0 -\u003e \n"}
+{"Time":"2019-09-30T11:57:05.070896+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[32m•\u001b[0m\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.070916+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[1m\u001b[32mRan 3 of 3 Specs in 0.000 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.070935+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m3 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.07099+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Output":"--- PASS: TestLinklist (0.00s)\n"}
+{"Time":"2019-09-30T11:57:05.071011+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/linklist","Test":"TestLinklist","Elapsed":0}
+{"Time":"2019-09-30T11:57:05.071033+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:05.072685+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"coverage: 26.6% of statements\n"}
+{"Time":"2019-09-30T11:57:05.074505+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/linklist","Output":"ok  \tAlgorithm-Datastruct/golang/linklist\t0.038s\tcoverage: 26.6% of statements\n"}
+{"Time":"2019-09-30T11:57:05.074564+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/linklist","Elapsed":0.038}
+{"Time":"2019-09-30T11:57:05.913625+08:00","Action":"run","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist"}
+{"Time":"2019-09-30T11:57:05.91377+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"=== RUN   TestSkiplist\n"}
+{"Time":"2019-09-30T11:57:05.914518+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Running Suite: Skiplist Suite\n"}
+{"Time":"2019-09-30T11:57:05.914587+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"=============================\n"}
+{"Time":"2019-09-30T11:57:05.914619+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Random Seed: \u001b[1m1569815825\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.914655+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"Will run \u001b[1m1\u001b[0m of \u001b[1m1\u001b[0m specs\n"}
+{"Time":"2019-09-30T11:57:05.914697+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\n"}
+{"Time":"2019-09-30T11:57:05.917265+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[32m•\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.917327+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[1m\u001b[32mRan 1 of 1 Specs in 0.002 seconds\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.917359+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"\u001b[1m\u001b[32mSUCCESS!\u001b[0m -- \u001b[32m\u001b[1m1 Passed\u001b[0m | \u001b[91m\u001b[1m0 Failed\u001b[0m | \u001b[33m\u001b[1m0 Pending\u001b[0m | \u001b[36m\u001b[1m0 Skipped\u001b[0m\n"}
+{"Time":"2019-09-30T11:57:05.917447+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Output":"--- PASS: TestSkiplist (0.00s)\n"}
+{"Time":"2019-09-30T11:57:05.917477+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/skiplist","Test":"TestSkiplist","Elapsed":0}
+{"Time":"2019-09-30T11:57:05.917497+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"PASS\n"}
+{"Time":"2019-09-30T11:57:05.917547+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"coverage: 71.4% of statements\n"}
+{"Time":"2019-09-30T11:57:05.919157+08:00","Action":"output","Package":"Algorithm-Datastruct/golang/skiplist","Output":"ok  \tAlgorithm-Datastruct/golang/skiplist\t0.037s\tcoverage: 71.4% of statements\n"}
+{"Time":"2019-09-30T11:57:05.919205+08:00","Action":"pass","Package":"Algorithm-Datastruct/golang/skiplist","Elapsed":0.037}

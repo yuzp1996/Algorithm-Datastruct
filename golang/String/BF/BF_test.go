@@ -2,7 +2,6 @@ package BF_test
 
 import (
 	"Algorithm-Datastruct/golang/String/BF"
-	"Algorithm-Datastruct/golang/String/BM"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -16,7 +15,7 @@ var _ = Describe("BF", func() {
 			UnMatchPattern string
 		)
 		BeforeEach(func() {
-			Main = "gogogogogogogoddddgggggyuzhipengshiyigedahaorenbalabaala"
+			Main = "1zhipengyudzhipeng"
 			MatchPattern = "yuzhipeng"
 			UnMatchPattern = "xuyahui"
 		})
@@ -41,10 +40,15 @@ var _ = Describe("BF", func() {
 			Expect(exist).To(Equal(true))
 		})
 
-		It("BM should find the right string", func() {
-			exist := BM.BMfindstring(Main, MatchPattern)
-			Expect(exist).To(Equal(true))
-		})
+		//It("BM should find the right string", func() {
+		//	exist := BM.BMfindstring(Main, MatchPattern)
+		//	Expect(exist).To(Equal(true))
+		//})
+		//
+		//It("GoodSuffix can find if there is the matching string", func() {
+		//	exsit := BM.GoodSuffix(Main, MatchPattern)
+		//	Expect(exsit).To(Equal(false))
+		//})
 
 	})
 })
