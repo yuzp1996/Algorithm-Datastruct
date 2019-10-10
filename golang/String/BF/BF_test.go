@@ -2,6 +2,7 @@ package BF_test
 
 import (
 	"Algorithm-Datastruct/golang/String/BF"
+	"Algorithm-Datastruct/golang/String/BM"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -12,12 +13,17 @@ var _ = Describe("BF", func() {
 		var (
 			Main           string
 			MatchPattern   string
+			Main1          string
+			MatchPattern1  string
 			UnMatchPattern string
 		)
 		BeforeEach(func() {
-			Main = "1zhipengyudzhipeng"
-			MatchPattern = "yuzhipeng"
+			Main = "aaaassssdsdsdsds1zhipengyuzhipeng"
+			MatchPattern = "zhipengyuzhipeng"
 			UnMatchPattern = "xuyahui"
+
+			Main1 = "xxxwwwwabcdwwwqqqaaaaaxxxabcdabcabcdab"
+			MatchPattern1 = "abcdabc"
 		})
 		It("find the main", func() {
 			exist := BF.BFfindstring(Main, MatchPattern)
@@ -40,15 +46,25 @@ var _ = Describe("BF", func() {
 			Expect(exist).To(Equal(true))
 		})
 
-		//It("BM should find the right string", func() {
-		//	exist := BM.BMfindstring(Main, MatchPattern)
-		//	Expect(exist).To(Equal(true))
-		//})
-		//
-		//It("GoodSuffix can find if there is the matching string", func() {
-		//	exsit := BM.GoodSuffix(Main, MatchPattern)
-		//	Expect(exsit).To(Equal(false))
-		//})
+		It("BM should find the right string", func() {
+			exist := BM.BMfindstring(Main, MatchPattern)
+			Expect(exist).To(Equal(true))
+		})
+
+		It("GoodSuffix can find if there is the matching string", func() {
+			exsit := BM.GoodSuffix(Main1, MatchPattern1)
+			Expect(exsit).To(Equal(true))
+		})
+
+		It("GetNeededArray should return the right three array", func() {
+			Pattern := "abcdefabc"
+			patternwithlength, suffix, _ := BM.Getneededarray(Pattern)
+
+			Expect(patternwithlength).To(Equal([]string{"c", "bc", "abc", "fabc", "efabc", "defabc", "cdefabc", "bcdefabc"}))
+			Expect(suffix).To(Equal([]int{2, 1, 0}))
+			//Expect(prefix).To(Equal([]string{"c","bc","abc","fabc","efabc","defbac","cdefabc","bcdefabc"}))
+
+		})
 
 	})
 })

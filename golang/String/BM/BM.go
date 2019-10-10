@@ -61,43 +61,35 @@ func GoodSuffix(Main, Pattern string) bool {
 	mainlength := len(Main)
 	patternlength := len(Pattern)
 
-	fmt.Printf("mainlength is %d\n", mainlength)
-	fmt.Printf("patternlength is %d\n", patternlength)
-
 	if patternlength > mainlength {
 		return false
 	}
-	matchendindex := patternlength - 1
+	mainindex := patternlength - 1
 
 	for {
-		if matchendindex < mainlength {
+		if mainindex < mainlength {
 			//find good suffix
 			patternindex := patternlength - 1
-			for index := matchendindex; index > matchendindex-patternlength+1; index-- {
-				if patternindex == -1 {
-					return true
-				}
+			for index := mainindex; index > mainindex-patternlength; index-- {
 				if Main[index] == Pattern[patternindex] {
-					fmt.Printf("Main[index] is %s  and Patter[pattern] is %s \n", string(Main[index]), string(Pattern[patternindex]))
 					patternindex--
 				} else {
-					goodsuffiixlength := patternlength - (patternindex + 1)
-					goodsuffix := Main[index+1 : index+goodsuffiixlength+1]
-					fmt.Printf("goodsuffix is %s and goodsuffixlength is %d  matchendindex is %d\n", goodsuffix, goodsuffiixlength, matchendindex)
+					goodsuffixlength := patternlength - (patternindex + 1)
+					goodsuffix := Main[index+1 : index+goodsuffixlength+1]
 					forwdstep = Findforwdstep(Pattern, goodsuffix)
 					break
+				}
+				if patternindex < 0 {
+					return true
 				}
 			}
 		} else {
 			return false
 		}
-		matchendindex += forwdstep
+		mainindex += forwdstep
 	}
 
 }
-
-//abcdef
-//acbde
 
 func Findforwdstep(pattern, goodsuffix string) int {
 	if len(goodsuffix) == 0 {
@@ -110,6 +102,25 @@ func Findforwdstep(pattern, goodsuffix string) int {
 		if pattern[index-suffixlen:index] == goodsuffix {
 			return startindex - index
 		}
+		// good suffix should be equal to prefix
+
 	}
+	//dsfdafabcdefabc
+	//bcdefabc
+
 	return len(pattern)
+}
+
+func Getneededarray(pattern string) (childpatternwithlength []string, suffix []int, prefix []bool) {
+	lengthpattern := len(pattern)
+	childpatternwithlength = make([]string, lengthpattern-1)
+	suffix = make([]int, lengthpattern)
+	prefix = make([]bool, lengthpattern)
+	j := 0
+	for i := lengthpattern - 1; i > 0; i-- {
+		childpatternwithlength[j] = pattern[i:]
+		j++
+	}
+
+	return childpatternwithlength, suffix, prefix
 }
