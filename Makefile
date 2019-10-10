@@ -11,7 +11,7 @@ sonar: test
 
 upload:
 	git add .
-	git commit -m "update load code"
+	git commit -m $(log)
 	git push origin master
 
 
