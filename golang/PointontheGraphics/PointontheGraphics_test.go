@@ -12,26 +12,27 @@ var _ = Describe("PointontheGraphics", func() {
 
 		It("Add Round should be right", func() {
 			cooridinate := NewCoordinates(5, 5)
-			round1 := cooridinate.NewRound(3, 2, 1, 1)
-			round2 := cooridinate.NewRound(3, 2, 1, 2)
-			round3 := cooridinate.NewRound(3, 3, 1, 3)
+			round1 := cooridinate.NewRound(3, 2, 0.7, 1)
+			round2 := cooridinate.NewRound(4, 2, 3, 2)
+			round3 := cooridinate.NewRound(3, 3, 0.7, 3)
+			round4 := cooridinate.NewRound(4, 3, 1, 4)
 
 			cooridinate.AddRound(*round1)
 			cooridinate.AddRound(*round2)
 			cooridinate.AddRound(*round3)
+			cooridinate.AddRound(*round4)
 
 			resultround := cooridinate.FindRoundsonPoint(3, 2)
-			//Expect(cooridinate.XRounds).Should(Equal(
-			//
-			//	map[int][]Round{2:[]Round{Round{3,2,1,1}},3:[]Round{Round{3,2,1,1}}},
-			//
-			//	))
-			//Expect(cooridinate.YRounds).Should(Equal(
-			//
-			//	map[int][]Round{2:[]Round{Round{3,2,1,1}},3:[]Round{Round{3,2,1,1}}},
-			//
-			//))
-			Expect(resultround).Should(Equal(map[int]struct{}{1: {}, 2: {}, 3: {}}))
+
+			Expect(resultround).Should(Equal(map[int]struct{}{1: {}, 2: {}}))
+
+
+			resultround1 := cooridinate.FindRoundsonPoint(3.9, 2.8)
+			Expect(resultround1).Should(Equal(map[int]struct{}{4: {}, 2: {}}))
+
+			resultround2 := cooridinate.FindRoundsonPoint(1, 1)
+			Expect(resultround2).Should(Equal(map[int]struct{}{}))
+
 
 		})
 	})

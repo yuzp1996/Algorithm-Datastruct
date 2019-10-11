@@ -1,22 +1,24 @@
 package PointontheGraphics
 
-import "fmt"
+import (
+	"math"
+)
 
 type CheckPointInShape interface {
-	CheckPoint(x, y int) bool
+	CheckPoint(x, y float64) bool
 }
 
 var _ = CheckPointInShape(Round{})
 
-func (round Round) CheckPoint(x, y int) bool {
+func (round Round) CheckPoint(x, y float64) bool {
 	length := (x-round.X)*(x-round.X) + (y-round.Y)*(y-round.Y)
 	return length <= round.Radius*round.Radius
 }
 
 type Round struct {
-	X      int
-	Y      int
-	Radius int
+	X      float64
+	Y      float64
+	Radius float64
 	ID     int
 }
 
@@ -38,8 +40,8 @@ func NewCoordinates(X, Y int) *Coordinates {
 	}
 }
 
-func (coordinate *Coordinates) NewRound(X, Y, Radius, ID int) *Round {
-	if X > coordinate.MAXX || X < 0 || Y > coordinate.MAXY || Y < 0 {
+func (coordinate *Coordinates) NewRound(X float64, Y float64, Radius float64, ID int) *Round {
+	if X > float64(coordinate.MAXX )|| X < 0 || Y > float64(coordinate.MAXY )|| Y < 0 {
 		return nil
 	}
 	return &Round{
@@ -58,23 +60,21 @@ func (coordinate *Coordinates) AddRound(round Round) bool {
 	down := round.Y - round.Radius
 	up := round.Y + round.Radius
 
-	for i := left / 1; i <= right/1; i++ {
-		coordinate.XRounds[i] = append(coordinate.XRounds[i], round)
+	for i := math.Floor(left); i <= math.Floor(right); i++ {
+		coordinate.XRounds[int(i)] = append(coordinate.XRounds[int(i)], round)
 	}
-	fmt.Printf("left/1 is %d, right/1 is %d\n", left/1, right/1+1)
 
-	for j := down / 1; j <= up/1; j++ {
-		coordinate.YRounds[j] = append(coordinate.YRounds[j], round)
+	for j := math.Floor(down); j <= math.Floor(up); j++ {
+		coordinate.YRounds[int(j)] = append(coordinate.YRounds[int(j)], round)
 	}
-	fmt.Printf("down/1 is %d, up/1 is %d\n", down/1, up/1+1)
 
 	coordinate.Rounds[round.ID] = &round
 	return true
 }
 
-func (coordinate *Coordinates) FindRoundsonPoint(X, Y int) map[int]struct{} {
-	XRounds := coordinate.XRounds[X-1]
-	YRounds := coordinate.YRounds[Y-1]
+func (coordinate *Coordinates) FindRoundsonPoint(X, Y float64) map[int]struct{} {
+	XRounds := coordinate.XRounds[int(math.Floor(X))]
+	YRounds := coordinate.YRounds[int(math.Floor(Y))]
 	RoundsID := map[int]struct{}{}
 
 	for _, v := range XRounds {
@@ -85,7 +85,6 @@ func (coordinate *Coordinates) FindRoundsonPoint(X, Y int) map[int]struct{} {
 	}
 
 	for roundid := range RoundsID {
-		fmt.Printf("roundid is %v\n", roundid)
 		if !coordinate.Rounds[roundid].CheckPoint(X, Y) {
 			delete(RoundsID, roundid)
 		}
