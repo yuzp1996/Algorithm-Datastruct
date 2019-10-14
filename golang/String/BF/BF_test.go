@@ -66,5 +66,19 @@ var _ = Describe("BF", func() {
 
 		})
 
+
+		It("find the right string before . ", func() {
+			NameWithVersion := "GoLangBuild.1.10.9"
+			ExpectString := "GoLangBuild"
+			result := BM.GetNameWithOutVersion(NameWithVersion)
+			Expect(result).To(Equal(ExpectString))
+		})
+
+		It("find version with RE", func() {
+			NameWithVersion := "GoLangBuilder2.7.1.10.9"
+			result := BM.GetNameWithRE(NameWithVersion)
+			Expect(result).To(Equal("GoLangBuilder2.7"))
+		})
+
 	})
 })

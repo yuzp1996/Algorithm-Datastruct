@@ -1,6 +1,10 @@
 package BM
 
-import "fmt"
+import (
+	"fmt"
+	"regexp"
+	"strings"
+)
 
 func BMfindstring(Main, Pattern string) bool {
 	mainlength := len(Main)
@@ -122,5 +126,36 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 		j++
 	}
 
+	for parentindex := 0; parentindex < lengthpattern - 2 ; parentindex++{
+		for childindex := parentindex; childindex > 0; childindex--{
+			//只要有匹配 那就应该进行数组的插入
+			if pattern[childindex] == pattern[len(pattern)-(parentindex - childindex)]{
+				suffix[parentindex-childindex] = childindex
+				if childindex == 0{
+					prefix[parentindex-childindex] = true
+				}
+			}
+		}
+	}
+
+	fmt.Printf("suffix is %v  prefix is %v",suffix, prefix)
 	return childpatternwithlength, suffix, prefix
+}
+
+
+func GetNameWithOutVersion(name string)string{
+	return name[:strings.Index(name,".")]
+}
+
+
+
+func GetNameWithRE(s string)string{
+	rex, _ := regexp.Compile(`\.[\d]+\.[\d]+\.[\d]+$`)
+	result := rex.FindAllStringIndex(s,-1)
+	//result1 := rex.FindAllStringSubmatch(s,1)
+	//fmt.Printf("result1 is %v\n",result1)
+
+	fmt.Printf("what I want is %v",s[:result[0][0]])
+
+	return s[:result[0][0]]
 }
