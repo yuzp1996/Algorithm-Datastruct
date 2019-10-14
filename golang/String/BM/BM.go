@@ -152,10 +152,9 @@ func GetNameWithOutVersion(name string)string{
 func GetNameWithRE(s string)string{
 	rex, _ := regexp.Compile(`\.[\d]+\.[\d]+\.[\d]+$`)
 	result := rex.FindAllStringIndex(s,-1)
-	//result1 := rex.FindAllStringSubmatch(s,1)
-	//fmt.Printf("result1 is %v\n",result1)
-
-	fmt.Printf("what I want is %v",s[:result[0][0]])
-
-	return s[:result[0][0]]
+	if len(result)>0{
+		fmt.Printf("when there is match result is %v\n", s[:result[0][0]])
+		return s[:result[0][0]]
+	}
+	return "nosuchthing"
 }

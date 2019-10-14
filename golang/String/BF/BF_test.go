@@ -78,6 +78,16 @@ var _ = Describe("BF", func() {
 			NameWithVersion := "GoLangBuilder2.7.1.10.9"
 			result := BM.GetNameWithRE(NameWithVersion)
 			Expect(result).To(Equal("GoLangBuilder2.7"))
+
+			NameWithVersion1 := "Python2.7Builder.1.10.9"
+			result1 := BM.GetNameWithRE(NameWithVersion1)
+			Expect(result1).To(Equal("Python2.7Builder"))
+
+			NameWithOutVersion := "GoLangBuilder"
+			result = BM.GetNameWithRE(NameWithOutVersion)
+			Expect(result).To(Equal("nosuchthing"))
+
+
 		})
 
 	})
