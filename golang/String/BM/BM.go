@@ -112,7 +112,7 @@ func Findforwdstep(pattern, goodsuffix string, suffix []int, prefix []bool) int 
 	}
 	for j := len(goodsuffix);j>=0;j--{
 		if prefix[j]{
-			return len(pattern)-2*j
+			return len(pattern)-j
 		}
 	}
 
@@ -149,7 +149,7 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 	return childpatternwithlength, suffix, prefix
 }
 
-
+//below code just for test
 func GetNameWithOutVersion(name string)string{
 	return name[:strings.Index(name,".")]
 }
