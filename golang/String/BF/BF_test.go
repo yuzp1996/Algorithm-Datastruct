@@ -54,18 +54,23 @@ var _ = Describe("BF", func() {
 		It("GoodSuffix can find if there is the matching string", func() {
 			exsit := BM.GoodSuffix(Main1, MatchPattern1)
 			Expect(exsit).To(Equal(true))
+
+			exsit1 := BM.GoodSuffix(Main1, UnMatchPattern)
+			Expect(exsit1).To(Equal(false))
+
+			exsit2 := BM.GoodSuffix(Main, MatchPattern)
+			Expect(exsit2).To(Equal(true))
 		})
 
 		It("GetNeededArray should return the right three array", func() {
 			Pattern := "abcdefabc"
-			patternwithlength, suffix, _ := BM.Getneededarray(Pattern)
+			patternwithlength, suffix, prefix := BM.Getneededarray(Pattern)
 
 			Expect(patternwithlength).To(Equal([]string{"c", "bc", "abc", "fabc", "efabc", "defabc", "cdefabc", "bcdefabc"}))
-			Expect(suffix).To(Equal([]int{2, 1, 0}))
-			//Expect(prefix).To(Equal([]string{"c","bc","abc","fabc","efabc","defbac","cdefabc","bcdefabc"}))
+			Expect(suffix).To(Equal([]int{2, 1, 0, -1, -1, -1, -1, -1, -1}))
+			Expect(prefix).To(Equal([]bool{false, false, true, false, false, false, false, false, false}))
 
 		})
-
 
 		It("find the right string before . ", func() {
 			NameWithVersion := "GoLangBuild.1.10.9"
@@ -86,7 +91,6 @@ var _ = Describe("BF", func() {
 			NameWithOutVersion := "GoLangBuilder"
 			result = BM.GetNameWithRE(NameWithOutVersion)
 			Expect(result).To(Equal("nosuchthing"))
-
 
 		})
 

@@ -70,6 +70,10 @@ func GoodSuffix(Main, Pattern string) bool {
 	}
 	mainindex := patternlength - 1
 
+	substring, suffix,prefix := Getneededarray(Pattern)
+
+	fmt.Printf("get the substring is %v suffix is %v  and the prefix is %v\n", substring,suffix,prefix)
+
 	for {
 		if mainindex < mainlength {
 			//find good suffix
@@ -80,7 +84,8 @@ func GoodSuffix(Main, Pattern string) bool {
 				} else {
 					goodsuffixlength := patternlength - (patternindex + 1)
 					goodsuffix := Main[index+1 : index+goodsuffixlength+1]
-					forwdstep = Findforwdstep(Pattern, goodsuffix)
+					forwdstep = Findforwdstep(Pattern, goodsuffix, suffix, prefix)
+					fmt.Printf("forwdstep is %v \n", forwdstep)
 					break
 				}
 				if patternindex < 0 {
@@ -95,22 +100,21 @@ func GoodSuffix(Main, Pattern string) bool {
 
 }
 
-func Findforwdstep(pattern, goodsuffix string) int {
-	if len(goodsuffix) == 0 {
+func Findforwdstep(pattern, goodsuffix string, suffix []int, prefix []bool) int {
+
+	lensuffix := len(goodsuffix)
+	if lensuffix == 0 {
 		return 1
 	}
-	suffixlen := len(goodsuffix)
-	startindex := len(pattern) - 1
-	for index := startindex; index-suffixlen >= 0; index-- {
-		//should return the latter pattern index
-		if pattern[index-suffixlen:index] == goodsuffix {
-			return startindex - index
-		}
-		// good suffix should be equal to prefix
+	if suffix[lensuffix-1]!=-1{
+		return len(pattern) -len(goodsuffix)- suffix[lensuffix-1]
 
 	}
-	//dsfdafabcdefabc
-	//bcdefabc
+	for j := len(goodsuffix);j>=0;j--{
+		if prefix[j]{
+			return len(pattern)-2*j
+		}
+	}
 
 	return len(pattern)
 }
@@ -126,10 +130,9 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 		j++
 	}
 
-	for parentindex := 0; parentindex < lengthpattern - 2 ; parentindex++{
-		for childindex := parentindex; childindex > 0; childindex--{
-			//只要有匹配 那就应该进行数组的插入
-			if pattern[childindex] == pattern[len(pattern)-(parentindex - childindex)]{
+	for parentindex := 0; parentindex <= lengthpattern - 2 ; parentindex++{
+		for childindex := parentindex; childindex >= 0; childindex--{
+			if pattern[childindex] == pattern[len(pattern)-1-(parentindex - childindex)]{
 				suffix[parentindex-childindex] = childindex
 				if childindex == 0{
 					prefix[parentindex-childindex] = true
@@ -138,7 +141,11 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 		}
 	}
 
-	fmt.Printf("suffix is %v  prefix is %v",suffix, prefix)
+	for i := 0;i < len(suffix);i++{
+		if suffix[i] == 0 && !prefix[i]{
+			suffix[i]=-1
+		}
+	}
 	return childpatternwithlength, suffix, prefix
 }
 
