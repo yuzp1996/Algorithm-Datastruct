@@ -16,6 +16,8 @@ var _ = Describe("BF", func() {
 			Main1          string
 			MatchPattern1  string
 			UnMatchPattern string
+			Main2	string
+			MatchPattern2 string
 		)
 		BeforeEach(func() {
 			Main = "aaaassssdsdsdsds1zhipengyuzhipeng"
@@ -24,6 +26,11 @@ var _ = Describe("BF", func() {
 
 			Main1 = "xxxwwwwabcdwwwqqqaaaaaxxxabcdabcabcdab"
 			MatchPattern1 = "abcdabc"
+
+
+			Main2 = "asfdlnjasdfoousdfhodsohafodsnfadsfsoodfoodsdfds"
+			MatchPattern2 = "odfood"
+
 		})
 		It("find the main", func() {
 			exist := BF.BFfindstring(Main, MatchPattern)
@@ -51,6 +58,16 @@ var _ = Describe("BF", func() {
 			Expect(exist).To(Equal(true))
 		})
 
+		It("BM1 should find the right string", func() {
+			exist := BM.BMfindstring(Main1, MatchPattern1)
+			Expect(exist).To(Equal(true))
+		})
+
+		It("BM1 should find the right string", func() {
+			exist := BM.BMfindstring(Main2, MatchPattern2)
+			Expect(exist).To(Equal(true))
+		})
+
 		It("GoodSuffix can find if there is the matching string", func() {
 			exsit := BM.GoodSuffix(Main1, MatchPattern1)
 			Expect(exsit).To(Equal(true))
@@ -60,6 +77,10 @@ var _ = Describe("BF", func() {
 
 			exsit2 := BM.GoodSuffix(Main, MatchPattern)
 			Expect(exsit2).To(Equal(true))
+
+			exsit3 := BM.GoodSuffix(Main2, MatchPattern2)
+			Expect(exsit3).To(Equal(true))
+
 		})
 
 		It("GetNeededArray should return the right three array", func() {
@@ -67,16 +88,16 @@ var _ = Describe("BF", func() {
 			patternwithlength, suffix, prefix := BM.Getneededarray(Pattern)
 
 			Expect(patternwithlength).To(Equal([]string{"c", "bc", "abc", "fabc", "efabc", "defabc", "cdefabc", "bcdefabc"}))
-			Expect(suffix).To(Equal([]int{2, 1, 0, -1, -1, -1, -1, -1, -1}))
-			Expect(prefix).To(Equal([]bool{false, false, true, false, false, false, false, false, false}))
+			Expect(suffix).To(Equal([]int{2, 1, 0, -1, -1, -1, -1, -1}))
+			Expect(prefix).To(Equal([]bool{false, false, true, false, false, false, false, false}))
 
 		})
 
 		It("find the right string before . ", func() {
-			NameWithVersion := "GoLangBuild.1.10.9"
-			ExpectString := "GoLangBuild"
-			result := BM.GetNameWithOutVersion(NameWithVersion)
-			Expect(result).To(Equal(ExpectString))
+			NameWithVersion := "GoLang1.10Build.1.10.9"
+			ExpectString := "GoLang1.10Build"
+			result := BM.GetNameWithOutVersion(ExpectString,NameWithVersion)
+			Expect(result).To(Equal(true))
 		})
 
 		It("find version with RE", func() {
@@ -91,6 +112,9 @@ var _ = Describe("BF", func() {
 			NameWithOutVersion := "GoLangBuilder"
 			result = BM.GetNameWithRE(NameWithOutVersion)
 			Expect(result).To(Equal("nosuchthing"))
+
+
+
 
 		})
 

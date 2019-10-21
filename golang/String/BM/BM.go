@@ -3,7 +3,6 @@ package BM
 import (
 	"fmt"
 	"regexp"
-	"strings"
 )
 
 func BMfindstring(Main, Pattern string) bool {
@@ -16,9 +15,7 @@ func BMfindstring(Main, Pattern string) bool {
 	}
 
 	for {
-		if start+patternlength < mainlength {
-			fmt.Printf("start is %v", start)
-			fmt.Printf("Main[start:start+patternlength] is %v  Pattern is %v\n", Main[start:start+patternlength], Pattern)
+		if start+patternlength <= mainlength {
 			if Main[start:start+patternlength] == Pattern {
 				return true
 			}
@@ -28,6 +25,7 @@ func BMfindstring(Main, Pattern string) bool {
 			} else {
 				start += forward
 			}
+			fmt.Printf("forward is %d \n",forward)
 
 		} else {
 			break
@@ -55,7 +53,7 @@ func FindForward(Main, Pattern string) int {
 		}
 	}
 
-	fmt.Printf("%v - %v", notmatchindex, notmatcharinpattern)
+	fmt.Printf("%v - %v = ", notmatchindex, notmatcharinpattern)
 	return notmatchindex - notmatcharinpattern
 }
 
@@ -122,8 +120,8 @@ func Findforwdstep(pattern, goodsuffix string, suffix []int, prefix []bool) int 
 func Getneededarray(pattern string) (childpatternwithlength []string, suffix []int, prefix []bool) {
 	lengthpattern := len(pattern)
 	childpatternwithlength = make([]string, lengthpattern-1)
-	suffix = make([]int, lengthpattern)
-	prefix = make([]bool, lengthpattern)
+	suffix = make([]int, lengthpattern-1)
+	prefix = make([]bool, lengthpattern-1)
 	j := 0
 	for i := lengthpattern - 1; i > 0; i-- {
 		childpatternwithlength[j] = pattern[i:]
@@ -137,10 +135,13 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 				if childindex == 0{
 					prefix[parentindex-childindex] = true
 				}
+			}else{
+				continue
 			}
 		}
 	}
 
+	fmt.Printf("now now suffix is %v \n",suffix)
 	for i := 0;i < len(suffix);i++{
 		if suffix[i] == 0 && !prefix[i]{
 			suffix[i]=-1
@@ -150,9 +151,9 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 }
 
 //below code just for test
-func GetNameWithOutVersion(name string)string{
-	return name[:strings.Index(name,".")]
-}
+//func GetNameWithOutVersion(name string)string{
+//	return name[:strings.Index(name,".")]
+//}
 
 
 
@@ -164,4 +165,14 @@ func GetNameWithRE(s string)string{
 		return s[:result[0][0]]
 	}
 	return "nosuchthing"
+}
+
+
+func GetNameWithOutVersion(name,versionName string) bool {
+	rex, _ := regexp.Compile(`\.[\d]+\.[\d]+\.[\d]+$`)
+	result := rex.FindAllStringIndex(versionName, -1)
+	if len(result) > 0 {
+		return versionName[:result[0][0]] == name
+	}
+	return false
 }
