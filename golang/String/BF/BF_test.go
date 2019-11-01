@@ -16,8 +16,8 @@ var _ = Describe("BF", func() {
 			Main1          string
 			MatchPattern1  string
 			UnMatchPattern string
-			Main2	string
-			MatchPattern2 string
+			Main2          string
+			MatchPattern2  string
 		)
 		BeforeEach(func() {
 			Main = "aaaassssdsdsdsds1zhipengyuzhipeng"
@@ -26,7 +26,6 @@ var _ = Describe("BF", func() {
 
 			Main1 = "xxxwwwwabcdwwwqqqaaaaaxxxabcdabcabcdab"
 			MatchPattern1 = "abcdabc"
-
 
 			Main2 = "asfdlnjasdfoousdfhodsohafodsnfadsfsoodfoodsdfds"
 			MatchPattern2 = "odfood"
@@ -96,7 +95,7 @@ var _ = Describe("BF", func() {
 		It("find the right string before . ", func() {
 			NameWithVersion := "GoLang1.10Build.1.10.9"
 			ExpectString := "GoLang1.10Build"
-			result := BM.GetNameWithOutVersion(ExpectString,NameWithVersion)
+			result := BM.GetNameWithOutVersion(ExpectString, NameWithVersion)
 			Expect(result).To(Equal(true))
 		})
 
@@ -112,9 +111,6 @@ var _ = Describe("BF", func() {
 			NameWithOutVersion := "GoLangBuilder"
 			result = BM.GetNameWithRE(NameWithOutVersion)
 			Expect(result).To(Equal("nosuchthing"))
-
-
-
 
 		})
 

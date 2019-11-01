@@ -28,25 +28,25 @@ func RKfindstring(Main, Pattern string) bool {
 
 	//不能太想当然的写代码  应该先用草图实现了 自己心里真的明白了才行
 	for {
-		log.Printf("the matched is %v",Main[matchfirstindex:matchlastindex])
+		log.Printf("the matched is %v", Main[matchfirstindex:matchlastindex])
 		if mainvalue != patternvalue {
-			if matchlastindex < len(Main){
+			if matchlastindex < len(Main) {
 				mainvalue -= int32(Main[matchfirstindex])
 				mainvalue += int32(Main[matchlastindex])
 				matchfirstindex++
 				matchlastindex++
-			}else{
-					return false
+			} else {
+				return false
 			}
 		} else {
 			if Main[matchfirstindex:matchlastindex] == Pattern {
 				return true
 			} else {
-				if matchlastindex <len(Main){
+				if matchlastindex < len(Main) {
 					matchfirstindex++
 					matchlastindex++
-				}else{
-						return false
+				} else {
+					return false
 				}
 			}
 		}

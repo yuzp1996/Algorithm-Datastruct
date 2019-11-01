@@ -41,7 +41,7 @@ func NewCoordinates(X, Y int) *Coordinates {
 }
 
 func (coordinate *Coordinates) NewRound(X float64, Y float64, Radius float64, ID int) *Round {
-	if X > float64(coordinate.MAXX )|| X < 0 || Y > float64(coordinate.MAXY )|| Y < 0 {
+	if X > float64(coordinate.MAXX) || X < 0 || Y > float64(coordinate.MAXY) || Y < 0 {
 		return nil
 	}
 	return &Round{

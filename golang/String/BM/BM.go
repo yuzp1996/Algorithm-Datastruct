@@ -25,7 +25,7 @@ func BMfindstring(Main, Pattern string) bool {
 			} else {
 				start += forward
 			}
-			fmt.Printf("forward is %d \n",forward)
+			fmt.Printf("forward is %d \n", forward)
 
 		} else {
 			break
@@ -68,9 +68,9 @@ func GoodSuffix(Main, Pattern string) bool {
 	}
 	mainindex := patternlength - 1
 
-	substring, suffix,prefix := Getneededarray(Pattern)
+	substring, suffix, prefix := Getneededarray(Pattern)
 
-	fmt.Printf("get the substring is %v suffix is %v  and the prefix is %v\n", substring,suffix,prefix)
+	fmt.Printf("get the substring is %v suffix is %v  and the prefix is %v\n", substring, suffix, prefix)
 
 	for {
 		if mainindex < mainlength {
@@ -104,13 +104,13 @@ func Findforwdstep(pattern, goodsuffix string, suffix []int, prefix []bool) int 
 	if lensuffix == 0 {
 		return 1
 	}
-	if suffix[lensuffix-1]!=-1{
-		return len(pattern) -len(goodsuffix)- suffix[lensuffix-1]
+	if suffix[lensuffix-1] != -1 {
+		return len(pattern) - len(goodsuffix) - suffix[lensuffix-1]
 
 	}
-	for j := len(goodsuffix);j>=0;j--{
-		if prefix[j]{
-			return len(pattern)-j
+	for j := len(goodsuffix); j >= 0; j-- {
+		if prefix[j] {
+			return len(pattern) - j
 		}
 	}
 
@@ -128,23 +128,23 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 		j++
 	}
 
-	for parentindex := 0; parentindex <= lengthpattern - 2 ; parentindex++{
-		for childindex := parentindex; childindex >= 0; childindex--{
-			if pattern[childindex] == pattern[len(pattern)-1-(parentindex - childindex)]{
+	for parentindex := 0; parentindex <= lengthpattern-2; parentindex++ {
+		for childindex := parentindex; childindex >= 0; childindex-- {
+			if pattern[childindex] == pattern[len(pattern)-1-(parentindex-childindex)] {
 				suffix[parentindex-childindex] = childindex
-				if childindex == 0{
+				if childindex == 0 {
 					prefix[parentindex-childindex] = true
 				}
-			}else{
+			} else {
 				continue
 			}
 		}
 	}
 
-	fmt.Printf("now now suffix is %v \n",suffix)
-	for i := 0;i < len(suffix);i++{
-		if suffix[i] == 0 && !prefix[i]{
-			suffix[i]=-1
+	fmt.Printf("now now suffix is %v \n", suffix)
+	for i := 0; i < len(suffix); i++ {
+		if suffix[i] == 0 && !prefix[i] {
+			suffix[i] = -1
 		}
 	}
 	return childpatternwithlength, suffix, prefix
@@ -155,20 +155,17 @@ func Getneededarray(pattern string) (childpatternwithlength []string, suffix []i
 //	return name[:strings.Index(name,".")]
 //}
 
-
-
-func GetNameWithRE(s string)string{
+func GetNameWithRE(s string) string {
 	rex, _ := regexp.Compile(`\.[\d]+\.[\d]+\.[\d]+$`)
-	result := rex.FindAllStringIndex(s,-1)
-	if len(result)>0{
+	result := rex.FindAllStringIndex(s, -1)
+	if len(result) > 0 {
 		fmt.Printf("when there is match result is %v\n", s[:result[0][0]])
 		return s[:result[0][0]]
 	}
 	return "nosuchthing"
 }
 
-
-func GetNameWithOutVersion(name,versionName string) bool {
+func GetNameWithOutVersion(name, versionName string) bool {
 	rex, _ := regexp.Compile(`\.[\d]+\.[\d]+\.[\d]+$`)
 	result := rex.FindAllStringIndex(versionName, -1)
 	if len(result) > 0 {

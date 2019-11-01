@@ -26,13 +26,11 @@ var _ = Describe("PointontheGraphics", func() {
 
 			Expect(resultround).Should(Equal(map[int]struct{}{1: {}, 2: {}}))
 
-
 			resultround1 := cooridinate.FindRoundsonPoint(3.9, 2.8)
 			Expect(resultround1).Should(Equal(map[int]struct{}{4: {}, 2: {}}))
 
 			resultround2 := cooridinate.FindRoundsonPoint(1, 1)
 			Expect(resultround2).Should(Equal(map[int]struct{}{}))
-
 
 		})
 	})
