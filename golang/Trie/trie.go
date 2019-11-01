@@ -1,5 +1,7 @@
 package Trie
 
+import "log"
+
 type TrieLeaf struct {
 	Value string
 	Leafs []*TrieLeaf
@@ -54,4 +56,71 @@ func(TrieTree *TrieLeaf)Find(keyword string)bool{
 		Root = Root.Leafs[int(char)-97]
 	}
 	return true
+}
+
+type PointTester struct {
+	Name int
+}
+
+
+func TestArrayPointer(Array []*PointTester)bool{
+	resultlist := make(map[int]*PointTester)
+
+	for index, value := range Array{
+		resultlist[index] = value
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,value)
+	}
+	log.Printf("now \n next")
+
+
+	for index, value := range resultlist{
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,&value)
+	}
+
+
+	log.Printf("resultlist is %v", resultlist)
+
+	return  true
+}
+
+
+func TestArray(Array []PointTester)bool{
+	resultlist := make(map[int]*PointTester)
+
+	for index, value := range Array{
+		//value := _value
+		resultlist[index] = &value
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,value)
+	}
+	log.Printf("now \n next")
+	for index, value := range resultlist{
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,&value)
+	}
+
+
+	log.Printf("resultlist is %v", resultlist)
+
+	return  true
+}
+
+
+
+func TestPointerArray(Array *[]PointTester)bool{
+	resultlist := make(map[int]*PointTester)
+
+	for index, value := range *Array{
+		//value := _value
+		resultlist[index] = &value
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,value)
+	}
+	log.Printf("now \n next")
+
+	for index, value := range resultlist{
+		log.Printf("index is %v, value is %v and address is %v\n", index,value,&value)
+	}
+
+
+	log.Printf("resultlist is %v", resultlist)
+
+	return  true
 }
