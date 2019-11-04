@@ -2,6 +2,8 @@ package Trie
 
 import (
 	"log"
+	"sync"
+	"time"
 )
 
 type TrieLeaf struct {
@@ -164,6 +166,28 @@ func Test12(){
 }
 
 func Test14(){
+	x := 2
+	y := 4
+	table := make([][]int,x)
+	for i := range table{
+		table[i] = make([]int,y)
+	}
+	table[0][0] = 1
+
+	log.Printf("table is %v\n", table)
+
+
+	h,w := 2,4
+	raw := make([]int, h*w)
+	for i := range raw {
+		raw[i] = i
+	}
+	log.Printf("raw is %v &raw is %v \n", raw,&raw[4])
+	table = make([][]int,h)
+	for i := range table{
+		table[i] =  raw[i*w:i*w+w]
+	}
+	log.Printf("table is %v and &table[1][0] is %v",table, &table[1][0])
 
 }
 
@@ -175,12 +199,124 @@ func Test18(){
 
 }
 
-
+//WaitGroup make sure all worker will be done
 func Test31(){
+	var wg sync.WaitGroup
+
+	workcount := 2
+	for i:=0;i<workcount;i++{
+		wg.Add(1)
+		go test31DoIt(i, &wg)
+	}
+
+	time.Sleep(1 * time.Second)
+	wg.Wait()
+	log.Printf("all done")
+
 
 }
 
+func test31DoIt(workId int, wg *sync.WaitGroup){
+	log.Printf("[%v]start running... \n", workId)
+	time.Sleep(3*time.Second)
+	log.Printf("[%v]running done \n",workId)
+	wg.Done()
+}
+
+// WaitGroup make sure all worker will be done
+// but chan done is for stop a goroutine when it is not done because we want to exit all the sub program
+func Test311(){
+	done := make(chan struct{})
+	var wg sync.WaitGroup
+	ch := make(chan interface{})
+
+
+	workcount := 2
+	for i:=0;i<workcount;i++{
+		wg.Add(1)
+		go test311DoIt(i, done,ch, &wg)
+	}
+	for i := 0;i<workcount;i++{
+		ch <-i
+	}
+
+	close(done)
+	wg.Wait()
+	close(ch)
+
+	log.Printf("all done")
+}
+
+func test311DoIt(workId int, done <-chan struct{},ch <-chan interface{}, wg *sync.WaitGroup){
+	log.Printf("[%v]start running... \n", workId)
+	defer wg.Done()
+	for{
+		select {
+		case m:= <-ch:
+			log.Printf("[%v] m is %v \n ", workId,m)
+		case <-done:
+			log.Printf("[%v] is done",workId)
+			return
+		}
+	}
+}
+
+func Test33(){
+	done := make(chan struct{})
+	ch := make(chan int)
+	for i:= 0;i < 3;i++{
+		go func(index int) {
+			select {
+			case ch <- (index+1)*2:
+				log.Println(index, "Send Result")
+			case <-done:
+				log.Println(index," Exits")
+			}
+		}(i)
+	}
+
+	log.Println("Result: ",<-ch)
+	close(done)
+	time.Sleep(time.Second *2)
+	log.Println("done")
+
+
+}
+
+//在一个值为 nil 的 channel 上发送和接收数据将永久阻塞
+//向已关闭的 channel 发送数据会造成 panic
+//两者不同
 func Test34(){
+	inch := make(chan int)
+	outch := make(chan int)
+
+	go func() {
+		var in <-chan int = inch
+		var out chan<- int
+		var val int
+
+		for{
+			select {
+			case out <- val:
+				log.Println("-----")
+				out = nil
+				in = inch
+			case val = <-in:
+				log.Println("+++++")
+				out = outch
+				in = nil
+			}
+		}
+	}()
+	go func() {
+		for r:= range outch{
+			log.Println("Result: ", r)
+		}
+	}()
+	inch <- 1
+	inch <- 2
+	time.Sleep(3*time.Second)
+
 
 }
 

@@ -56,6 +56,20 @@ var _ = Describe("Trie", func() {
 	It("Test47", func() {
 		Test47()
 	})
-
+	It("Test14", func() {
+		Test14()
+	})
+	It("Test31", func() {
+		Test31()
+	})
+	It("Test311", func() {
+		Test311()
+	})
+	It("Test33", func() {
+		Test33()
+	})
+	It("Test34", func() {
+		Test34()
+	})
 
 })
