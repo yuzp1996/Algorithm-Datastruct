@@ -40,5 +40,22 @@ var _ = Describe("Trie", func() {
 		arrayointerresult := TestArrayPointer(ArrayPointer)
 		Expect(arrayointerresult).To(Equal(true))
 
+
 	})
+	It("Test the Golang traps", func() {
+		Test12()
+	})
+
+	It("Test18", func() {
+		Test18()
+	})
+
+	It("Test45", func() {
+		Test45()
+	})
+	It("Test47", func() {
+		Test47()
+	})
+
+
 })

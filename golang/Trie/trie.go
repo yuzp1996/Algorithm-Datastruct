@@ -1,6 +1,8 @@
 package Trie
 
-import "log"
+import (
+	"log"
+)
 
 type TrieLeaf struct {
 	Value   string
@@ -117,3 +119,103 @@ func TestArrayPointer(Array []*PointTester) bool {
 //
 //	return  true
 //}
+
+//https://segmentfault.com/a/1190000013739000#articleHeader5
+
+func Test12(){
+
+
+	// this is array this will not work
+	TestArray := [3]int{1,2,3}
+	log.Printf("before func TestArray it is %v",TestArray)
+
+	func(arr [3]int){
+		arr[0] = 0
+		log.Printf("TestArray in func it is %v",arr)
+	}(TestArray)
+
+	log.Printf("out of ht func it is %v", TestArray)
+
+
+	//this is array but use pointer it willl work
+	log.Printf("before func TestArray it is %v",TestArray)
+
+	func(arr *[3]int){
+		arr[0] = 0
+		log.Printf("TestArray in func it is %v",arr)
+	}(&TestArray)
+
+	log.Printf("out of ht func it is %v", TestArray)
+
+
+
+	// this is slice it will work
+	TestSlice := []int{1,2,3}
+	log.Printf("before func TestArray it is %v",TestSlice)
+
+	func(arr []int){
+		arr[0] = 0
+		log.Printf("TestArray in func it is %v",arr)
+	}(TestSlice)
+
+	log.Printf("out of ht func it is %v", TestSlice)
+
+
+}
+
+func Test14(){
+
+}
+
+func Test18(){
+	TestString := "zpyutest"
+	log.Printf("TestString[0] is %v", TestString[0])
+	TestChinese := "于志鹏"
+	log.Printf("TestChinese[0] is %v", TestChinese[0])
+
+}
+
+
+func Test31(){
+
+}
+
+func Test34(){
+
+}
+
+func Test45(){
+	loop:
+		for{
+			switch {
+			case true:
+				log.Printf("breaking out ...")
+				break loop
+			}
+		}
+
+	loop1: for{
+		switch {
+		case true:
+			log.Printf("breaking1 out ...")
+			break loop1
+		}
+	}
+	log.Printf("out loop...")
+
+}
+
+func Test47(){
+	var i = 1
+	i++
+	defer log.Printf("result is %v", func()int {return i*2}())
+	i++
+}
+
+func Test50(){
+
+}
+
+func Test51(){}
+
+func Test53(){}
