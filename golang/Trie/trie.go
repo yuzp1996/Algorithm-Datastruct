@@ -354,4 +354,17 @@ func Test50(){
 
 func Test51(){}
 
-func Test53(){}
+func Test53(){
+
+
+	var data *PointTester
+	log.Println("data is nil ", data == nil)
+
+	// it will be nil only if it's type and val be nil
+	var inter interface{}
+	log.Println("inter is nil ", inter == nil)
+
+	inter = data
+	log.Println("after inter=data inter is nil", inter == nil)
+
+}
