@@ -8,11 +8,13 @@ import (
 
 var _ = Describe("KMP", func() {
 	It("kmp algorithm", func() {
-		result := MainSkeleTon("abcabcabcd", "abcd")
+		result := MainSkeleTon("dsfdsfdsfdsfdsfsdabababzabababsfdsfdsabababzabababdsfdsfdsabababzababab", "abababzababab")
 		Expect(result).To(Equal(true))
 
-		next := Failurefunction("zpyduzpsyuzpdyuzxpyu")
-		Expect(next).To(Equal([]int{1,3,4}))
-
+	})
+	It("test failuerfuntion", func() {
+		pattern := "abababzababab"
+		next := FailuerFunction(pattern)
+		Expect(next).To(Equal([]int{-1,-1,0,1,2,3,-1,0,1,2,3,4}))
 	})
 })
