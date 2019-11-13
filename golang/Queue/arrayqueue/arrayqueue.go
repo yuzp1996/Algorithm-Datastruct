@@ -59,11 +59,15 @@ func (this *ArrayQueue) Enqueue(value interface{}) {
 	}
 }
 
-func (this *ArrayQueue) Dequeue() {
+func (this *ArrayQueue) Dequeue() interface{}{
+	var result interface{}
 	if this.Candequeue() {
+		result = this.Data[this.Head]
 		this.Data[this.Head] = nil
 		this.Head++
 	}
+	return result
+
 }
 
 func (this *ArrayQueue) PrintQueue() []interface{} {
