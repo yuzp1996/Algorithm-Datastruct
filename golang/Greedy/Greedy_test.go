@@ -8,7 +8,7 @@ import (
 
 var _ = Describe("Greedy", func() {
 	It("Test Greedy", func() {
-		Expect(FindTheLatest(1987321)).To(Equal(187321))
+		Expect(FindTheLatest(1987321,3)).To(Equal(1321))
 
 	})
 	It("test ConstructNum", func() {

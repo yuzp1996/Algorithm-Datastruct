@@ -4,7 +4,7 @@ import (
 	. "Algorithm-Datastruct/golang/Stack/stackarray"
 )
 
-func FindTheLatest(data int)(result int){
+func FindTheLatest(data int, time int)(result int){
 
 	stack := NewStackArray()
 
@@ -16,15 +16,18 @@ func FindTheLatest(data int)(result int){
 	for !stack.IsEmpty(){
 		resultarray = append(resultarray,stack.Pop().(int))
 	}
-	really := []int{}
-	for i := 0;i<len(resultarray)-1;i++{
-		if resultarray[i] > resultarray[i+1]{
-			really = append(really,resultarray[:i]...)
-			really = append(really,resultarray[i+1:]...)
-			break
+	var really []int
+	for t:=0;t<time;t++{
+		really = []int{}
+		for i := 0;i<len(resultarray)-1;i++{
+			if resultarray[i] > resultarray[i+1]{
+				really = append(really,resultarray[:i]...)
+				really = append(really,resultarray[i+1:]...)
+				resultarray = really
+				break
+			}
 		}
 	}
-
 	result = ConstructNum(really)
 	return result
 }
