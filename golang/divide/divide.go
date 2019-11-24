@@ -1,17 +1,19 @@
 package divide
 
-func MergeSort(data []int)[]int{
+var count int
+
+func MergeSort(data []int)( []int, int){
+
 
 	length := len(data)
 	if length <= 1{
-		return data
+		return data,count
 	}
 	index := length/2
-
-	larray := MergeSort(data[:index])
-	rarray := MergeSort(data[index:])
+	larray,_ := MergeSort(data[:index])
+	rarray,_ := MergeSort(data[index:])
 	result := Merge(larray,rarray)
-	return result
+	return result, count
 }
 
 func Merge(larray []int, rarray []int)[]int{
@@ -24,6 +26,7 @@ func Merge(larray []int, rarray []int)[]int{
 			lindex++
 		}else{
 			result = append(result,rarray[rindex])
+			count += llenght - lindex
 			rindex++
 		}
 	}
