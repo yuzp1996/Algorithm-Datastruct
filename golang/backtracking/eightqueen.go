@@ -3,61 +3,6 @@ package backtracking
 import "fmt"
 
 var quene = []int{0,0,0,0,0,0,0,0}
-//
-//// GetEightQueue get Eight queue array
-//func GetEightQueue(row int) {
-//	if row == 8{
-//		fmt.Println(quene)
-//		PrintEightQueue()
-//		return
-//	}
-//	for column := 0;column<8;column++{
-//		if IsOk(row,column){
-//			quene[row] = column
-//			GetEightQueue(row+1)
-//		}
-//	}
-//}
-//
-//func IsOk(row int, column int) bool {
-//
-//	leftup,rightup := column-1,column+1
-//	for r := row-1; r >= 0; r--{
-//			if quene[r] == leftup{
-//				return false
-//			}
-//
-//			if quene[r] == rightup{
-//				return false
-//			}
-//
-//
-//		if quene[r] == column{
-//			return false
-//		}
-//		leftup--
-//		rightup++
-//	}
-//	return true
-//}
-//
-//func PrintEightQueue() {
-//	for i := 0;i < 8;i++{
-//		for j := 0;j<8;j++{
-//			if quene[i]==j{
-//				fmt.Print("  Q",)
-//			}else{
-//				fmt.Printf("  *")
-//			}
-//		}
-//		fmt.Println()
-//	}
-//	fmt.Println()
-//	return
-//}
-
-
-
 
 func EightQueue(row int){
 	if row == 8{
@@ -129,6 +74,64 @@ func ZerOnePackage(index int, currentweight int,weightarray []int,totalnum int,l
 	if currentweight+weightarray[index] <= loadmaxwight{
 		ZerOnePackage(index+1, currentweight+weightarray[index],weightarray,totalnum,loadmaxwight)
 	}
-
-
 }
+
+
+
+
+var CanloadWeight int
+
+var PackageMaxWeight  = 10
+var MaxNum = 8
+var ItemsWeight = []int{2,1,1,2,2,3,4,5}
+
+var cheap = [][]bool{
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+		[]bool{false,false,false,false,false,false,false,false,false,false},
+	}
+
+//SimpleZerOnePackage  use it by SimpleZerOnePackage(0,0)
+func SimpleZerOnePackage(index int,currentweight int){
+
+	if index == MaxNum - 1||currentweight == PackageMaxWeight{
+		if currentweight > CanloadWeight{
+			CanloadWeight = currentweight
+		}
+		fmt.Println(CanloadWeight)
+		fmt.Println(cheap)
+		return
+	}
+	if cheap[index][currentweight]{
+		return
+	}
+	cheap[index][currentweight] = true
+	SimpleZerOnePackage(index+1, currentweight)
+	if currentweight+ItemsWeight[index]<= PackageMaxWeight{
+		SimpleZerOnePackage(index+1,currentweight+ItemsWeight[index])
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
