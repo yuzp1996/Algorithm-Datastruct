@@ -79,12 +79,16 @@ func ZerOnePackage(index int, currentweight int,weightarray []int,totalnum int,l
 
 
 
+
+
+
 var CanloadWeight int
 
 var PackageMaxWeight  = 10
 var MaxNum = 8
 var ItemsWeight = []int{2,1,1,2,2,3,4,5}
 
+//备忘录  把计算过的东西存储下来，可以避免重复计算 这种计算的效率 已经可以比肩动态规划了
 var cheap = [][]bool{
 		[]bool{false,false,false,false,false,false,false,false,false,false},
 		[]bool{false,false,false,false,false,false,false,false,false,false},
@@ -122,7 +126,24 @@ func SimpleZerOnePackage(index int,currentweight int){
 
 
 
+var MaxValue int
+var ItemsValue = []int{2,3,4,2,2,3,3,3}
 
+func SimpleZerOnePackageMaxValue(index int,currentweight int, currentvalue int){
+
+	if index == MaxNum - 1||currentweight == PackageMaxWeight{
+		if currentvalue > MaxValue{
+			MaxValue = currentvalue
+		}
+		fmt.Println(MaxValue)
+		return
+	}
+
+	SimpleZerOnePackageMaxValue(index+1, currentweight, currentvalue)
+	if currentweight+ItemsWeight[index]<= PackageMaxWeight{
+		SimpleZerOnePackageMaxValue(index+1,currentweight+ItemsWeight[index], currentvalue+ItemsValue[index])
+	}
+}
 
 
 

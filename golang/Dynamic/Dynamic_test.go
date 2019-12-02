@@ -10,5 +10,11 @@ var _ = Describe("Dynamic", func() {
 		Dynamic.ZerOnePackage()
 		Dynamic.ZerOnePackageSimple()
 	})
+	It("test max value", func() {
+		Dynamic.ZeronePackageMaxValue()
+	})
+	It("minpath", func() {
+		Dynamic.MinPath()
+	})
 
 })

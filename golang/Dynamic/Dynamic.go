@@ -52,3 +52,50 @@ func ZerOnePackageSimple(){
 	fmt.Println(simplearray)
 
 }
+
+
+
+//var ItemsWeight = []int{1,2,1,2,1}
+//var MaxNum = 5
+//var MaxLoad = 10
+
+// 有了价值的  多的就是看看留下 如果有重复的值的话 留下价值最大的
+var ItemsValue = []int{2,3,4,5,1}
+var maxValueArray = [5][10]int{}
+
+func ZeronePackageMaxValue(){
+	for row := 0; row<MaxNum; row++{
+		for column := 0; column<MaxLoad;column++{
+			maxValueArray[row][column]=-1
+		}
+	}
+	fmt.Println(maxValueArray)
+	//处理第一个物品
+	maxValueArray[0][0] = 0
+	if ItemsWeight[0] <= MaxLoad{
+		maxValueArray[0][ItemsWeight[0]] = ItemsValue[0]
+	}
+	for row := 1;row < MaxNum;row++{
+
+		for column := 0; column < MaxLoad;column++{
+			if maxValueArray[row-1][column] != -1{
+				//这里只看重量 可以放进去
+				if column + ItemsWeight[row] <= MaxLoad{
+					// 这里要看价值了
+					//不加入
+					if maxValueArray[row-1][column] > maxValueArray[row][column]{
+						maxValueArray[row][column] = maxValueArray[row-1][column]
+					}
+					// 这里要看价值了
+					//加入  上一行的价值要大于下一行 加入了质量后对应的那个价值
+					if 	maxValueArray[row-1][column]+ItemsValue[row] > maxValueArray[row][column + ItemsWeight[row]]{
+						maxValueArray[row][column + ItemsWeight[row]] = maxValueArray[row-1][column]+ItemsValue[row]
+					}
+				}
+			}
+		}
+	}
+
+	fmt.Println(maxValueArray)
+}
+

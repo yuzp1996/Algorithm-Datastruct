@@ -17,4 +17,17 @@ var _ = Describe("Backtracking", func() {
 		//index int, currentweight int,weightarray []int,totalnum int,loadwight int
 		backtracking.SimpleZerOnePackage(0,0)
 	})
+
+
+	It("simple zeronnepackage max value", func() {
+		//index int, currentweight int,weightarray []int,totalnum int,loadwight int
+		backtracking.SimpleZerOnePackageMaxValue(0,0,0)
+	})
+
+	It("the min path", func() {
+		backtracking.MinPath(0,0,1)
+	})
+	It("levenshtein", func() {
+		backtracking.Levenshtein(0,0,0)
+	})
 })
