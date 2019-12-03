@@ -13,7 +13,7 @@ func Stringtoarray(data string)(result []uint8){
 
 var FirstStr = "yuzhipeng"
 var LenFirst = len(FirstStr)
-var SecondStr = "yuzhppeng"
+var SecondStr = "yuzhppeeg"
 var LenSecond = len(SecondStr)
 var MinStep = 1000
 func Levenshtein(i int, j int, step int){
