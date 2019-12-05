@@ -74,7 +74,7 @@ func (this *ArrayQueue) PrintQueue() []interface{} {
 	if this.Head < this.Tail {
 		index := this.Head
 		fmt.Printf("Equeue is ")
-		for index <= this.Tail {
+		for index < this.Tail {
 			fmt.Printf(" %v", this.Data[index])
 			index++
 		}
