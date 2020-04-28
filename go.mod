@@ -1,4 +1,4 @@
-module Algorithm-Datastruct
+module github.com/yuzp1996/Algorithm-Datastruct.git
 
 go 1.12
 

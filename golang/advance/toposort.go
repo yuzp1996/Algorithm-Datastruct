@@ -127,6 +127,5 @@ func dfs(i int,listgraph *ListGraph.ListGraph,visited []bool){
 		visited[i] = true
 		dfs(listgraph.Data[i].Value,listgraph,visited)
 	}
-	fmt.Printf("visited is %v",visited)
 	fmt.Printf(" %d ->", i)
 }
